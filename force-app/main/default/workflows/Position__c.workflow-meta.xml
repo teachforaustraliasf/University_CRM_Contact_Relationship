@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>IA_sent_Call_Guide_VIC_SA_TAS</fullName>
+        <description>IA sent Call Guide VIC/SA/TAS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_VIC/X11a_IA_Call_Guide_Send_to_IA</template>
+    </alerts>
+    <alerts>
+        <fullName>IA_sent_Call_Guide_WA_NT</fullName>
+        <description>IA sent Call Guide WA/NT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_WA/X11a_IA_Call_Guide_Send_to_IA_TO_BE_SENT_FROM_POSITION_RECORD</template>
+    </alerts>
+    <alerts>
+        <fullName>Informing_IAs_of_a_tentative_match_VIC_SA_TAS</fullName>
+        <description>Informing IAs of a tentative match VIC/SA/TAS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_VIC/C24_IA_Tentative_Match_Email_Send_from_Position_Record</template>
+    </alerts>
+    <alerts>
+        <fullName>Informing_IAs_of_a_tentative_match_WA_NT</fullName>
+        <description>Informing IAs of a tentative match WA/NT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_WA/C24_IA_Tentative_Match_Email_Send_from_Position_Record1</template>
+    </alerts>
+    <alerts>
+        <fullName>LDP_Internal_Alert_to_IA_Owner_to_Followup_with_IA</fullName>
+        <description>LDP Internal Alert to IA Owner to Followup with IA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>LastModifiedById</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>support@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sf_Admin/LDP_placeholder_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Position_Email_Alert_to_IA_Owner_when_Position_is_RAM_to_communicate_tentative_m</fullName>
+        <description>Position - Email Alert to VIC Props LT &apos;IA approved tentative match&apos;</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>philippa.williams@teachforaustralia.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sf_Admin/Position_Email_to_VIC_Props_LT_IA_Approved_Tentative_Match</template>
+    </alerts>
+    <alerts>
+        <fullName>Position_Email_Alert_to_NTPROPS_when_Position_is_RAM_to_communicate_tentative_m</fullName>
+        <description>Position - Email Alert to NT Props LT &apos;IA approved tentative match&apos;</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>caitlin.conway@teachforaustralia.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sf_Admin/Position_Email_to_VIC_Props_LT_IA_Approved_Tentative_Match</template>
+    </alerts>
+    <alerts>
+        <fullName>Position_Email_Alert_to_SAPROPS_when_Position_is_RAM_to_communicate_tentative_m</fullName>
+        <description>Position - Email Alert to SA Props LT &apos;IA approved tentative match&apos;</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>lisa.daly@teachforaustralia.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sf_Admin/Position_Email_to_VIC_Props_LT_IA_Approved_Tentative_Match</template>
+    </alerts>
+    <alerts>
+        <fullName>Position_Email_Alert_to_TASPROPS_when_Position_is_RAM_to_communicate_tentative_m</fullName>
+        <description>Position - Email Alert to TAS Props LT &apos;IA approved tentative match&apos;</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>amy.sharp@teachforaustralia.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sf_Admin/Position_Email_to_VIC_Props_LT_IA_Approved_Tentative_Match</template>
+    </alerts>
+    <alerts>
+        <fullName>Position_Email_Alert_to_WA_Props_LT_IA_approved_tentative_match</fullName>
+        <description>Position - Email Alert to WA Props LT &apos;IA approved tentative match&apos;</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jane.mulder@teachforaustralia.org</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>support@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sf_Admin/Position_Email_to_VIC_Props_LT_IA_Approved_Tentative_Match</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_IA_Confirmation_of_Placement_NT</fullName>
+        <description>Send IA Confirmation of Placement NT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/NT_C24_Associate_Confirmed_Placement_IA_Email_TO_SEND_FROM_POSITION_RECO</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_IA_Confirmation_of_Placement_SA</fullName>
+        <description>Send IA Confirmation of Placement SA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/SA_Associate_C2022_IA_Confirmed_Placement_Next_Steps</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_IA_Confirmation_of_Placement_TAS</fullName>
+        <description>Send IA Confirmation of Placement VTAS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/TAS_Associate_C2022_IA_Next_Steps</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_IA_Confirmation_of_Placement_VIC</fullName>
+        <description>Send IA Confirmation of Placement VIC</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_VIC/VIC_Associate_C2022_IA_Confirmed_Placement_Next_Steps</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_IA_Confirmation_of_Placement_WA</fullName>
+        <description>Send IA Confirmation of Placement WA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Placed_Associate__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>admissions@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_WA/WA_Associate_C2022_Confirmed_Placement_Next_Steps</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_School_Confirmation_of_Placement_NT</fullName>
+        <description>Send School Confirmation of Placement NT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>ntschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/NT_C23_Confirmed_placement_to_schools</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_School_Confirmation_of_Placement_SA</fullName>
+        <description>Send School Confirmation of Placement SA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>saschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/SA_Schools_C2024_Confirmed_Placement_TO_SEND_FROM_POSITION_RECORD</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_School_Confirmation_of_Placement_TAS</fullName>
+        <description>Send School Confirmation of Placement TAS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>tasschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/TAS_Schools_C2024_Confirmed_Placement_TO_SEND_FROM_POSITION_RECORD</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_School_Confirmation_of_Placement_VIC</fullName>
+        <description>Send School Confirmation of Placement VIC</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>vicschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_VIC/VIC_Schools_C2023_Confirmed_Placement_TO_SEND_FROM_POSITION_RECORD_1</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_School_Confirmation_of_Placement_WA</fullName>
+        <description>Send School Confirmation of Placement WA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>waschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_WA/WA_C23_Confirmation_of_Placement_Prins</template>
+    </alerts>
+    <alerts>
+        <fullName>Sending_School_Primary_Contact_the_IA_s_Contact_Details_NT</fullName>
+        <description>Sending School Primary Contact the IA&apos;s Contact Details NT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>ntschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/NT_4a_C25_IA_Contact_Details_to_Principal_SEND_FROM_POSITION_RECORD</template>
+    </alerts>
+    <alerts>
+        <fullName>Sending_School_Primary_Contact_the_IA_s_Contact_Details_SA</fullName>
+        <description>Sending School Primary Contact the IA&apos;s Contact Details SA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>saschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/SA_C2024_IA_Contact_Details_to_Principal_SEND_FROM_POSITION_RECORD1</template>
+    </alerts>
+    <alerts>
+        <fullName>Sending_School_Primary_Contact_the_IA_s_Contact_Details_TAS</fullName>
+        <description>Sending School Primary Contact the IA&apos;s Contact Details TAS</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>tasschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>LDP_C2022_Placement_Communications/TAS_C24_IA_Contact_Details_to_Principal_SEND_FROM_POSITION_RECORD</template>
+    </alerts>
+    <alerts>
+        <fullName>Sending_School_Primary_Contact_the_IA_s_Contact_Details_VIC</fullName>
+        <description>Sending School Primary Contact the IA&apos;s Contact Details VIC</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>vicschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_VIC/X11_IA_Contact_Details</template>
+    </alerts>
+    <alerts>
+        <fullName>Sending_School_Primary_Contact_the_IA_s_Contact_Details_WA</fullName>
+        <description>Sending School Primary Contact the IA&apos;s Contact Details WA</description>
+        <protected>false</protected>
+        <recipients>
+            <field>School_Primary_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>waschools@teachforaustralia.org</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>C2023_LDP_Placement_Communications_WA/X5_WA_IA_Contact_Details_to_Principal_SEND_FROM_POSITION_RECORD</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Append_Position_Notes</fullName>
+        <description>Notes History - most recent notes at top.</description>
+        <field>Notes_History__c</field>
+        <formula>Notes__c + 
+&apos; [&apos;+ $User.FirstName + &apos; &apos; + $User.LastName + &apos; &apos; + TEXT(Today())+ &apos;] &apos; + BR() +
+Notes_History__c</formula>
+        <name>Append Position Notes</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_Position_Notes</fullName>
+        <field>Notes__c</field>
+        <name>Clear Position Notes</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Null</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Date_Stamp_Email_sent_to_school</fullName>
+        <field>Email_Send_to_School_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Date Stamp Email sent to school</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Date_Stamp_IA_Contact_Details_Sent_date</fullName>
+        <field>IA_Contact_Details_Sent_to_School_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Date Stamp IA Contact Details Sent date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Position_status_placed</fullName>
+        <description>Sets the Position Status to &apos;Placed&apos;</description>
+        <field>Status__c</field>
+        <literalValue>Placed</literalValue>
+        <name>Position status placed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Position_to_Placed</fullName>
+        <description>Sets Position to Placed</description>
+        <field>Status__c</field>
+        <literalValue>Placed</literalValue>
+        <name>Position to Placed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamp_Position_reference_added_date_on_p</fullName>
+        <field>Position_Reference_Added_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Stamp Position reference added date on p</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Stamp_Registration_Granted_Date</fullName>
+        <description>Stamp Registration granted date to today</description>
+        <field>Registration_Granted_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Stamp Registration Granted Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>LDP - EMAIL ALERT - IA Placed</fullName>
+        <actions>
+            <name>Position_status_placed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.IA_spoke_to_school__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.School_approved_placement__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Sends an email update to the IA when they have been placed</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - DATE STAMP - IA Contact Details Sent to School</fullName>
+        <actions>
+            <name>Date_Stamp_IA_Contact_Details_Sent_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.IA_Contact_Details_Sent_to_School__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - DATE STAMP - Set Email sent to school date</fullName>
+        <actions>
+            <name>Date_Stamp_Email_sent_to_school</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.Email_sent_to_school__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Position - DATE STAMP - Set Email sent to school date</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - DATE STAMP - Set Registration Granted Date</fullName>
+        <actions>
+            <name>Stamp_Registration_Granted_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.Registration_Status__c</field>
+            <operation>equals</operation>
+            <value>Granted</value>
+        </criteriaItems>
+        <description>System date stamp - When Registration Status is set to granted</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - DATE STAMP - set Position Reference Added Date</fullName>
+        <actions>
+            <name>Stamp_Position_reference_added_date_on_p</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>System date stamp - when Position Reference Number is populated.</description>
+        <formula>NOT(ISBLANK(Position_Reference_Number__c))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - INTERNAL ALERT - IA approved tentative match -- SA only</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.State__c</field>
+            <operation>equals</operation>
+            <value>SA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.IA_approved_placement__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Tentatively matched</value>
+        </criteriaItems>
+        <description>Alert to SA Props LT when IA approved tentative match</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - INTERNAL ALERT - IA approved tentative match -- VIC only</fullName>
+        <actions>
+            <name>Position_Email_Alert_to_IA_Owner_when_Position_is_RAM_to_communicate_tentative_m</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.State__c</field>
+            <operation>equals</operation>
+            <value>VIC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.IA_approved_placement__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Tentatively matched</value>
+        </criteriaItems>
+        <description>Alert to VIC Props LT when IA approved tentative match</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - INTERNAL ALERT - IA approved tentative match -- WA only</fullName>
+        <actions>
+            <name>Position_Email_Alert_to_WA_Props_LT_IA_approved_tentative_match</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.State__c</field>
+            <operation>equals</operation>
+            <value>WA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.IA_approved_placement__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Tentatively matched</value>
+        </criteriaItems>
+        <description>Alert to WA Props LT when IA approved tentative match</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position - SYSTEM RULE - Appends Note History</fullName>
+        <actions>
+            <name>Append_Position_Notes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Clear_Position_Notes</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ISCHANGED(Notes__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Position Confirmed for Placement</fullName>
+        <actions>
+            <name>Position_to_Placed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Position__c.IA_spoke_to_school__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Position__c.School_approved_placement__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>4. IA spoke to school+approved placement and 5. School approved placement are true then set Position to Placed.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>
