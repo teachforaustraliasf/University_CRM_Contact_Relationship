@@ -327,6 +327,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
+                <field>Associate_Preferred_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
                 <field>Associate_Mobile__c</field>
             </layoutItems>
             <layoutItems>
