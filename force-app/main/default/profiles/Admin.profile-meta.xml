@@ -93,6 +93,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Position__c.Business_Manager_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Position__c.Cohort__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -349,11 +354,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Position__c.Rollup_Count_Placed_Potential_Matches__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Position__c.School_Business_Manager_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
