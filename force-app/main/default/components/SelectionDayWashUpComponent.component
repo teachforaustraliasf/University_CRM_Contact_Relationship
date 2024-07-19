@@ -1,0 +1,581 @@
+<apex:component allowDML="true">
+
+    <apex:attribute name="ctrl" description="Instance of SelectionDayWashUpController passed from the parent page" type="SelectionDayWashUpController" required="true"/>
+
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <head>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+            <title>Selection Day Wash Up - {!ctrl.page_title}</title>
+
+            <!-- Salesforce Lightning Design System -->
+            <apex:slds />
+
+            <!-- jQuery, for Bootstrap -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+            <!-- popper.js, for Bootstrap -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha256-ZvOgfh+ptkpoa2Y4HkRY28ir89u/+VRyDE7sB7hEEcI=" crossorigin="anonymous"></script>
+
+            <!-- Bootstrap - css -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+            <!-- Bootstrap - js -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+
+            <!-- jQuery validate <td class="cell-data leadership-achievement cell-data--sdiv text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_IV_Leadership_Achievement_Final__c}</td>-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js" integrity="sha256-bu/BP02YMudBc96kI7yklc639Mu4iKGUNNcam8D2nLc=" crossorigin="anonymous"></script>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js" integrity="sha256-vhi8Tw3fBc+L8T6WvxZ/rmdB0AwBqVDtxc8rkK/Vuhc=" crossorigin="anonymous"></script> -->
+
+            <!-- custom style -->
+            <link rel="stylesheet" href="{!URLFOR($Resource.SelectionDayWashUpCSS)}" />
+
+            <!-- custom script -->
+            <script src="{!URLFOR($Resource.SelectionDayWashUpJS)}"></script>
+
+
+        </head>
+
+        <body>
+
+            <div class="p-3">
+
+                <apex:form id="SelectionDayWashUpForm" styleClass="validate">
+
+                    <!-- REQUIRED SLDS WRAPPER -->
+                    <div class="slds-scope">
+                        <!-- SLDS HEADER -->
+                        <div class="slds-page-header">
+                            <div class="slds-grid">
+                                <div class="slds-col slds-has-flexi-truncate">
+                                    <div class="slds-media slds-no-space slds-grow">
+                                        <div class="slds-icon_container slds-media__figure">
+                                            <svg aria-hidden="true" class="slds-icon slds-icon-standard-user" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <use xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#record"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <p class="slds-text-title--caps slds-line-height--reset">Selection Day {!IF(ctrl.num_total > 1, 'Bulk', '')} Wash Up</p>
+                                            <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="{!ctrl.page_title}">{!ctrl.page_title}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                                    <div class="slds-button-group" role="group">
+                                        <apex:commandButton action="{!ctrl.save}" id="saveButton" value="Save & Return" styleClass="slds-button slds-button--success" reRender="page_messages" status="status"/>
+                                        <apex:commandButton action="{!ctrl.saveSilent}" id="saveSilentButton" value="Quick Save" styleClass="slds-button slds-button--brand" reRender="page_messages" status="status"/>
+                                        <apex:commandButton action="{!ctrl.cancel}" id="cancelButton" value="Cancel" styleClass="slds-button slds-button--neutral" reRender="page_messages" status="status"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / SLDS HEADER -->
+                    </div>
+                    <!-- / REQUIRED SLDS WRAPPER -->
+
+                    <apex:actionFunction id="save" name="save" namespace="ctrl" action="{!ctrl.saveSilent}" reRender="page_messages" status="status"/>
+                    <apex:actionFunction id="saveSilent" name="saveSilent" namespace="ctrl" action="{!ctrl.saveSilent}" reRender="page_messages"/>
+
+                    <!-- PRIMARY CONTENT WRAPPER -->
+                    <div class="py-3">
+                        <div class="container-fluid">
+
+                            <div class="row">
+                                <div class="col">
+                                    <apex:pageMessages id="page_messages"/>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false" data-keyboard="false" data-wrap="false">
+
+                                        <!-- indicators -->
+                                        <apex:outputPanel layout="none" rendered="{!ctrl.num_total > 1}">
+                                            <ol class="carousel-indicators">
+                                                <!-- indicator for title page -->
+                                                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+
+                                                <!-- indicators for each element -->
+                                                <apex:variable value="{!0}" var="num"/>
+                                                <apex:repeat value="{!ctrl.wrapped_selection_days}" var="selection_day_id">
+                                                    <apex:variable value="{!num + 1}" var="num"/>
+                                                    <li data-target="#carousel" data-slide-to="{!num}"></li>
+                                                </apex:repeat>
+                                            </ol>
+                                        </apex:outputPanel>
+                                        <!-- / indicators -->
+
+                                        <div class="carousel-inner shadow">
+
+                                            <!-- title panel -->
+                                            <apex:outputPanel layout="none" rendered="{!ctrl.num_total > 1}">
+                                                <div class="carousel-item active">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            something something title page welcome to wash up page
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </apex:outputPanel>
+                                            <!-- / title panel -->
+
+                                            <!-- item panel -->
+                                            <apex:variable value="{!0}" var="num"/>
+                                            <apex:repeat value="{!ctrl.wrapped_selection_days}" var="selection_day_id">
+                                                <apex:variable value="{!num + 1}" var="num"/>
+                                                <div class="carousel-item {!IF(ctrl.num_total = 1, 'active', '')}">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col"><span class="h4">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.RecordType.Name}</span></div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col"><span class="h4">Candidate Name:</span> <span class="h2">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.Contact__r.Name}</span></div>
+                                                            </div>
+                                                            <br/>
+
+                                                            <table class="table table-sm table-bordered">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-center align-middle" style="width: 28%;">Competency</th>
+                                                                        <th class="text-center align-middle cell-header-oa" style="width: 12%;">OA</th>
+<!--                                                                        <th class="text-center align-middle cell-header-piv" style="width: 12%;">P IV</th>-->
+                                                                        <!--<th class="text-center align-middle cell-header-sdiv" style="width: 12%;">SD IV</th>-->
+                                                                        <th class="text-center align-middle cell-header-ga" style="width: 12%;">GA</th>
+                                                                        <th class="text-center align-middle cell-header-stl" style="width: 12%;">STL</th>
+                                                                        <th class="text-center align-middle cell-header-stl" style="width: 12%;">PTI</th>
+                                                                        <th class="text-center align-middle cell-header-average" style="width: 12%;">Average by Competency</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    
+                                                                   
+                                                                <tr class="table-row motivation">
+                                                                    <th class="cell-heading motivation ">Motivation</th>
+                                                                    <td class="cell-data motivation cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Motivation_Final__c}</td>
+                                                                    <!--<td class="cell-data motivation cell-data--sdiv text-center bg-darkblue"></td>-->
+                                                                    <td class="cell-data motivation cell-data--ga text-center bg-darkblue"></td>
+                                                                    <td class="cell-data motivation cell-data--stl text-center bg-darkblue"></td>
+                                                                    <td class="cell-data motivation cell-data--pti text-center bg-darkblue"></td>
+<!--                                                                <td class="cell-data commitment-to-mission cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Commitment_to_Vision_Final__c}</td>
+                                                                    <td class="cell-data commitment-to-mission cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash;{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.PS_CTM__c}&ndash;&gt;</td>
+                                                                    <td class="cell-data commitment-to-mission cell-data--sdiv text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_IV_Commitment_to_Vision_Final__c}</td>
+                                                                    <td class="cell-data commitment-to-mission cell-data--ga text-center bg-darkblue"></td>
+                                                                    <td class="cell-data commitment-to-mission cell-data--stl text-center bg-darkblue"></td>
+                                                                    <td class="cell-data commitment-to-mission cell-data--pti text-center bg-darkblue"></td>-->
+                                                                    <td class="cell-data motivation cell-data--average text-center"></td>
+                                                                </tr>
+                                                                    <tr class="table-row learning-potential">
+                                                                        <th class="cell-heading learning-potential">Learning Potential</th>
+                                                                        <td class="cell-data learning-potential cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Learning_Potential_Final__c}</td>
+                                                                        <!--<td class="cell-data learning-potential cell-data--sdiv text-center bg-darkblue"></td>-->
+                                                                        <td class="cell-data learning-potential cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Learning_Potential_Final__c}</td>
+                                                                        <td class="cell-data learning-potential cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Learning_Potential_Final__c}</td>
+                                                                        <td class="cell-data learning-potential cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Learning_Potential_Final__c}</td>
+<!--                                                                    <td class="cell-data communication-influencing-ability cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Communication_Ability_Final__c}</td>
+                                                                        <td class="cell-data communication-influencing-ability cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash;{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.PS_Int__c}&ndash;&gt;</td>
+                                                                        <td class="cell-data communication-influencing-ability cell-data--sdiv text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_IV_Communication_Ability_Final__c}</td>
+                                                                        <td class="cell-data communication-influencing-ability cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Communication_Ability_Final__c}</td>
+                                                                        <td class="cell-data communication-influencing-ability cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Communication_Ability_Final__c}</td>
+                                                                        <td class="cell-data communication-influencing-ability cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Communication_Ability_Final__c}</td>-->
+                                                                        <td class="cell-data learning-potential cell-data--average text-center"></td>
+                                                                    </tr>
+
+                                                                    <tr class="table-row relationship-building">
+                                                                        <th class="cell-heading relationship-building">Relationship Building</th>
+                                                                        <td class="cell-data relationship-building cell-data--oa text-center bg-darkblue"></td>
+                                                                        <!--<td class="cell-data relationship-building cell-data--sdiv text-center bg-darkblue"></td>-->
+                                                                        <td class="cell-data relationship-building cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Relationship_Building_Final__c}</td>
+                                                                        <td class="cell-data relationship-building cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Relationship_Building_Final__c}</td>
+                                                                        <td class="cell-data relationship-building cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Relationship_Building_Final__c}</td>
+<!--                                                                    <td class="cell-data problem-solving cell-data--oa text-center bg-darkblue"></td>
+                                                                        <td class="cell-data humility-respect-empathy cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash;{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.PS_HRE__c}&ndash;&gt;</td>
+                                                                        <td class="cell-data humility-respect-empathy cell-data--sdiv text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_IV_Humility_Respect_Empathy_Final__c}</td>
+                                                                        <td class="cell-data humility-respect-empathy cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Humility_Respect_Empathy_Final__c}</td>
+                                                                        <td class="cell-data humility-respect-empathy cell-data--stl text-center bg-darkblue"></td>
+                                                                        <td class="cell-data humility-respect-empathy cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Humility_Respect_Empathy_Final__c}</td>-->
+                                                                        <td class="cell-data relationship-building cell-data--average text-center"></td>
+                                                                    </tr>
+                                                                <tr class="table-row communication">
+                                                                    <th class="cell-heading communication">Communication</th>
+                                                                    <td class="cell-data communication cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Communication_Final__c}</td>
+                                                                    <!--<td class="cell-data communication cell-data--sdiv text-center bg-darkblue"></td>-->
+                                                                    <td class="cell-data communication cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Communication_Final__c}</td>
+                                                                    <td class="cell-data communication cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Communication_Final__c}</td>
+                                                                    <td class="cell-data communication cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Communication_Final__c}</td>
+<!--                                                                <td class="cell-data leadership-achievement cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Leadership_Achievement_Final__c}</td>
+                                                                    <td class="cell-data leadership-achievement cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash; not scored &ndash;&gt;</td>
+                                                                    <td class="cell-data leadership-achievement cell-data&#45;&#45;piv text-center bg-darkblue"></td>
+                                                                    <td class="cell-data leadership-achievement cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Leadership_Achievement_Final__c}</td>
+                                                                    <td class="cell-data leadership-achievement cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Leadership_Achievement_Final__c}</td>
+                                                                    <td class="cell-data leadership-achievement cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Leadership_Achievement_Final__c}</td>-->
+                                                                    <td class="cell-data communication cell-data--average text-center"></td>
+                                                                </tr>
+                                                                <tr class="table-row adaptability">
+                                                                    <th class="cell-heading adaptability">Adaptability</th>
+                                                                    <td class="cell-data adaptability cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Adaptability_Final__c}</td>
+                                                                    <!--<td class="cell-data adaptability cell-data--sdiv text-center bg-darkblue"></td>-->
+                                                                    <td class="cell-data adaptability cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Adaptability_Final__c}</td>
+                                                                    <td class="cell-data adaptability cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Adaptability_Final__c}</td>
+                                                                    <td class="cell-data adaptability cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Adaptability_Final__c}</td>
+<!--                                                                <td class="cell-data learning-self-evaluation cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Learning_Self_Evaluation_Final__c}</td>
+                                                                    <td class="cell-data learning-self-evaluation cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash; not scored &ndash;&gt;</td>
+                                                                    <td class="cell-data learning-self-evaluation cell-data--sdiv text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_IV_Learning_Self_Eval_Final__c}</td>
+                                                                    <td class="cell-data learning-self-evaluation cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Learning_Self_Eval_Final__c}</td>
+                                                                    <td class="cell-data learning-self-evaluation cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Learning_Self_Evaluation_Final__c}</td>
+                                                                    <td class="cell-data learning-self-evaluation cell-data--pti text-center bg-darkblue"></td>-->
+                                                                    <td class="cell-data adaptability cell-data--average text-center"></td>
+                                                                </tr>
+                                                                   <tr class="table-row strategic-thinking">
+                                                                        <th class="cell-heading strategic-thinking">Strategic Thinking</th>
+                                                                        <td class="cell-data strategic-thinking cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Strategic_Thinking_Final__c}</td>
+                                                                        <!--<td class="cell-data strategic-thinking cell-data--sdiv text-center bg-darkblue"></td>-->
+                                                                        <td class="cell-data strategic-thinking cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Strategic_Thinking_Final__c}</td>
+                                                                        <td class="cell-data strategic-thinking cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Strategic_Thinking_Final__c}</td>
+                                                                        <td class="cell-data strategic-thinking cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Strategic_Thinking_Final__c}</td>
+<!--                                                                    <td class="cell-data learning-self-evaluation cell-data--oa text-center">{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Planning_Organisation_Final__c}</td>
+                                                                        <td class="cell-data problem-solving cell-data--oa text-center bg-darkblue"></td>
+                                                                        <td class="cell-data planning-organisation cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash; not scored &ndash;&gt;</td>
+                                                                        <td class="cell-data planning-organisation cell-data--sdiv text-center bg-darkblue"></td>
+                                                                        <td class="cell-data planning-organisation cell-data--ga text-center bg-darkblue"></td>
+                                                                        <td class="cell-data planning-organisation cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Planning_Organisation_Final__c}</td>
+                                                                        <td class="cell-data planning-organisation cell-data--pti text-center bg-darkblue"></td>-->
+                                                                        <td class="cell-data strategic-thinking cell-data--average text-center"></td>
+                                                                    </tr>
+<!--     OLD COMPETENCIES, UPDATED 6/12/23                          <tr class="table-row problem-solving">
+                                                                        <th class="cell-heading problem-solving">Problem Solving</th>
+                                                                        <td class="cell-data learning-self-evaluation cell-data--oa text-center bg-darkblue"></td>
+                                                                        <td class="cell-data problem-solving cell-data--oa text-center bg-darkblue"></td
+                                                                        <td class="cell-data problem-solving cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash;{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.PS_Problem_Solving__c}&ndash;&gt;</td>
+                                                                        <td class="cell-data problem-solving cell-data--sdiv text-center bg-darkblue"></td>
+                                                                        <td class="cell-data problem-solving cell-data--ga text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_GA_Problem_Solving_Final__c}</td>
+                                                                        <td class="cell-data problem-solving cell-data--stl text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_STL_Problem_Solving_Final__c}</td>
+                                                                        <td class="cell-data problem-solving cell-data--pti text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_PTI_Problem_Solving_Final__c}</td>
+                                                                        <td class="cell-data problem-solving cell-data--average text-center"></td>
+                                                                    </tr>
+
+                                                                    <tr class="table-row resilience">
+                                                                        <th class="cell-heading resilience ">Resilience</th>
+                                                                        <td class="cell-data resilience cell-data--oa text-center"> {!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Resilience_Final__c}</td>
+                                                                        <td class="cell-data resilience cell-data&#45;&#45;piv text-center bg-darkblue">&lt;!&ndash;{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.PS_Resilience__c}&ndash;&gt;</td>
+                                                                        <td class="cell-data resilience cell-data--sdiv text-center">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_IV_Resilience_Final__c}</td>
+                                                                        <td class="cell-data resilience cell-data--ga text-center bg-darkblue"></td>
+                                                                        <td class="cell-data resilience cell-data--stl text-center bg-darkblue"></td>
+                                                                        <td class="cell-data resilience cell-data--pti text-center bg-darkblue"></td>
+                                                                        <td class="cell-data resilience cell-data--average text-center"></td>
+                                                                    </tr>-->
+
+
+                                                                    <tr>
+                                                                        <th class="cell-heading assessor-name bg-grey text-center">Assessor Name</th>
+                                                                        <td class="cell-data assessor-name bg-grey">
+                                                                            <small>
+                                                                                <apex:repeat value="{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r}" var="oa">
+                                                                                    {!oa.Reviewer__r.Name}
+                                                                                </apex:repeat>
+                                                                            </small>
+                                                                        </td>
+                                                                        <!--<td class="cell-data assessor-name bg-grey">-->
+                                                                           <!-- <small>-->
+                                                                                <!--<apex:repeat value="{!ctrl.wrapped_selection_days[selection_day_id].application.Phone_Screens__r}" var="piv">-->
+                                                                                   <!-- {!piv.Phone_Screen_Completed_By__r.Name}-->
+                                                                              <!--  </apex:repeat>-->
+                                                                          <!--  </small>-->
+                                                                      <!--  </td>-->
+                                                                        <!--<td class="cell-data assessor-name bg-grey"><small>{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Virtual_Interview_Conducted_By__r.Name}</small></td>-->
+                                                                        <td class="cell-data assessor-name bg-grey"><small>{!ctrl.wrapped_selection_days[selection_day_id].selection_day.GA_Assessed_by__r.Name}</small></td>
+                                                                        <td class="cell-data assessor-name bg-grey"><small>{!ctrl.wrapped_selection_days[selection_day_id].selection_day.STL_Assessed_by__r.Name}</small></td>
+                                                                        <apex:outputPanel rendered="{!IF(CONTAINS(ctrl.wrapped_selection_days[selection_day_id].selection_day.RecordType.Name, 'Virtual'), true, false)}">
+                                                                            <td class="cell-data assessor-name bg-grey"><small>{!ctrl.wrapped_selection_days[selection_day_id].selection_day.PTI_Assessed_by__r.Name}</small></td>
+                                                                        </apex:outputPanel>
+                                                                        <apex:outputPanel rendered="{!IF(CONTAINS(ctrl.wrapped_selection_days[selection_day_id].selection_day.RecordType.Name, 'Virtual'), false, true)}">
+                                                                            <td class="cell-data assessor-name bg-grey"><small><!-- not applicable --></small></td>
+                                                                        </apex:outputPanel>
+                                                                        <td class="cell-data assessor-name bg-grey"><small><!-- not applicable --></small></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                            <!-- OVERALL AVERAGE -->
+                                                            <div class="row">
+                                                                <div class="col col-10 text-right"><span class="h4">Overall average</span></div>
+                                                                <div class="col col-2"><span  class="h4 overall-average"></span></div>
+
+                                                                <!--hidden div to capture overall average to the SD screen and Application-->
+                                                                <div style="display:none;">
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right" for="{!$Component.overall_average}">Overall Average</label>
+                                                                        <div class="col col-8">
+                                                                            <apex:inputField styleClass="form-control overall-average" id="overall_average" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Overall_Average__c}" html-placeholder="( no average )"/>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <label class="col-4 col-form-label text-right" for="{!$Component.application_overall_average}">Application Overall Average</label>
+                                                                    <div class="col col-8">
+                                                                        <!--<apex:inputField styleClass="form-control overall-average" id="application_overall_average" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.SD_Overall_Score__c}" html-placeholder="( no average )"/>-->
+                                                                        <apex:inputField styleClass="form-control overall-average" id="application_overall_average" value="{!ctrl.unwrappedApplications[0].SD_Overall_Score__c}" html-placeholder="( no average )"/>
+
+                                                                        <!--<apex:inputField styleClass="form-control overall-average" id="application_overall_average" value="{!ctrl.wrapped_selection_days[selection_day_id].application.SD_Overall_Score__c}" html-placeholder="( no average )"/>-->
+                                                                    </div>
+                                                                </div>
+                                                                <!--END hidden div to capture overall average to the SD screen and Application-->
+
+
+
+
+                                                            </div>
+                                                            <!-- / OVERALL AVERAGE -->
+
+
+                                                            <!-- COMMENTS FROM SD -->
+                                                            <div class="slds-form">
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right">Previously Applied (indicated by candidate on App)</label>
+                                                                        <div class="col col-8 col-form-label">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.Previously_Applied__c}</div>
+                                                                    </div>
+                                                                    <apex:outputPanel layout="none" rendered="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.Previously_Applied__c == 'Yes'}">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-4 col-form-label text-right">Previous Application Progress (indicated by candidate on App)</label>
+                                                                            <div class="col col-8 col-form-label">{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Application__r.Previous_Application_Progress__c}</div>
+                                                                        </div>
+                                                                    </apex:outputPanel>
+
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right">OA Review Comments</label>
+                                                                        <div class="col col-8 col-form-label">
+                                                                            <apex:outputPanel rendered="{!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r.size > 0}">
+                                                                                {!ctrl.wrapped_selection_days[selection_day_id].application.Online_Reviews__r[0].OA_Review_Comments__c}
+                                                                            </apex:outputPanel>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <apex:repeat value="{!ctrl.wrapped_selection_days[selection_day_id].application.Phone_Screens__r}" var="piv">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.assessor_observations}">Phone Interview Comments</label>
+                                                                            <div class="col col-8 col-form-label">
+                                                                                {!piv.Phone_Screen_Comments__c}
+                                                                            </div>
+                                                                        </div>
+                                                                    </apex:repeat>
+
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right" for="{!$Component.interview_notes}">Interview Notes</label>
+                                                                        <div class="col col-8 col-form-label collapseText">
+                                                                            {!ctrl.wrapped_selection_days[selection_day_id].selection_day.Interview_Notes__c}
+                                                                        </div>
+                                                                        <!-- <div class="col col-8">
+                                                                            <apex:inputField styleClass="form-control" id="interview_notes" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Interview_Notes__c}" html-placeholder="( no notes )"/>
+                                                                        </div> -->
+                                                                    </div>
+
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right">GA Notes</label>
+                                                                        <div class="col col-8 col-form-label collapseText">
+                                                                            {!ctrl.wrapped_selection_days[selection_day_id].selection_day.GA_Notes__c}
+                                                                        </div>
+                                                                    </div>
+                                                                    
+
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right">STL Notes</label>
+                                                                        <div class="col col-8 col-form-label collapseText">
+                                                                            {!ctrl.wrapped_selection_days[selection_day_id].selection_day.STL_Notes__c}
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right">PTI Notes</label>
+                                                                        <div class="col col-8 col-form-label collapseText">
+                                                                            {!ctrl.wrapped_selection_days[selection_day_id].selection_day.PTI_Notes__c}
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right" for="{!$Component.assessor_observations}">Lead Assessor Comments</label>
+                                                                        <div class="col col-8">
+                                                                            <apex:inputField styleClass="form-control" id="assessor_observations" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_Assessor_Observations__c}" html-placeholder="( no comments )"/>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!--Support Notes-->
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right" for="{!$Component.support_notes}">Support Notes</label>
+                                                                        <div class="col col-8">
+                                                                            <apex:inputField styleClass="form-control support-notes" id="support_notes" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Support_Notes__c}" html-placeholder="( no comments )"/>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!--hidden div to propagate the support notes to the Associate_Record-->
+                                                                    <div style="display:none;">
+                                                                        <apex:outputPanel rendered="{!ctrl.unwrappedAssociates.size > 0}">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.associate_Support_Notes}">Associate Support Notes</label>
+                                                                            <div class="col col-8">
+                                                                                <apex:inputField styleClass="form-control support-notes-clone" id="associate_Support_Notes" value="{!ctrl.unwrappedAssociates[0].SD_Support_notes__c}" />
+                                                                            </div>
+                                                                        </apex:outputPanel>
+
+                                                                    </div>
+                                                                    <!--END hidden div to propagate the support notes to the Associate_Record-->
+                                                                    <!--END Support Notes-->
+
+                                                                    <div class="form-group row">
+                                                                        <label class="col-4 col-form-label text-right" for="{!$Component.candidate_feedback}">SD Candidate Feedback</label>
+                                                                        <div class="col col-8">
+                                                                            <apex:inputField styleClass="form-control" id="candidate_feedback" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.SD_Candidate_Feedback__c}" html-placeholder="( no feedback )"/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- / COMMENTS FROM SD -->
+
+                                                                    <div class="form-group">
+                                                                        <!-- FINAL DECISION -->
+                                                                        <div class="row">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.final_decision}">{!$ObjectType.Selection_Day__c.fields.Proposed_Outcome__c.Label}</label>
+                                                                            <div class="col col-8 form-group">
+                                                                                <apex:inputField styleClass="form-control" id="final_decision" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Proposed_Outcome__c}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.Selection_Day_Outcome}">{!$ObjectType.Selection_Day__c.fields.Selection_Day_Outcome__c.Label}</label>
+                                                                            <div class="col col-8 form-group">
+                                                                                <apex:inputField styleClass="form-control" id="Selection_Day_Outcome" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Selection_Day_Outcome__c}"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- / FINAL DECISION -->
+
+                                                                        <!-- RECOMMEND RE-APPLY -->
+                                                                        <div class="row">
+                                                                            <label class="col col-4 text-right" for="{!$Component.recommend_reapply}">{!$ObjectType.Selection_Day__c.fields.Recommend_Re_Apply__c.Label}</label>
+                                                                            <div class="col col-8">
+                                                                                <div class="form-check">
+                                                                                    <apex:inputField id="recommend_reapply" styleClass="form-check-input" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Recommend_Re_Apply__c}"/>
+                                                                                    <label class="form-check-label" for="{!$Component.recommend_reapply}">{!$ObjectType.Selection_Day__c.fields.Recommend_Re_Apply__c.Label}</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- / RECOMMEND RE-APPLY -->
+
+                                                                        <br/>
+
+                                                                        <!--Rubrics Interview Feedback-->
+                                                                        <div class="form-group row">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.interview_feedback}">Interview Rubrics Feedback</label>
+                                                                            <div class="col col-8">
+                                                                                <apex:inputField styleClass="form-control" id="interview_feedback" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.Interview_Feedback__c}" html-placeholder="( no feedback )"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--END Rubrics Interview Feedback-->
+
+                                                                        <!--STL Interview Feedback-->
+                                                                        <div class="form-group row">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.STL_feedback}">STL Rubrics Feedback</label>
+                                                                            <div class="col col-8">
+                                                                                <apex:inputField styleClass="form-control" id="STL_feedback" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.STL_Feedback__c}" html-placeholder="( no feedback )"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--END STL Interview Feedback-->
+
+                                                                        <!--GA Interview Feedback-->
+                                                                        <div class="form-group row">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.GA_Feedback}">GA Rubrics Feedback</label>
+                                                                            <div class="col col-8">
+                                                                                <apex:inputField styleClass="form-control" id="GA_Feedback" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.GA_Feedback__c}" html-placeholder="( no feedback )"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--GA Interview Feedback-->
+
+                                                                        <!--PTI Interview Feedback-->
+                                                                        <div class="form-group row">
+                                                                            <label class="col-4 col-form-label text-right" for="{!$Component.PTI_Feedback}">PTI Rubrics Feedback</label>
+                                                                            <div class="col col-8">
+                                                                                <apex:inputField styleClass="form-control" id="PTI_Feedback" value="{!ctrl.wrapped_selection_days[selection_day_id].selection_day.PTI_Feedback__c}" html-placeholder="( no feedback )"/>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--PTI Interview Feedback-->
+
+                                                                    </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </apex:repeat>
+                                            <!-- / item panel -->
+
+                                        </div>
+
+                                        <!-- back / next buttons -->
+                                        <apex:outputPanel layout="none" rendered="{!ctrl.num_total > 1}">
+                                            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </apex:outputPanel>
+                                        <!-- / back / next buttons -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- / PRIMARY CONTENT WRAPPER -->
+
+
+                    <!-- REQUIRED SLDS WRAPPER -->
+                    <div class="slds-scope">
+                        <!-- SLDS DOCKED FORM FOOTER -->
+                        <div style="height: 96px;">
+                            <div class="slds-docked-form-footer">
+                                <apex:commandButton action="{!ctrl.save}" value="Save & Return" styleClass="slds-button slds-button--success" reRender="page_messages" status="status"/>
+                                <apex:commandButton action="{!ctrl.saveSilent}" value="Quick Save" styleClass="slds-button slds-button--brand" reRender="page_messages" status="status"/>
+                                <apex:commandButton action="{!ctrl.cancel}" value="Cancel" styleClass="slds-button slds-button--neutral" reRender="page_messages" status="status"/>
+                            </div>
+                        </div>
+                        <!-- / SLDS DOCKED FORM FOOTER -->
+                    </div>
+                    <!-- / REQUIRED SLDS WRAPPER -->
+
+
+                </apex:form>
+
+            </div>
+
+            <!-- spinner should always be just before </body>, to ensure it's always on top of everything -->
+            <!-- SPINNER -->
+            <apex:actionStatus id="status">
+                <apex:facet name="start">
+                    <div class="bg-dark fixed-top fixed-bottom loading-bg z-index-9999"></div>
+                    <div class="fixed-top fixed-bottom z-index-9999">
+                        <div class="position-fixed loading-spinner">
+                            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </apex:facet>
+            </apex:actionStatus>
+            <!-- / SPINNER -->
+
+        </body>
+
+        <script type="text/javascript">
+                //function Callmefunc(id){
+                //
+                //   let supportComments = id.value;
+                //   console.log(supportComments);
+                //
+                //   let realSupportNotes = document.getElementById('support_notes');
+                //   console.log(realSupportNotes.value);
+                //
+                //   }
+           </script>
+
+    </html>
+
+
+</apex:component>
