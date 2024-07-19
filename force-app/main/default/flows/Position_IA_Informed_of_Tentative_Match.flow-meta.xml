@@ -108,7 +108,7 @@
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>WA_NT</name>
+            <name>WA</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.State__c</leftValueReference>
@@ -117,20 +117,13 @@
                     <stringValue>WA</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.State__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>NT</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Informing_IAs_of_a_tentative_match_WA</targetReference>
             </connector>
-            <label>WA/NT</label>
+            <label>WA</label>
         </rules>
         <rules>
-            <name>VIC_SA_TAS</name>
+            <name>VIC</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.State__c</leftValueReference>
@@ -139,24 +132,10 @@
                     <stringValue>VIC</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.State__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>SA</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.State__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>TAS</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Informing_IAs_of_a_tentative_match_VIC</targetReference>
             </connector>
-            <label>VIC/SA/TAS</label>
+            <label>VIC</label>
         </rules>
         <rules>
             <name>NT</name>
