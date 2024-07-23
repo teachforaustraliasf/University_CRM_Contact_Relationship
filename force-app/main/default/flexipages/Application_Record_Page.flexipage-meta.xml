@@ -1491,6 +1491,16 @@
                 <identifier>RecordSelection_Day_Date_Format_cField1</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.PACA_Booking_Date_Time__c</fieldItem>
+                <identifier>RecordPACA_Booking_Date_Time_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-a6a3a737-0403-4225-9e75-35653fe4bdd2</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -1513,6 +1523,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.SMS_AC_Reminder_date__c</fieldItem>
                 <identifier>RecordSMS_AC_Reminder_date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.PACA_Outcome_Delivered__c</fieldItem>
+                <identifier>RecordPACA_Outcome_Delivered_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-fceff43c-11dc-4c38-a9a0-e5eaae57a73b</name>
