@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_E_Sub_Category__c</fullName>
+    <label>A&amp;E Sub Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ELP Test</fullName>
+                <default>false</default>
+                <label>ELP Test</label>
+            </value>
+            <value>
+                <fullName>ELP Coaching</fullName>
+                <default>false</default>
+                <label>ELP Coaching</label>
+            </value>
+            <value>
+                <fullName>Housing</fullName>
+                <default>false</default>
+                <label>Housing</label>
+            </value>
+            <value>
+                <fullName>Food/Other</fullName>
+                <default>false</default>
+                <label>Food/Other</label>
+            </value>
+            <value>
+                <fullName>Childcare</fullName>
+                <default>false</default>
+                <label>Childcare</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
