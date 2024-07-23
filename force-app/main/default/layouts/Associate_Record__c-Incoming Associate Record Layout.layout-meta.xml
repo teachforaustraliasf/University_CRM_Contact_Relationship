@@ -559,6 +559,26 @@
                 <behavior>Edit</behavior>
                 <field>Test_Text_Field__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>A_E_Fund_Application_Submitted__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>A_E_Fund_Application_Assessed__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>A_E_Fund_Application_Communicated__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>A_E_Fund_Payment_Made__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>A_E_Fund_Confirmed_Amount__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -1020,6 +1040,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>May_Additionally_Teach_Text__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>A_E_Fund_Category__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>A_E_Sub_Category__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
