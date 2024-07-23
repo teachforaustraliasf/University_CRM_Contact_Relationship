@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Activity_Date_Range__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISNULL(LastActivityDate), &quot;Lead not contacted&quot;,
+IF(TODAY() - 3 &lt;= LastActivityDate, &quot;Updated in the last 3 days&quot;,
+IF(TODAY() - 7 &lt;= LastActivityDate, &quot;Updated in the last 7 days&quot;,
+IF(TODAY() - 14 &lt;= LastActivityDate, &quot;Updated in the last 14 days&quot;,
+&quot;Updated more than 14 days ago&quot;
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Last Activity Date Range</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
