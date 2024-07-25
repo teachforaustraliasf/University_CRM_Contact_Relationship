@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <actionOnInsert>Block</actionOnInsert>
+    <actionOnUpdate>Block</actionOnUpdate>
+    <alertText>Duplicate Affiliation is not allowed</alertText>
+    <description>Block Duplicate Affiliation Creation</description>
+    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleMatchRules>
+        <matchRuleSObjectType>npe5__Affiliation__c</matchRuleSObjectType>
+        <matchingRule>Block_Duplicate_Affiliation_Creation_matching_rule</matchingRule>
+        <objectMapping xsi:nil="true"/>
+    </duplicateRuleMatchRules>
+    <isActive>true</isActive>
+    <masterLabel>Block Duplicate Affiliation Creation</masterLabel>
+    <securityOption>EnforceSharingRules</securityOption>
+    <sortOrder>1</sortOrder>
+</DuplicateRule>
