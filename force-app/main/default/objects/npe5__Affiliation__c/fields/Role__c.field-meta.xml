@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <label>Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Role_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assistant Professor</fullName>
+                <default>false</default>
+                <label>Assistant Professor</label>
+            </value>
+            <value>
+                <fullName>Associate Professor</fullName>
+                <default>false</default>
+                <label>Associate Professor</label>
+            </value>
+            <value>
+                <fullName>Chair</fullName>
+                <default>false</default>
+                <label>Chair</label>
+            </value>
+            <value>
+                <fullName>Grants</fullName>
+                <default>false</default>
+                <label>Grants</label>
+            </value>
+            <value>
+                <fullName>Lecturer</fullName>
+                <default>false</default>
+                <label>Lecturer</label>
+            </value>
+            <value>
+                <fullName>Other Academic</fullName>
+                <default>false</default>
+                <label>Other Academic</label>
+            </value>
+            <value>
+                <fullName>Professor</fullName>
+                <default>false</default>
+                <label>Professor</label>
+            </value>
+            <value>
+                <fullName>Reader</fullName>
+                <default>false</default>
+                <label>Reader</label>
+            </value>
+            <value>
+                <fullName>Scholarships</fullName>
+                <default>false</default>
+                <label>Scholarships</label>
+            </value>
+            <value>
+                <fullName>Senior / Principal Lecturer</fullName>
+                <default>false</default>
+                <label>Senior / Principal Lecturer</label>
+            </value>
+            <value>
+                <fullName>Studentships</fullName>
+                <default>false</default>
+                <label>Studentships</label>
+            </value>
+            <value>
+                <fullName>Tutor/Teacher</fullName>
+                <default>false</default>
+                <label>Tutor/Teacher</label>
+            </value>
+            <value>
+                <fullName>Research Technician</fullName>
+                <default>false</default>
+                <label>Research Technician</label>
+            </value>
+            <value>
+                <fullName>Research Officer</fullName>
+                <default>false</default>
+                <label>Research Officer</label>
+            </value>
+            <value>
+                <fullName>Research Manager</fullName>
+                <default>false</default>
+                <label>Research Manager</label>
+            </value>
+            <value>
+                <fullName>Research Fellow</fullName>
+                <default>false</default>
+                <label>Research Fellow</label>
+            </value>
+            <value>
+                <fullName>Research Director</fullName>
+                <default>false</default>
+                <label>Research Director</label>
+            </value>
+            <value>
+                <fullName>Research Associate</fullName>
+                <default>false</default>
+                <label>Research Associate</label>
+            </value>
+            <value>
+                <fullName>Research Assistant</fullName>
+                <default>false</default>
+                <label>Research Assistant</label>
+            </value>
+            <value>
+                <fullName>Postdoctoral</fullName>
+                <default>false</default>
+                <label>Postdoctoral</label>
+            </value>
+            <value>
+                <fullName>Other Research Position</fullName>
+                <default>false</default>
+                <label>Other Research Position</label>
+            </value>
+            <value>
+                <fullName>Laboratory Positions</fullName>
+                <default>false</default>
+                <label>Laboratory Positions</label>
+            </value>
+            <value>
+                <fullName>Junior Research</fullName>
+                <default>false</default>
+                <label>Junior Research</label>
+            </value>
+            <value>
+                <fullName>Graduate Research Position</fullName>
+                <default>false</default>
+                <label>Graduate Research Position</label>
+            </value>
+            <value>
+                <fullName>Fellowships</fullName>
+                <default>false</default>
+                <label>Fellowships</label>
+            </value>
+            <value>
+                <fullName>Accommodation Services</fullName>
+                <default>false</default>
+                <label>Accommodation Services</label>
+            </value>
+            <value>
+                <fullName>Administrative</fullName>
+                <default>false</default>
+                <label>Administrative</label>
+            </value>
+            <value>
+                <fullName>Coordinator</fullName>
+                <default>false</default>
+                <label>Coordinator</label>
+            </value>
+            <value>
+                <fullName>Education &amp; Teaching</fullName>
+                <default>false</default>
+                <label>Education &amp; Teaching</label>
+            </value>
+            <value>
+                <fullName>Estates and Facilities</fullName>
+                <default>false</default>
+                <label>Estates and Facilities</label>
+            </value>
+            <value>
+                <fullName>Finance and Procurement</fullName>
+                <default>false</default>
+                <label>Finance and Procurement</label>
+            </value>
+            <value>
+                <fullName>Fundraising, Development and Alumni</fullName>
+                <default>false</default>
+                <label>Fundraising, Development and Alumni</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>International Activities</fullName>
+                <default>false</default>
+                <label>International Activities</label>
+            </value>
+            <value>
+                <fullName>IT Services</fullName>
+                <default>false</default>
+                <label>IT Services</label>
+            </value>
+            <value>
+                <fullName>Knowledge Transfer / Business Links</fullName>
+                <default>false</default>
+                <label>Knowledge Transfer / Business Links</label>
+            </value>
+            <value>
+                <fullName>Library / Records / Information Management</fullName>
+                <default>false</default>
+                <label>Library / Records / Information Management</label>
+            </value>
+            <value>
+                <fullName>Marketing and Communications</fullName>
+                <default>false</default>
+                <label>Marketing and Communications</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Other Professional Services</fullName>
+                <default>false</default>
+                <label>Other Professional Services</label>
+            </value>
+            <value>
+                <fullName>Planning</fullName>
+                <default>false</default>
+                <label>Planning</label>
+            </value>
+            <value>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+                <label>Project Management</label>
+            </value>
+            <value>
+                <fullName>Registry</fullName>
+                <default>false</default>
+                <label>Registry</label>
+            </value>
+            <value>
+                <fullName>Research and Innovation</fullName>
+                <default>false</default>
+                <label>Research and Innovation</label>
+            </value>
+            <value>
+                <fullName>Student Recruitment / Admissions</fullName>
+                <default>false</default>
+                <label>Student Recruitment / Admissions</label>
+            </value>
+            <value>
+                <fullName>Student &amp; Career Services</fullName>
+                <default>false</default>
+                <label>Student &amp; Career Services</label>
+            </value>
+            <value>
+                <fullName>Team Leader</fullName>
+                <default>false</default>
+                <label>Team Leader</label>
+            </value>
+            <value>
+                <fullName>Technicians / Technical Officers</fullName>
+                <default>false</default>
+                <label>Technicians / Technical Officers</label>
+            </value>
+            <value>
+                <fullName>Chief Executive Officer</fullName>
+                <default>false</default>
+                <label>Chief Executive Officer</label>
+            </value>
+            <value>
+                <fullName>Chief Operating Officer</fullName>
+                <default>false</default>
+                <label>Chief Operating Officer</label>
+            </value>
+            <value>
+                <fullName>Dean</fullName>
+                <default>false</default>
+                <label>Dean</label>
+            </value>
+            <value>
+                <fullName>Deputy Vice Chancellor</fullName>
+                <default>false</default>
+                <label>Deputy Vice Chancellor</label>
+            </value>
+            <value>
+                <fullName>Director</fullName>
+                <default>false</default>
+                <label>Director</label>
+            </value>
+            <value>
+                <fullName>Executive Assistant / Officer</fullName>
+                <default>false</default>
+                <label>Executive Assistant / Officer</label>
+            </value>
+            <value>
+                <fullName>Executive Managers</fullName>
+                <default>false</default>
+                <label>Executive Managers</label>
+            </value>
+            <value>
+                <fullName>Head of Department</fullName>
+                <default>false</default>
+                <label>Head of Department</label>
+            </value>
+            <value>
+                <fullName>Other Executive Positions</fullName>
+                <default>false</default>
+                <label>Other Executive Positions</label>
+            </value>
+            <value>
+                <fullName>Principals / Provosts</fullName>
+                <default>false</default>
+                <label>Principals / Provosts</label>
+            </value>
+            <value>
+                <fullName>Pro Vice-Chancellor</fullName>
+                <default>false</default>
+                <label>Pro Vice-Chancellor</label>
+            </value>
+            <value>
+                <fullName>Registar / Assistant Registar</fullName>
+                <default>false</default>
+                <label>Registar / Assistant Registar</label>
+            </value>
+            <value>
+                <fullName>Senior Manager</fullName>
+                <default>false</default>
+                <label>Senior Manager</label>
+            </value>
+            <value>
+                <fullName>Vice-Chancellor</fullName>
+                <default>false</default>
+                <label>Vice-Chancellor</label>
+            </value>
+            <value>
+                <fullName>Deputy Director</fullName>
+                <default>false</default>
+                <label>Deputy Director</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Assistant Professor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Associate Professor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Chair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Grants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Lecturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Other Academic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Professor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Reader</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Scholarships</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Senior / Principal Lecturer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Studentships</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Academic</controllingFieldValue>
+            <valueName>Tutor/Teacher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Research Technician</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Research Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Research Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Research Fellow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Research Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Research Associate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Research Assistant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Postdoctoral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Other Research Position</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Laboratory Positions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Junior Research</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Graduate Research Position</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Research</controllingFieldValue>
+            <valueName>Fellowships</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Accommodation Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Administrative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Coordinator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Education &amp; Teaching</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Estates and Facilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Finance and Procurement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Fundraising, Development and Alumni</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Human Resources</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>International Activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>IT Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Knowledge Transfer / Business Links</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Library / Records / Information Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Marketing and Communications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Other Professional Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Planning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Project Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Registry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Research and Innovation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Student Recruitment / Admissions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Student &amp; Career Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Team Leader</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional</controllingFieldValue>
+            <valueName>Technicians / Technical Officers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Chief Executive Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Chief Operating Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Dean</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Deputy Vice Chancellor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Executive Assistant / Officer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Executive Managers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Head of Department</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Other Executive Positions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Principals / Provosts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Pro Vice-Chancellor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Registar / Assistant Registar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Senior Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Vice-Chancellor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
+            <valueName>Deputy Director</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
