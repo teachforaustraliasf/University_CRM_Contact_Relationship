@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_in_Last_3_Business_Days__c</fullName>
+    <description>Flags referrals created in last 24-72 hrs (excluding weekends)</description>
+    <formula>IF(WEEKDAY( TODAY() ) == 5 || WEEKDAY( TODAY() ) == 6, 
+AND(CreatedDate &lt;=  NOW() - 1 , CreatedDate &gt;=  NOW() - 3), 
+AND(CreatedDate &lt;=  NOW() - 1 , CreatedDate &gt;=  NOW() - 5))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Created in Last 3 Business Days</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
