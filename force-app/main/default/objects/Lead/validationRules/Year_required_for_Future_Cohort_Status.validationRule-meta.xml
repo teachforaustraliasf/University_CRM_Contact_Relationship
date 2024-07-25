@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_required_for_Future_Cohort_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Status , &apos;Future Cohort&apos;), 
+ISBLANK( TEXT(Expected_Future_Cohort_Year__c) ) )</errorConditionFormula>
+    <errorMessage>Must select &apos;Expected Future Cohort Year&apos; for Leads updated to &apos;Future Cohort&apos; status.</errorMessage>
+</ValidationRule>
