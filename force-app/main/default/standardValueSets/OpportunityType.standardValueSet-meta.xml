@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Development</fullName>
+        <default>false</default>
+        <label>Development</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gift</fullName>
+        <default>false</default>
+        <label>Gift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Donation</fullName>
+        <default>false</default>
+        <label>Donation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Government</fullName>
+        <default>false</default>
+        <label>Government</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engagement</fullName>
+        <default>false</default>
+        <label>Engagement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Application</fullName>
+        <default>false</default>
+        <label>Application</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Network</fullName>
+        <default>false</default>
+        <label>Network</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cooperation</fullName>
+        <default>false</default>
+        <label>Cooperation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Commercial</fullName>
+        <default>false</default>
+        <label>Commercial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Collaboration</fullName>
+        <default>false</default>
+        <label>Collaboration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Strategic</fullName>
+        <default>false</default>
+        <label>Strategic</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Grant</fullName>
+        <default>false</default>
+        <label>Grant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Major gift</fullName>
+        <default>false</default>
+        <label>Major gift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bequest</fullName>
+        <default>false</default>
+        <label>Bequest</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In-kind</fullName>
+        <default>false</default>
+        <label>In-kind</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Workshops</fullName>
+        <default>false</default>
+        <label>Workshops</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Career Fairs</fullName>
+        <default>false</default>
+        <label>Career Fairs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Information Sessions</fullName>
+        <default>false</default>
+        <label>Information Sessions</label>
+    </standardValue>
+    <standardValue>
+        <fullName>University specific app workshops</fullName>
+        <default>false</default>
+        <label>University specific app workshops</label>
+    </standardValue>
+</StandardValueSet>
