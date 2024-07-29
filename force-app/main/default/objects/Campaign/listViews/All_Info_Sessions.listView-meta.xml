@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Info_Sessions</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>Organization__c</columns>
+    <columns>CAMPAIGN.BUDGETED_COST</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.ACTIVE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CAMPAIGN.NUM_WON_OPPORTUNITIES</columns>
+    <columns>CAMPAIGN.NUM_OPPORTUNITIES</columns>
+    <columns>CAMPAIGN.NUM_LEADS</columns>
+    <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.CAMPAIGN_TYPE</field>
+        <operation>equals</operation>
+        <value>Info Session</value>
+    </filters>
+    <label>All Info Sessions (Active only)</label>
+</ListView>

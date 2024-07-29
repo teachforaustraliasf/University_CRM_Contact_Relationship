@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CBA_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>Expression_of_Interest_URL__c</columns>
+    <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+    <columns>CAMPAIGN.NUM_LEADS</columns>
+    <columns>CAMPAIGN.NUM_CONTACTS</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CAMPAIGN.NAME</field>
+        <operation>contains</operation>
+        <value>2022 CBA</value>
+    </filters>
+    <label>CBA Campaigns</label>
+</ListView>

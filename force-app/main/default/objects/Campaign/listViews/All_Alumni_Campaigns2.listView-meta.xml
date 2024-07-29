@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Alumni_Campaigns2</fullName>
+    <columns>CAMPAIGN.RECORDTYPE</columns>
+    <columns>Type__c</columns>
+    <columns>Categories__c</columns>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.ACTIVE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Periods__c</columns>
+    <columns>CAMPAIGN.NUM_CONTACTS</columns>
+    <columns>CAMPAIGN.NUM_LEADS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Campaign.Alumni</value>
+    </filters>
+    <label>All Alumni &amp; Associate (2018)</label>
+</ListView>
