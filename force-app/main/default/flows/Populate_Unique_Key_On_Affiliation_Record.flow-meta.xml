@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>Populate Unique Key On Affiliation Record</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>compoundKey</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.npe5__Organization__c}+{!$Record.npe5__Contact__c}</expression>
+    </formulas>
+    <interviewLabel>Populate Unique Key On Affiliation Record {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Populate Unique Key On Affiliation Record</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>update_compount_Key</name>
+        <label>update compount Key</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Compound_Key__c</field>
+            <value>
+                <elementReference>compoundKey</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>update_compount_Key</targetReference>
+        </connector>
+        <object>npe5__Affiliation__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
