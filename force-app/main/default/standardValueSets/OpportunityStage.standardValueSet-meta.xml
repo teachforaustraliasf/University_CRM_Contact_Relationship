@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Seeking Introduction</fullName>
+        <default>false</default>
+        <label>Seeking Introduction</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Application In Progress</fullName>
+        <default>false</default>
+        <label>Application In Progress</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Received</fullName>
+        <default>false</default>
+        <label>Application Received</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Ineligible</fullName>
+        <default>false</default>
+        <label>Ineligible</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Unfinished</fullName>
+        <default>false</default>
+        <description>Move all incomplete applications from previous round to this stage - allows lead pipe line to begin</description>
+        <label>Application Unfinished</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Assessed - Waiting on 2nd Review</fullName>
+        <default>false</default>
+        <label>Assessed - Waiting on 2nd Review</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Assessed - Invite to Phone Screen</fullName>
+        <default>false</default>
+        <label>Assessed - Invite to Phone Screen</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Assessed - Reject</fullName>
+        <default>false</default>
+        <label>Assessed - Reject</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Screen - Invitation made</fullName>
+        <default>false</default>
+        <label>Phone Screen - Invitation made</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Screen - Booked</fullName>
+        <default>false</default>
+        <label>Phone Screen - Booked</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Screen - Invite to Selection Day</fullName>
+        <default>false</default>
+        <label>Phone Screen - Invite to Selection Day</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Screen - Reject</fullName>
+        <default>false</default>
+        <label>Phone Screen - Reject</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Selection Day - Booked</fullName>
+        <default>false</default>
+        <label>Selection Day - Booked</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Selection Day - Follow up</fullName>
+        <default>false</default>
+        <label>Selection Day - Follow up</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Selection Day - Reject</fullName>
+        <default>false</default>
+        <label>Selection Day - Reject</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Selection Day - Offer for Program</fullName>
+        <default>false</default>
+        <label>Selection Day - Offer for Program</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Firm Offer</fullName>
+        <default>false</default>
+        <label>Firm Offer</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waitlisted</fullName>
+        <default>false</default>
+        <label>Waitlisted</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined Offer</fullName>
+        <default>false</default>
+        <label>Declined Offer</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Deferred offer</fullName>
+        <default>false</default>
+        <label>Deferred offer</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>0</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Placement - Unplaced</fullName>
+        <default>false</default>
+        <label>Placement - Unplaced</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Placement - Tentative</fullName>
+        <default>false</default>
+        <label>Placement - Tentative</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>95</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Placed</fullName>
+        <default>false</default>
+        <label>Placed</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined Placement</fullName>
+        <default>false</default>
+        <label>Declined Placement</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected after Application-Communicated</fullName>
+        <default>false</default>
+        <label>Rejected after Application-Communicated</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected after PS - Communicated</fullName>
+        <default>false</default>
+        <label>Rejected after PS - Communicated</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected after SD - Communicated</fullName>
+        <default>false</default>
+        <label>Rejected after SD - Communicated</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Withdrawn prior to Assessment</fullName>
+        <default>false</default>
+        <label>Withdrawn prior to Assessment</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Withdrawn prior to Selection Day</fullName>
+        <default>false</default>
+        <label>Withdrawn prior to Selection Day</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Withdrawn prior to offer/waitlist</fullName>
+        <default>false</default>
+        <label>Withdrawn prior to offer/waitlist</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Withdrawn prior to phone interview</fullName>
+        <default>false</default>
+        <label>Withdrawn prior to phone interview</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Withdrawn from Waitlist</fullName>
+        <default>false</default>
+        <label>Withdrawn from Waitlist</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Deferral Request</fullName>
+        <default>false</default>
+        <label>Deferral Request</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Temporarily removed from placement pool</fullName>
+        <default>false</default>
+        <label>Temporarily removed from placement pool</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Assess</fullName>
+        <default>false</default>
+        <label>Assess</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>5</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Design Concept</fullName>
+        <default>false</default>
+        <description>Assess (previously Design Concept)</description>
+        <label>Design Concept</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Create Proposal</fullName>
+        <default>false</default>
+        <description>Create Proposal</description>
+        <label>Create Proposal</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Present Proposal</fullName>
+        <default>false</default>
+        <description>Presented Proposal</description>
+        <label>Present Proposal</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Negotiate</fullName>
+        <default>false</default>
+        <description>Negotiate</description>
+        <label>Negotiate</label>
+        <closed>false</closed>
+        <forecastCategory>BestCase</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled/On Hold</fullName>
+        <default>false</default>
+        <description>Cancelled/On Hold</description>
+        <label>Cancelled/On Hold</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+        <description>Closed Lost</description>
+        <label>Closed Lost</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+        <description>Closed Won</description>
+        <label>Closed Won</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Assessing</fullName>
+        <default>false</default>
+        <label>Assessing</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementing</fullName>
+        <default>false</default>
+        <label>Implementing</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>15</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Evaluating</fullName>
+        <default>false</default>
+        <label>Evaluating</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Transitioning</fullName>
+        <default>false</default>
+        <label>Transitioning</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Hold</fullName>
+        <default>false</default>
+        <label>Hold</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Not Proceeding</fullName>
+        <default>false</default>
+        <label>Closed - Not Proceeding</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>0</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - End</fullName>
+        <default>false</default>
+        <label>Closed - End</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospecting and Research</fullName>
+        <default>false</default>
+        <description>Use this stage to identify target universities, student societies, and key contacts. Gather detailed information about their upcoming events, interests, and past engagement with similar organizations. Leverage university websites, LinkedIn, and other soci</description>
+        <label>Prospecting and Research</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Initial Contact</fullName>
+        <default>false</default>
+        <description>Mark this stage when you reach out to university contacts and/or student society leaders. Craft personalized emails or messages introducing TFA’s mission and outline potential collaboration opportunities.</description>
+        <label>Initial Contact</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Relationship Building</fullName>
+        <default>false</default>
+        <description>Focus on building a rapport with key contacts during this stage. Engage in meaningful conversations, attend relevant events, and offer/share valuable resources like case studies, former Alumni stories etc. We’re trying to identify champions within the uni</description>
+        <label>Relationship Building</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduling Engagements</fullName>
+        <default>false</default>
+        <description>Once interest is established, move to this stage to arrange specific dates and times for lecture pitches, workshops, society club attendance and other engagements. Confirm logistical details and involve the events team as necessary. Ensure all necessary m</description>
+        <label>Scheduling Engagements</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Engagement Delivery</fullName>
+        <default>false</default>
+        <description>Update to this stage while delivering your scheduled activities, such as lecture pitches, society group pitches, and workshops. Ensure a smooth execution by double-checking all arrangements and actively engaging with the audience.</description>
+        <label>Engagement Delivery</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up</fullName>
+        <default>false</default>
+        <description>After an engagement, promptly follow up with thank-you emails and additional resources. Collect feedback from participants to gauge the success of the event and maintain ongoing communication to nurture interest and address any further queries.</description>
+        <label>Follow-up</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Post-Engagement Evaluation</fullName>
+        <default>false</default>
+        <description>Use this stage to analyse the outcomes of your engagements. Assess the effectiveness of each activity, gather data on lead/application conversions, and collect feedback from both participants and internal teams. Utilize this information to refine future e</description>
+        <label>Post-Engagement Evaluation</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Interested / Cancelled</fullName>
+        <default>false</default>
+        <description>Select this stage for engagements that do not proceed, either due to lack of interest or cancellations. Document the reasons and any feedback received to understand potential barriers and identify opportunities for improvement in future approaches.</description>
+        <label>Not Interested / Cancelled</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>10</probability>
+        <won>true</won>
+    </standardValue>
+</StandardValueSet>

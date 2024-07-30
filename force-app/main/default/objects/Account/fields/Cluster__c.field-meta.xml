@@ -1,0 +1,1570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cluster__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>TFA defined cluster.</inlineHelpText>
+    <label>Cluster</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Region__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adelaide</fullName>
+                <default>false</default>
+                <label>Adelaide</label>
+            </value>
+            <value>
+                <fullName>Albany</fullName>
+                <default>false</default>
+                <label>Albany</label>
+            </value>
+            <value>
+                <fullName>Albury</fullName>
+                <default>false</default>
+                <label>Albury</label>
+            </value>
+            <value>
+                <fullName>Alice Springs</fullName>
+                <default>false</default>
+                <label>Alice Springs</label>
+            </value>
+            <value>
+                <fullName>Ararat</fullName>
+                <default>false</default>
+                <label>Ararat</label>
+            </value>
+            <value>
+                <fullName>Armidale</fullName>
+                <default>false</default>
+                <label>Armidale</label>
+            </value>
+            <value>
+                <fullName>Auburn</fullName>
+                <default>false</default>
+                <label>Auburn</label>
+            </value>
+            <value>
+                <fullName>Bankstown</fullName>
+                <default>false</default>
+                <label>Bankstown</label>
+            </value>
+            <value>
+                <fullName>Barkly</fullName>
+                <default>false</default>
+                <label>Barkly</label>
+            </value>
+            <value>
+                <fullName>Barkly Remote</fullName>
+                <default>false</default>
+                <label>Barkly Remote</label>
+            </value>
+            <value>
+                <fullName>Barwon</fullName>
+                <default>false</default>
+                <label>Barwon</label>
+            </value>
+            <value>
+                <fullName>Batemans Bay</fullName>
+                <default>false</default>
+                <label>Batemans Bay</label>
+            </value>
+            <value>
+                <fullName>Bathurst</fullName>
+                <default>false</default>
+                <label>Bathurst</label>
+            </value>
+            <value>
+                <fullName>Baw Baw/South Gippsland</fullName>
+                <default>false</default>
+                <label>Baw Baw/South Gippsland</label>
+            </value>
+            <value>
+                <fullName>Bayside Peninsula</fullName>
+                <default>false</default>
+                <label>Bayside Peninsula</label>
+            </value>
+            <value>
+                <fullName>Belconnen</fullName>
+                <default>false</default>
+                <label>Belconnen</label>
+            </value>
+            <value>
+                <fullName>Bendigo</fullName>
+                <default>false</default>
+                <label>Bendigo</label>
+            </value>
+            <value>
+                <fullName>Beverly Hills</fullName>
+                <default>false</default>
+                <label>Beverly Hills</label>
+            </value>
+            <value>
+                <fullName>Big Rivers Remote</fullName>
+                <default>false</default>
+                <label>Big Rivers Remote</label>
+            </value>
+            <value>
+                <fullName>Blue Mountains</fullName>
+                <default>false</default>
+                <label>Blue Mountains</label>
+            </value>
+            <value>
+                <fullName>Bondi</fullName>
+                <default>false</default>
+                <label>Bondi</label>
+            </value>
+            <value>
+                <fullName>Botany Bay</fullName>
+                <default>false</default>
+                <label>Botany Bay</label>
+            </value>
+            <value>
+                <fullName>Boulburn</fullName>
+                <default>false</default>
+                <label>Boulburn</label>
+            </value>
+            <value>
+                <fullName>Brimbank Melton</fullName>
+                <default>false</default>
+                <label>Brimbank Melton</label>
+            </value>
+            <value>
+                <fullName>Brisbane</fullName>
+                <default>false</default>
+                <label>Brisbane</label>
+            </value>
+            <value>
+                <fullName>Brisbane Water</fullName>
+                <default>false</default>
+                <label>Brisbane Water</label>
+            </value>
+            <value>
+                <fullName>Broome</fullName>
+                <default>false</default>
+                <label>Broome</label>
+            </value>
+            <value>
+                <fullName>Bunbury</fullName>
+                <default>false</default>
+                <label>Bunbury</label>
+            </value>
+            <value>
+                <fullName>Bungarribee</fullName>
+                <default>false</default>
+                <label>Bungarribee</label>
+            </value>
+            <value>
+                <fullName>Callaghan</fullName>
+                <default>false</default>
+                <label>Callaghan</label>
+            </value>
+            <value>
+                <fullName>Cambridge Park</fullName>
+                <default>false</default>
+                <label>Cambridge Park</label>
+            </value>
+            <value>
+                <fullName>Camden</fullName>
+                <default>false</default>
+                <label>Camden</label>
+            </value>
+            <value>
+                <fullName>Campbelltown</fullName>
+                <default>false</default>
+                <label>Campbelltown</label>
+            </value>
+            <value>
+                <fullName>Canberra Goulburn</fullName>
+                <default>false</default>
+                <label>Canberra Goulburn</label>
+            </value>
+            <value>
+                <fullName>Canterbury</fullName>
+                <default>false</default>
+                <label>Canterbury</label>
+            </value>
+            <value>
+                <fullName>Carlingford</fullName>
+                <default>false</default>
+                <label>Carlingford</label>
+            </value>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>Central/South Network</fullName>
+                <default>false</default>
+                <label>Central/South Network</label>
+            </value>
+            <value>
+                <fullName>Central Coast</fullName>
+                <default>false</default>
+                <label>Central Coast</label>
+            </value>
+            <value>
+                <fullName>Central Highlands</fullName>
+                <default>false</default>
+                <label>Central Highlands</label>
+            </value>
+            <value>
+                <fullName>Central Network</fullName>
+                <default>false</default>
+                <label>Central Network</label>
+            </value>
+            <value>
+                <fullName>Central Remote</fullName>
+                <default>false</default>
+                <label>Central Remote</label>
+            </value>
+            <value>
+                <fullName>Cessnock</fullName>
+                <default>false</default>
+                <label>Cessnock</label>
+            </value>
+            <value>
+                <fullName>Chipping Norton</fullName>
+                <default>false</default>
+                <label>Chipping Norton</label>
+            </value>
+            <value>
+                <fullName>Chullora</fullName>
+                <default>false</default>
+                <label>Chullora</label>
+            </value>
+            <value>
+                <fullName>Clarence Valley</fullName>
+                <default>false</default>
+                <label>Clarence Valley</label>
+            </value>
+            <value>
+                <fullName>Cocos Island</fullName>
+                <default>false</default>
+                <label>Cocos Island</label>
+            </value>
+            <value>
+                <fullName>Coffs Harbour</fullName>
+                <default>false</default>
+                <label>Coffs Harbour</label>
+            </value>
+            <value>
+                <fullName>Corangamite/Otways</fullName>
+                <default>false</default>
+                <label>Corangamite/Otways</label>
+            </value>
+            <value>
+                <fullName>Cowpasture</fullName>
+                <default>false</default>
+                <label>Cowpasture</label>
+            </value>
+            <value>
+                <fullName>Cowra</fullName>
+                <default>false</default>
+                <label>Cowra</label>
+            </value>
+            <value>
+                <fullName>Darwin, Palmerston &amp; Rural</fullName>
+                <default>false</default>
+                <label>Darwin, Palmerston &amp; Rural</label>
+            </value>
+            <value>
+                <fullName>Darwin Palmerston &amp; Rural</fullName>
+                <default>false</default>
+                <label>Darwin Palmerston &amp; Rural</label>
+            </value>
+            <value>
+                <fullName>Deniliquin</fullName>
+                <default>false</default>
+                <label>Deniliquin</label>
+            </value>
+            <value>
+                <fullName>Devonport</fullName>
+                <default>false</default>
+                <label>Devonport</label>
+            </value>
+            <value>
+                <fullName>Dowerin</fullName>
+                <default>false</default>
+                <label>Dowerin</label>
+            </value>
+            <value>
+                <fullName>Dubbo</fullName>
+                <default>false</default>
+                <label>Dubbo</label>
+            </value>
+            <value>
+                <fullName>East Arnhem Remote</fullName>
+                <default>false</default>
+                <label>East Arnhem Remote</label>
+            </value>
+            <value>
+                <fullName>Eastern Creek</fullName>
+                <default>false</default>
+                <label>Eastern Creek</label>
+            </value>
+            <value>
+                <fullName>Eastern Network</fullName>
+                <default>false</default>
+                <label>Eastern Network</label>
+            </value>
+            <value>
+                <fullName>Eastern Shore/Peninsula</fullName>
+                <default>false</default>
+                <label>Eastern Shore/Peninsula</label>
+            </value>
+            <value>
+                <fullName>East Kimberley</fullName>
+                <default>false</default>
+                <label>East Kimberley</label>
+            </value>
+            <value>
+                <fullName>Eden-Monaro</fullName>
+                <default>false</default>
+                <label>Eden-Monaro</label>
+            </value>
+            <value>
+                <fullName>Elcho Island</fullName>
+                <default>false</default>
+                <label>Elcho Island</label>
+            </value>
+            <value>
+                <fullName>Esperance</fullName>
+                <default>false</default>
+                <label>Esperance</label>
+            </value>
+            <value>
+                <fullName>Fairfield</fullName>
+                <default>false</default>
+                <label>Fairfield</label>
+            </value>
+            <value>
+                <fullName>Far North</fullName>
+                <default>false</default>
+                <label>Far North</label>
+            </value>
+            <value>
+                <fullName>Far West</fullName>
+                <default>false</default>
+                <label>Far West</label>
+            </value>
+            <value>
+                <fullName>Fitzroy Crossing</fullName>
+                <default>false</default>
+                <label>Fitzroy Crossing</label>
+            </value>
+            <value>
+                <fullName>Georges River</fullName>
+                <default>false</default>
+                <label>Georges River</label>
+            </value>
+            <value>
+                <fullName>Geraldton</fullName>
+                <default>false</default>
+                <label>Geraldton</label>
+            </value>
+            <value>
+                <fullName>Girraween</fullName>
+                <default>false</default>
+                <label>Girraween</label>
+            </value>
+            <value>
+                <fullName>Glenelg</fullName>
+                <default>false</default>
+                <label>Glenelg</label>
+            </value>
+            <value>
+                <fullName>Glenfield</fullName>
+                <default>false</default>
+                <label>Glenfield</label>
+            </value>
+            <value>
+                <fullName>Glenrock</fullName>
+                <default>false</default>
+                <label>Glenrock</label>
+            </value>
+            <value>
+                <fullName>Gold Coast</fullName>
+                <default>false</default>
+                <label>Gold Coast</label>
+            </value>
+            <value>
+                <fullName>Gordon</fullName>
+                <default>false</default>
+                <label>Gordon</label>
+            </value>
+            <value>
+                <fullName>Goulburn</fullName>
+                <default>false</default>
+                <label>Goulburn</label>
+            </value>
+            <value>
+                <fullName>Grafton</fullName>
+                <default>false</default>
+                <label>Grafton</label>
+            </value>
+            <value>
+                <fullName>Greater Hobart</fullName>
+                <default>false</default>
+                <label>Greater Hobart</label>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+                <label>Great Lakes</label>
+            </value>
+            <value>
+                <fullName>Griffith</fullName>
+                <default>false</default>
+                <label>Griffith</label>
+            </value>
+            <value>
+                <fullName>Gundagai</fullName>
+                <default>false</default>
+                <label>Gundagai</label>
+            </value>
+            <value>
+                <fullName>Hastings</fullName>
+                <default>false</default>
+                <label>Hastings</label>
+            </value>
+            <value>
+                <fullName>Hawkesbury</fullName>
+                <default>false</default>
+                <label>Hawkesbury</label>
+            </value>
+            <value>
+                <fullName>Hindmarsh</fullName>
+                <default>false</default>
+                <label>Hindmarsh</label>
+            </value>
+            <value>
+                <fullName>Hornsby</fullName>
+                <default>false</default>
+                <label>Hornsby</label>
+            </value>
+            <value>
+                <fullName>Horsham</fullName>
+                <default>false</default>
+                <label>Horsham</label>
+            </value>
+            <value>
+                <fullName>Hume</fullName>
+                <default>false</default>
+                <label>Hume</label>
+            </value>
+            <value>
+                <fullName>Hume Merri-bek</fullName>
+                <default>false</default>
+                <label>Hume Merri-bek</label>
+            </value>
+            <value>
+                <fullName>Hunter</fullName>
+                <default>false</default>
+                <label>Hunter</label>
+            </value>
+            <value>
+                <fullName>Inner Eastern Melbourne</fullName>
+                <default>false</default>
+                <label>Inner Eastern Melbourne</label>
+            </value>
+            <value>
+                <fullName>Inner Gippsland</fullName>
+                <default>false</default>
+                <label>Inner Gippsland</label>
+            </value>
+            <value>
+                <fullName>Iron Cove</fullName>
+                <default>false</default>
+                <label>Iron Cove</label>
+            </value>
+            <value>
+                <fullName>Kalgoorlie</fullName>
+                <default>false</default>
+                <label>Kalgoorlie</label>
+            </value>
+            <value>
+                <fullName>Kangaroo Island</fullName>
+                <default>false</default>
+                <label>Kangaroo Island</label>
+            </value>
+            <value>
+                <fullName>Karratha</fullName>
+                <default>false</default>
+                <label>Karratha</label>
+            </value>
+            <value>
+                <fullName>Katanning</fullName>
+                <default>false</default>
+                <label>Katanning</label>
+            </value>
+            <value>
+                <fullName>Katherine</fullName>
+                <default>false</default>
+                <label>Katherine</label>
+            </value>
+            <value>
+                <fullName>Kogarah</fullName>
+                <default>false</default>
+                <label>Kogarah</label>
+            </value>
+            <value>
+                <fullName>Lake Grace</fullName>
+                <default>false</default>
+                <label>Lake Grace</label>
+            </value>
+            <value>
+                <fullName>Lake Illawarra North</fullName>
+                <default>false</default>
+                <label>Lake Illawarra North</label>
+            </value>
+            <value>
+                <fullName>Lake Illawarra South</fullName>
+                <default>false</default>
+                <label>Lake Illawarra South</label>
+            </value>
+            <value>
+                <fullName>Lake Macquarie East</fullName>
+                <default>false</default>
+                <label>Lake Macquarie East</label>
+            </value>
+            <value>
+                <fullName>Lake Macquarie West</fullName>
+                <default>false</default>
+                <label>Lake Macquarie West</label>
+            </value>
+            <value>
+                <fullName>Latrobe Valley/Wellington</fullName>
+                <default>false</default>
+                <label>Latrobe Valley/Wellington</label>
+            </value>
+            <value>
+                <fullName>Launceston</fullName>
+                <default>false</default>
+                <label>Launceston</label>
+            </value>
+            <value>
+                <fullName>Lennox Coast</fullName>
+                <default>false</default>
+                <label>Lennox Coast</label>
+            </value>
+            <value>
+                <fullName>Lismore</fullName>
+                <default>false</default>
+                <label>Lismore</label>
+            </value>
+            <value>
+                <fullName>Lithgow</fullName>
+                <default>false</default>
+                <label>Lithgow</label>
+            </value>
+            <value>
+                <fullName>Liverpool</fullName>
+                <default>false</default>
+                <label>Liverpool</label>
+            </value>
+            <value>
+                <fullName>Loddon Campaspe</fullName>
+                <default>false</default>
+                <label>Loddon Campaspe</label>
+            </value>
+            <value>
+                <fullName>Macarthur</fullName>
+                <default>false</default>
+                <label>Macarthur</label>
+            </value>
+            <value>
+                <fullName>Macleay Valley</fullName>
+                <default>false</default>
+                <label>Macleay Valley</label>
+            </value>
+            <value>
+                <fullName>Macquarie</fullName>
+                <default>false</default>
+                <label>Macquarie</label>
+            </value>
+            <value>
+                <fullName>Maitland</fullName>
+                <default>false</default>
+                <label>Maitland</label>
+            </value>
+            <value>
+                <fullName>Mallee</fullName>
+                <default>false</default>
+                <label>Mallee</label>
+            </value>
+            <value>
+                <fullName>Mandurah</fullName>
+                <default>false</default>
+                <label>Mandurah</label>
+            </value>
+            <value>
+                <fullName>Marickville</fullName>
+                <default>false</default>
+                <label>Marickville</label>
+            </value>
+            <value>
+                <fullName>Melbourne CBD</fullName>
+                <default>false</default>
+                <label>Melbourne CBD</label>
+            </value>
+            <value>
+                <fullName>Merredin</fullName>
+                <default>false</default>
+                <label>Merredin</label>
+            </value>
+            <value>
+                <fullName>Mid Coast Valleys</fullName>
+                <default>false</default>
+                <label>Mid Coast Valleys</label>
+            </value>
+            <value>
+                <fullName>Mid-West WA Remote</fullName>
+                <default>false</default>
+                <label>Mid-West WA Remote</label>
+            </value>
+            <value>
+                <fullName>Mitchell</fullName>
+                <default>false</default>
+                <label>Mitchell</label>
+            </value>
+            <value>
+                <fullName>Moira</fullName>
+                <default>false</default>
+                <label>Moira</label>
+            </value>
+            <value>
+                <fullName>Mooki</fullName>
+                <default>false</default>
+                <label>Mooki</label>
+            </value>
+            <value>
+                <fullName>Mooney Mooney</fullName>
+                <default>false</default>
+                <label>Mooney Mooney</label>
+            </value>
+            <value>
+                <fullName>Mount Druitt</fullName>
+                <default>false</default>
+                <label>Mount Druitt</label>
+            </value>
+            <value>
+                <fullName>Mudgee</fullName>
+                <default>false</default>
+                <label>Mudgee</label>
+            </value>
+            <value>
+                <fullName>Murray</fullName>
+                <default>false</default>
+                <label>Murray</label>
+            </value>
+            <value>
+                <fullName>Namoi</fullName>
+                <default>false</default>
+                <label>Namoi</label>
+            </value>
+            <value>
+                <fullName>Narrandera</fullName>
+                <default>false</default>
+                <label>Narrandera</label>
+            </value>
+            <value>
+                <fullName>Newcastle</fullName>
+                <default>false</default>
+                <label>Newcastle</label>
+            </value>
+            <value>
+                <fullName>Nhulumbuy</fullName>
+                <default>false</default>
+                <label>Nhulumbuy</label>
+            </value>
+            <value>
+                <fullName>Northam</fullName>
+                <default>false</default>
+                <label>Northam</label>
+            </value>
+            <value>
+                <fullName>North Eastern Melbourne</fullName>
+                <default>false</default>
+                <label>North Eastern Melbourne</label>
+            </value>
+            <value>
+                <fullName>North East Metro</fullName>
+                <default>false</default>
+                <label>North East Metro</label>
+            </value>
+            <value>
+                <fullName>Northern Suburbs</fullName>
+                <default>false</default>
+                <label>Northern Suburbs</label>
+            </value>
+            <value>
+                <fullName>Northern Tablelands</fullName>
+                <default>false</default>
+                <label>Northern Tablelands</label>
+            </value>
+            <value>
+                <fullName>North Metro Perth</fullName>
+                <default>false</default>
+                <label>North Metro Perth</label>
+            </value>
+            <value>
+                <fullName>North Sydney</fullName>
+                <default>false</default>
+                <label>North Sydney</label>
+            </value>
+            <value>
+                <fullName>North West Metro</fullName>
+                <default>false</default>
+                <label>North West Metro</label>
+            </value>
+            <value>
+                <fullName>NT Remote Support</fullName>
+                <default>false</default>
+                <label>NT Remote Support</label>
+            </value>
+            <value>
+                <fullName>Orange</fullName>
+                <default>false</default>
+                <label>Orange</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Outer Eastern Melbourne</fullName>
+                <default>false</default>
+                <label>Outer Eastern Melbourne</label>
+            </value>
+            <value>
+                <fullName>Outer Gippsland</fullName>
+                <default>false</default>
+                <label>Outer Gippsland</label>
+            </value>
+            <value>
+                <fullName>Ovens Murray</fullName>
+                <default>false</default>
+                <label>Ovens Murray</label>
+            </value>
+            <value>
+                <fullName>Parramatta</fullName>
+                <default>false</default>
+                <label>Parramatta</label>
+            </value>
+            <value>
+                <fullName>Peel</fullName>
+                <default>false</default>
+                <label>Peel</label>
+            </value>
+            <value>
+                <fullName>Penrith</fullName>
+                <default>false</default>
+                <label>Penrith</label>
+            </value>
+            <value>
+                <fullName>Pilbara Remote</fullName>
+                <default>false</default>
+                <label>Pilbara Remote</label>
+            </value>
+            <value>
+                <fullName>Pittwater</fullName>
+                <default>false</default>
+                <label>Pittwater</label>
+            </value>
+            <value>
+                <fullName>Port Hacking</fullName>
+                <default>false</default>
+                <label>Port Hacking</label>
+            </value>
+            <value>
+                <fullName>Port Hedland</fullName>
+                <default>false</default>
+                <label>Port Hedland</label>
+            </value>
+            <value>
+                <fullName>Port Jackson</fullName>
+                <default>false</default>
+                <label>Port Jackson</label>
+            </value>
+            <value>
+                <fullName>Port Stephens</fullName>
+                <default>false</default>
+                <label>Port Stephens</label>
+            </value>
+            <value>
+                <fullName>Quakers Hill</fullName>
+                <default>false</default>
+                <label>Quakers Hill</label>
+            </value>
+            <value>
+                <fullName>Queanbeyan</fullName>
+                <default>false</default>
+                <label>Queanbeyan</label>
+            </value>
+            <value>
+                <fullName>Queenstown</fullName>
+                <default>false</default>
+                <label>Queenstown</label>
+            </value>
+            <value>
+                <fullName>Richmond</fullName>
+                <default>false</default>
+                <label>Richmond</label>
+            </value>
+            <value>
+                <fullName>Riverland</fullName>
+                <default>false</default>
+                <label>Riverland</label>
+            </value>
+            <value>
+                <fullName>Rockhampton</fullName>
+                <default>false</default>
+                <label>Rockhampton</label>
+            </value>
+            <value>
+                <fullName>Roxby Downs</fullName>
+                <default>false</default>
+                <label>Roxby Downs</label>
+            </value>
+            <value>
+                <fullName>Ryde</fullName>
+                <default>false</default>
+                <label>Ryde</label>
+            </value>
+            <value>
+                <fullName>Scottsdale</fullName>
+                <default>false</default>
+                <label>Scottsdale</label>
+            </value>
+            <value>
+                <fullName>Shepparton</fullName>
+                <default>false</default>
+                <label>Shepparton</label>
+            </value>
+            <value>
+                <fullName>Shoalhaven</fullName>
+                <default>false</default>
+                <label>Shoalhaven</label>
+            </value>
+            <value>
+                <fullName>South Coast</fullName>
+                <default>false</default>
+                <label>South Coast</label>
+            </value>
+            <value>
+                <fullName>South East</fullName>
+                <default>false</default>
+                <label>South East</label>
+            </value>
+            <value>
+                <fullName>South East Metro</fullName>
+                <default>false</default>
+                <label>South East Metro</label>
+            </value>
+            <value>
+                <fullName>Southern Melbourne</fullName>
+                <default>false</default>
+                <label>Southern Melbourne</label>
+            </value>
+            <value>
+                <fullName>South Metro Perth</fullName>
+                <default>false</default>
+                <label>South Metro Perth</label>
+            </value>
+            <value>
+                <fullName>South West</fullName>
+                <default>false</default>
+                <label>South West</label>
+            </value>
+            <value>
+                <fullName>South West Metro</fullName>
+                <default>false</default>
+                <label>South West Metro</label>
+            </value>
+            <value>
+                <fullName>South West - Remote</fullName>
+                <default>false</default>
+                <label>South West - Remote</label>
+            </value>
+            <value>
+                <fullName>South West Sydney</fullName>
+                <default>false</default>
+                <label>South West Sydney</label>
+            </value>
+            <value>
+                <fullName>Spencer Gulf</fullName>
+                <default>false</default>
+                <label>Spencer Gulf</label>
+            </value>
+            <value>
+                <fullName>St Andrews</fullName>
+                <default>false</default>
+                <label>St Andrews</label>
+            </value>
+            <value>
+                <fullName>Strathbogies</fullName>
+                <default>false</default>
+                <label>Strathbogies</label>
+            </value>
+            <value>
+                <fullName>Strathfield</fullName>
+                <default>false</default>
+                <label>Strathfield</label>
+            </value>
+            <value>
+                <fullName>Sutherland</fullName>
+                <default>false</default>
+                <label>Sutherland</label>
+            </value>
+            <value>
+                <fullName>Sydney</fullName>
+                <default>false</default>
+                <label>Sydney</label>
+            </value>
+            <value>
+                <fullName>Taree</fullName>
+                <default>false</default>
+                <label>Taree</label>
+            </value>
+            <value>
+                <fullName>Temora</fullName>
+                <default>false</default>
+                <label>Temora</label>
+            </value>
+            <value>
+                <fullName>Tennant Creek</fullName>
+                <default>false</default>
+                <label>Tennant Creek</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+            <value>
+                <fullName>The Beaches</fullName>
+                <default>false</default>
+                <label>The Beaches</label>
+            </value>
+            <value>
+                <fullName>The Forest</fullName>
+                <default>false</default>
+                <label>The Forest</label>
+            </value>
+            <value>
+                <fullName>The Hills</fullName>
+                <default>false</default>
+                <label>The Hills</label>
+            </value>
+            <value>
+                <fullName>The Ponds</fullName>
+                <default>false</default>
+                <label>The Ponds</label>
+            </value>
+            <value>
+                <fullName>To be determined</fullName>
+                <default>false</default>
+                <label>To be determined</label>
+            </value>
+            <value>
+                <fullName>Top End Remote</fullName>
+                <default>false</default>
+                <label>Top End Remote</label>
+            </value>
+            <value>
+                <fullName>Tuggerah Lakes</fullName>
+                <default>false</default>
+                <label>Tuggerah Lakes</label>
+            </value>
+            <value>
+                <fullName>Tuggeranong</fullName>
+                <default>false</default>
+                <label>Tuggeranong</label>
+            </value>
+            <value>
+                <fullName>Tweed Coast</fullName>
+                <default>false</default>
+                <label>Tweed Coast</label>
+            </value>
+            <value>
+                <fullName>Upper Hunter</fullName>
+                <default>false</default>
+                <label>Upper Hunter</label>
+            </value>
+            <value>
+                <fullName>Virtual</fullName>
+                <default>false</default>
+                <label>Virtual</label>
+            </value>
+            <value>
+                <fullName>Wagga Wagga</fullName>
+                <default>false</default>
+                <label>Wagga Wagga</label>
+            </value>
+            <value>
+                <fullName>Warrnambool</fullName>
+                <default>false</default>
+                <label>Warrnambool</label>
+            </value>
+            <value>
+                <fullName>West</fullName>
+                <default>false</default>
+                <label>West</label>
+            </value>
+            <value>
+                <fullName>Western Melbourne</fullName>
+                <default>false</default>
+                <label>Western Melbourne</label>
+            </value>
+            <value>
+                <fullName>Western Network</fullName>
+                <default>false</default>
+                <label>Western Network</label>
+            </value>
+            <value>
+                <fullName>Western Plains</fullName>
+                <default>false</default>
+                <label>Western Plains</label>
+            </value>
+            <value>
+                <fullName>West Wyalong</fullName>
+                <default>false</default>
+                <label>West Wyalong</label>
+            </value>
+            <value>
+                <fullName>Wheatbelt Remote</fullName>
+                <default>false</default>
+                <label>Wheatbelt Remote</label>
+            </value>
+            <value>
+                <fullName>Whyalla</fullName>
+                <default>false</default>
+                <label>Whyalla</label>
+            </value>
+            <value>
+                <fullName>Wimmera South West</fullName>
+                <default>false</default>
+                <label>Wimmera South West</label>
+            </value>
+            <value>
+                <fullName>Windsor</fullName>
+                <default>false</default>
+                <label>Windsor</label>
+            </value>
+            <value>
+                <fullName>Wodonga</fullName>
+                <default>false</default>
+                <label>Wodonga</label>
+            </value>
+            <value>
+                <fullName>Wollondilly</fullName>
+                <default>false</default>
+                <label>Wollondilly</label>
+            </value>
+            <value>
+                <fullName>Wollongong</fullName>
+                <default>false</default>
+                <label>Wollongong</label>
+            </value>
+            <value>
+                <fullName>Wollongong North</fullName>
+                <default>false</default>
+                <label>Wollongong North</label>
+            </value>
+            <value>
+                <fullName>Wollumbin</fullName>
+                <default>false</default>
+                <label>Wollumbin</label>
+            </value>
+            <value>
+                <fullName>Woronora River</fullName>
+                <default>false</default>
+                <label>Woronora River</label>
+            </value>
+            <value>
+                <fullName>Yass</fullName>
+                <default>false</default>
+                <label>Yass</label>
+            </value>
+            <value>
+                <fullName>Yorke Peninsula</fullName>
+                <default>false</default>
+                <label>Yorke Peninsula</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Brisbane</controllingFieldValue>
+            <valueName>Brisbane</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brisbane</controllingFieldValue>
+            <controllingFieldValue>Central West QLD</controllingFieldValue>
+            <controllingFieldValue>Metro QLD</controllingFieldValue>
+            <controllingFieldValue>North QLD</controllingFieldValue>
+            <controllingFieldValue>South East QLD</controllingFieldValue>
+            <controllingFieldValue>Metropolitan North NSW</controllingFieldValue>
+            <controllingFieldValue>Canberra Goulburn</controllingFieldValue>
+            <controllingFieldValue>Metropolitan South NSW</controllingFieldValue>
+            <controllingFieldValue>Midwest WA</controllingFieldValue>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <controllingFieldValue>East Arnhem</controllingFieldValue>
+            <controllingFieldValue>Hunter</controllingFieldValue>
+            <controllingFieldValue>To be determined</controllingFieldValue>
+            <controllingFieldValue>Southern Region</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Top End</controllingFieldValue>
+            <controllingFieldValue>Kimberley</controllingFieldValue>
+            <controllingFieldValue>Pilbara</controllingFieldValue>
+            <controllingFieldValue>Wheatbelt</controllingFieldValue>
+            <controllingFieldValue>Peel</controllingFieldValue>
+            <controllingFieldValue>South West WA</controllingFieldValue>
+            <controllingFieldValue>Rural North NSW</controllingFieldValue>
+            <controllingFieldValue>Darwin</controllingFieldValue>
+            <controllingFieldValue>Big Rivers</controllingFieldValue>
+            <controllingFieldValue>Yorke and Mid North</controllingFieldValue>
+            <controllingFieldValue>Barkly</controllingFieldValue>
+            <controllingFieldValue>Central (Alice Springs)</controllingFieldValue>
+            <controllingFieldValue>ACT</controllingFieldValue>
+            <controllingFieldValue>Greater Hobart</controllingFieldValue>
+            <controllingFieldValue>North West</controllingFieldValue>
+            <controllingFieldValue>North East</controllingFieldValue>
+            <controllingFieldValue>West Coast</controllingFieldValue>
+            <controllingFieldValue>Wheatbelt Remote</controllingFieldValue>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <controllingFieldValue>North Western Victoria</controllingFieldValue>
+            <controllingFieldValue>North Eastern Victoria</controllingFieldValue>
+            <controllingFieldValue>Metropolitan South and West</controllingFieldValue>
+            <controllingFieldValue>South Eastern Victoria</controllingFieldValue>
+            <controllingFieldValue>Virtual</controllingFieldValue>
+            <controllingFieldValue>Goldfields</controllingFieldValue>
+            <controllingFieldValue>North Metropolitan WA</controllingFieldValue>
+            <controllingFieldValue>South Metropolitan WA</controllingFieldValue>
+            <controllingFieldValue>Melbourne CBD</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>To be determined</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Central West QLD</controllingFieldValue>
+            <valueName>Rockhampton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South East QLD</controllingFieldValue>
+            <valueName>Gold Coast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan North NSW</controllingFieldValue>
+            <controllingFieldValue>Metropolitan South NSW</controllingFieldValue>
+            <controllingFieldValue>Regional North NSW</controllingFieldValue>
+            <controllingFieldValue>Regional South NSW</controllingFieldValue>
+            <controllingFieldValue>Metropolitan South and West</controllingFieldValue>
+            <valueName>South West Sydney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan North NSW</controllingFieldValue>
+            <controllingFieldValue>Metropolitan South NSW</controllingFieldValue>
+            <controllingFieldValue>Regional North NSW</controllingFieldValue>
+            <controllingFieldValue>Regional South NSW</controllingFieldValue>
+            <controllingFieldValue>Metropolitan South and West</controllingFieldValue>
+            <controllingFieldValue>Sydney</controllingFieldValue>
+            <valueName>Sydney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canberra Goulburn</controllingFieldValue>
+            <valueName>Canberra Goulburn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Midwest WA</controllingFieldValue>
+            <valueName>Geraldton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Midwest WA</controllingFieldValue>
+            <valueName>Mid-West WA Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Bankstown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Bungarribee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Chipping Norton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Cowpasture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Eastern Creek</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Fairfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Glenfield</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Liverpool</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Penrith</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Port Hacking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>St Andrews</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Sutherland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Metropolitan South &amp; West NSW</controllingFieldValue>
+            <valueName>Woronora River</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>East Arnhem</controllingFieldValue>
+            <valueName>East Arnhem Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>East Arnhem</controllingFieldValue>
+            <valueName>Nhulumbuy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Southern Region</controllingFieldValue>
+            <valueName>Central/South Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Southern Region</controllingFieldValue>
+            <valueName>Eastern Shore/Peninsula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Southern Region</controllingFieldValue>
+            <valueName>Northern Suburbs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northern Region</controllingFieldValue>
+            <valueName>Central Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northern Region</controllingFieldValue>
+            <valueName>Eastern Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Northern Region</controllingFieldValue>
+            <valueName>Western Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Top End</controllingFieldValue>
+            <valueName>Darwin Palmerston &amp; Rural</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Top End</controllingFieldValue>
+            <valueName>Top End Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimberley</controllingFieldValue>
+            <valueName>Broome</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimberley</controllingFieldValue>
+            <valueName>Cocos Island</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimberley</controllingFieldValue>
+            <valueName>East Kimberley</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kimberley</controllingFieldValue>
+            <valueName>Fitzroy Crossing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eyre and Western</controllingFieldValue>
+            <controllingFieldValue>Yorke and Mid North</controllingFieldValue>
+            <valueName>Spencer Gulf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eyre and Western</controllingFieldValue>
+            <valueName>West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pilbara</controllingFieldValue>
+            <valueName>Karratha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pilbara</controllingFieldValue>
+            <valueName>Pilbara Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pilbara</controllingFieldValue>
+            <valueName>Port Hedland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wheatbelt</controllingFieldValue>
+            <valueName>Dowerin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wheatbelt</controllingFieldValue>
+            <valueName>Katanning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wheatbelt</controllingFieldValue>
+            <valueName>Lake Grace</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wheatbelt</controllingFieldValue>
+            <valueName>Merredin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wheatbelt</controllingFieldValue>
+            <valueName>Northam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wheatbelt</controllingFieldValue>
+            <valueName>Wheatbelt Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Peel</controllingFieldValue>
+            <valueName>Peel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South West WA</controllingFieldValue>
+            <valueName>Albany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South West WA</controllingFieldValue>
+            <valueName>Bunbury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South West WA</controllingFieldValue>
+            <valueName>South West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South West WA</controllingFieldValue>
+            <valueName>South West - Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional North NSW</controllingFieldValue>
+            <valueName>Hunter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional North and West NSW</controllingFieldValue>
+            <valueName>Bathurst</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regional North and West NSW</controllingFieldValue>
+            <valueName>Dubbo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rural South &amp; West NSW</controllingFieldValue>
+            <controllingFieldValue>Riverland</controllingFieldValue>
+            <valueName>Murray</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rural South &amp; West NSW</controllingFieldValue>
+            <valueName>Queanbeyan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Far North</controllingFieldValue>
+            <valueName>Far North</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Darwin</controllingFieldValue>
+            <valueName>Darwin, Palmerston &amp; Rural</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Big Rivers</controllingFieldValue>
+            <valueName>Big Rivers Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Big Rivers</controllingFieldValue>
+            <valueName>Katherine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yorke and Mid North</controllingFieldValue>
+            <controllingFieldValue>Adelaide Plains</controllingFieldValue>
+            <controllingFieldValue>Adelaide Hills and Fleurieu</controllingFieldValue>
+            <valueName>Adelaide</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Yorke and Mid North</controllingFieldValue>
+            <valueName>Yorke Peninsula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barkly</controllingFieldValue>
+            <valueName>Barkly Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Barkly</controllingFieldValue>
+            <valueName>Tennant Creek</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Central (Alice Springs)</controllingFieldValue>
+            <valueName>Alice Springs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Central (Alice Springs)</controllingFieldValue>
+            <valueName>Central Remote</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACT</controllingFieldValue>
+            <valueName>Belconnen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACT</controllingFieldValue>
+            <valueName>Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ACT</controllingFieldValue>
+            <valueName>Tuggeranong</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Greater Hobart</controllingFieldValue>
+            <valueName>Greater Hobart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South East</controllingFieldValue>
+            <valueName>South East</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North West</controllingFieldValue>
+            <valueName>Devonport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North East</controllingFieldValue>
+            <valueName>Launceston</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North East</controllingFieldValue>
+            <valueName>Scottsdale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>West Coast</controllingFieldValue>
+            <valueName>Queenstown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <valueName>Barwon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <controllingFieldValue>North Western Victoria</controllingFieldValue>
+            <valueName>Brimbank Melton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <valueName>Central Highlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <controllingFieldValue>North Western Victoria</controllingFieldValue>
+            <valueName>Hume Merri-bek</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <controllingFieldValue>North Western Victoria</controllingFieldValue>
+            <valueName>Loddon Campaspe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <controllingFieldValue>North Western Victoria</controllingFieldValue>
+            <valueName>North Eastern Melbourne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <valueName>Western Melbourne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Western Victoria</controllingFieldValue>
+            <valueName>Wimmera South West</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Western Victoria</controllingFieldValue>
+            <valueName>Mallee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Western Victoria</controllingFieldValue>
+            <controllingFieldValue>North Eastern Victoria</controllingFieldValue>
+            <valueName>Outer Eastern Melbourne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Eastern Victoria</controllingFieldValue>
+            <valueName>Goulburn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Eastern Victoria</controllingFieldValue>
+            <valueName>Inner Eastern Melbourne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Eastern Victoria</controllingFieldValue>
+            <valueName>Ovens Murray</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Eastern Victoria</controllingFieldValue>
+            <valueName>Bayside Peninsula</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Eastern Victoria</controllingFieldValue>
+            <valueName>Inner Gippsland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Eastern Victoria</controllingFieldValue>
+            <valueName>Outer Gippsland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Eastern Victoria</controllingFieldValue>
+            <valueName>Southern Melbourne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Virtual</controllingFieldValue>
+            <valueName>Virtual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Riverland</controllingFieldValue>
+            <valueName>Riverland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kangaroo Island</controllingFieldValue>
+            <valueName>Kangaroo Island</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Goldfields</controllingFieldValue>
+            <valueName>Esperance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Goldfields</controllingFieldValue>
+            <valueName>Kalgoorlie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North Metropolitan WA</controllingFieldValue>
+            <valueName>North Metro Perth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South Metropolitan WA</controllingFieldValue>
+            <valueName>South Metro Perth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Melbourne CBD</controllingFieldValue>
+            <valueName>Melbourne CBD</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
