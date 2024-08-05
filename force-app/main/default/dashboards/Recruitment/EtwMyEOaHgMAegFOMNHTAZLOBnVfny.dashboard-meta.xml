@@ -38,6 +38,21 @@
         </dashboardFilterOptions>
         <name>Created Date</name>
     </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>NEXT_N_MONTHS:3</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>NEXT_N_MONTHS:6</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>NEXT_N_MONTHS:12</values>
+        </dashboardFilterOptions>
+        <name>Close Date</name>
+    </dashboardFilters>
     <dashboardGridLayout>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
@@ -55,6 +70,9 @@
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
                     <column>CREATED_DATE</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCTDUE_DATE</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -102,6 +120,9 @@
                 <dashboardFilterColumns>
                     <column>CREATED_DATE</column>
                 </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>CLOSE_DATE</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -144,6 +165,9 @@
                 <dashboardFilterColumns>
                     <column>CREATED_DATE</column>
                 </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>START_DATE</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
@@ -170,7 +194,7 @@
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
+            <colSpan>8</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -185,6 +209,9 @@
                 </dashboardFilterColumns>
                 <dashboardFilterColumns>
                     <column>Campaign$CreatedDate</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Campaign$StartDate</column>
                 </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
@@ -222,7 +249,7 @@
     <description>Dashboard of reports showing relationship between University accounts and engagements.</description>
     <isGridLayout>true</isGridLayout>
     <owner>chris.tauro@sinapse.com.au.tfa</owner>
-    <runningUser>chris.tauro@sinapse.com.au.tfa</runningUser>
+    <runningUser>dave.richardson@teachforaustralia.org</runningUser>
     <textColor>#000000</textColor>
     <title>Engagements/Events Dashboard</title>
     <titleColor>#000000</titleColor>
