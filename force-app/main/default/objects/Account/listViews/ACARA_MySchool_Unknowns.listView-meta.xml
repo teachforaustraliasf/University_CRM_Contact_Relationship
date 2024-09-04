@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACARA_MySchool_Unknowns</fullName>
+    <columns>Sector__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>MySchool_ID__c</columns>
+    <columns>ICSEA__c</columns>
+    <columns>Year_Range__c</columns>
+    <columns>S_I_TFA_Eligibility_Type__c</columns>
+    <columns>My_Schools_Data_Last_Updated__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.LAST_UPDATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>ACARA_MySchool Unknowns</label>
+</ListView>

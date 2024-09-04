@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MySchools_checks</fullName>
+    <columns>Sector__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ICSEA__c</columns>
+    <columns>Year_Range__c</columns>
+    <columns>S_I_TFA_Eligibility_Type__c</columns>
+    <columns>Bottom_SEA_Quarter__c</columns>
+    <columns>Lower_Middle_SEA_Quarter__c</columns>
+    <columns>Top_SEA_Quarter__c</columns>
+    <columns>Upper_Middle_SEA_Quarter__c</columns>
+    <columns>My_Schools_Data_Last_Updated__c</columns>
+    <columns>Enrolment_change_from_previous_year__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>Sector__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>My_Schools_Data_Last_Updated__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>8/19/2020</value>
+    </filters>
+    <label>ACARA_SF School Update</label>
+</ListView>
