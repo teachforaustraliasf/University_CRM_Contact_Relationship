@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>University Opportunity Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;Update to this stage while delivering your scheduled activities, such as lecture pitches, society group pitches, and workshops. Ensure a smooth execution by double-checking all arrangements and actively engaging with the audience.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Engagement Delivery</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;After an engagement, promptly follow up with thank-you emails and additional resources. Collect feedback from participants to gauge the success of the event and maintain ongoing communication to nurture interest and address any further queries.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Follow-up</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;Mark this stage when you reach out to university contacts and/or student society leaders. Craft personalized emails or messages introducing TFA’s mission and outline potential collaboration opportunities.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Initial Contact</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;Select this stage for engagements that do not proceed, either due to lack of interest or cancellations. Document the reasons and any feedback received to understand potential barriers and identify opportunities for improvement in future approaches.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;These help tips provide clear guidance for each stage, ensuring recruitment team members can effectively manage and update their engagement activities.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Not Interested / Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;Use this stage to analyse the outcomes of your engagements. Assess the effectiveness of each activity, gather data on lead/application conversions, and collect feedback from both participants and internal teams. Utilize this information to refine future engagement strategies and improve engagement quality.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Post-Engagement Evaluation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;Use this stage to identify target universities, student societies, and key contacts. Gather detailed information about their upcoming events, interests, and past engagement with similar organizations. Leverage university websites, LinkedIn, and other social media platforms to build a comprehensive profile.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Prospecting and Research</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;Focus on building a rapport with key contacts during this stage. Engage in meaningful conversations, attend relevant events, and offer/share valuable resources like case studies, former Alumni stories etc. We’re trying to identify champions within the university or society who will advocate for TFA.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Relationship Building</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif;&quot;&gt;Once interest is established, move to this stage to arrange specific dates and times for lecture pitches, workshops, society club attendance and other engagements. Confirm logistical details and involve the events team as necessary. Ensure all necessary materials and resources are prepared during this stage so you have them in advance.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Scheduling Engagements</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>University</recordTypeName>
+</PathAssistant>

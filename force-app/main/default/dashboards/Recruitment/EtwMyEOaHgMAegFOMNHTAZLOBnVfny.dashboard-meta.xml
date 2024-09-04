@@ -7,6 +7,52 @@
     <colorPalette>unity</colorPalette>
     <dashboardChartTheme>light</dashboardChartTheme>
     <dashboardColorPalette>unity</dashboardColorPalette>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Test University 1</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Test University 2</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Test University 3</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Monash University</values>
+        </dashboardFilterOptions>
+        <name>Account Name</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>LAST_WEEK</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>between</operator>
+            <values>N_DAYS_AGO:14</values>
+            <values>N_DAYS_AGO:7</values>
+        </dashboardFilterOptions>
+        <name>Created Date</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>NEXT_N_MONTHS:3</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>NEXT_N_MONTHS:6</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>NEXT_N_MONTHS:12</values>
+        </dashboardFilterOptions>
+        <name>Close Date</name>
+    </dashboardFilters>
     <dashboardGridLayout>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
@@ -18,26 +64,39 @@
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
                 </chartSummary>
-                <componentType>Bar</componentType>
+                <componentType>BarStacked</componentType>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT.NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>CREATED_DATE</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>ACCTDUE_DATE</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>CREATED_DATE</groupingColumn>
+                <groupingColumn>ASSIGNED</groupingColumn>
+                <groupingColumn>ACCOUNT.NAME</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
+                    <groupingSorts>
+                        <groupingLevel>g2</groupingLevel>
+                        <sortOrder>a</sortOrder>
+                    </groupingSorts>
                 </groupingSortProperties>
-                <header>Cold Leads</header>
+                <header>Team Member Interactions with Universities</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>LeadStatusReports/Cold_Leads_1hj</report>
+                <report>Recruitment/Report_of_Interactions_with_Universities_Flo</report>
                 <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
-                <showValues>true</showValues>
+                <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
@@ -55,22 +114,31 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>ACCOUNT_NAME</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>CREATED_DATE</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>CLOSE_DATE</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Lead.Last_Activity_Date_Range__c</groupingColumn>
+                <groupingColumn>ACCOUNT_NAME</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Cold - Attempted Contact Report</header>
+                <header>Opportunities Related to Universities</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>LeadStatusReports/Cold_Attempted_Contact_Report_ZPI</report>
+                <report>Recruitment/Opportunities_Related_to_Universities_BFd</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -90,24 +158,34 @@
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
                 </chartSummary>
-                <componentType>Column</componentType>
+                <componentType>Bar</componentType>
+                <dashboardFilterColumns>
+                    <column>Campaign.Organization__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>CREATED_DATE</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>START_DATE</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>LAST_ACTIVITY</groupingColumn>
+                <groupingColumn>Campaign.Organization__c</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Registered Event Attendance Leads Report</header>
+                <header>Campaigns Related to Universities</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>LeadStatusReports/Registered_Event_Attendance_Leads_Report_SSl</report>
+                <report>Recruitment/Campaigns_related_to_Universities_P32</report>
                 <showPercentage>false</showPercentage>
+                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
@@ -116,7 +194,7 @@
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>4</colSpan>
+            <colSpan>8</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
@@ -125,61 +203,38 @@
                     <axisBinding>y</axisBinding>
                     <column>RowCount</column>
                 </chartSummary>
-                <componentType>Bar</componentType>
+                <componentType>BarGrouped</componentType>
+                <dashboardFilterColumns>
+                    <column>Campaign$Organization__c</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Campaign$CreatedDate</column>
+                </dashboardFilterColumns>
+                <dashboardFilterColumns>
+                    <column>Campaign$StartDate</column>
+                </dashboardFilterColumns>
                 <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
-                <groupingColumn>Lead.Last_Activity_Date_Range__c</groupingColumn>
+                <groupingColumn>Campaign$Organization__c</groupingColumn>
+                <groupingColumn>Campaign$Name</groupingColumn>
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
-                </groupingSortProperties>
-                <header>In Contact - 1:1 Lead Report</header>
-                <legendPosition>Bottom</legendPosition>
-                <report>LeadStatusReports/In_Contact_11_Lead_Report_MDo</report>
-                <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
-                <showValues>true</showValues>
-                <sortBy>RowLabelAscending</sortBy>
-                <useReportChart>false</useReportChart>
-            </dashboardComponent>
-            <rowIndex>8</rowIndex>
-            <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
-            <colSpan>4</colSpan>
-            <columnIndex>4</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartAxisRange>Auto</chartAxisRange>
-                <chartSummary>
-                    <axisBinding>y</axisBinding>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>Bar</componentType>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <drillEnabled>false</drillEnabled>
-                <drillToDetailEnabled>false</drillToDetailEnabled>
-                <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingColumn>Lead$Last_Activity_Date_Range__c</groupingColumn>
-                <groupingSortProperties>
                     <groupingSorts>
-                        <groupingLevel>g1</groupingLevel>
+                        <groupingLevel>g2</groupingLevel>
                         <sortOrder>a</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
-                <header>Ready to Apply Leads - Not Started App</header>
-                <legendPosition>Bottom</legendPosition>
-                <report>LeadStatusReports/Ready_to_Apply_Leads_Not_Started_App_pyM</report>
+                <header>Leads Related to University Campaigns</header>
+                <legendPosition>Right</legendPosition>
+                <report>Recruitment/Leads_Related_to_University_Campaigns_zvc</report>
                 <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
@@ -191,11 +246,12 @@
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
+    <description>Dashboard of reports showing relationship between University accounts and engagements.</description>
     <isGridLayout>true</isGridLayout>
     <owner>chris.tauro@sinapse.com.au.tfa</owner>
     <runningUser>dave.richardson@teachforaustralia.org</runningUser>
     <textColor>#000000</textColor>
-    <title>Lead Status Dashboard</title>
+    <title>Engagements/Events Dashboard</title>
     <titleColor>#000000</titleColor>
     <titleSize>12</titleSize>
 </Dashboard>

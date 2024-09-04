@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Schools_updated_today</fullName>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Sector__c</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <columns>MySchool_ID__c</columns>
+    <columns>ICSEA__c</columns>
+    <columns>S_I_TFA_Eligibility_Type__c</columns>
+    <columns>Level_of_Participation__c</columns>
+    <columns>Level_Of_Engagement__c</columns>
+    <columns>My_Schools_Data_Last_Updated__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>Level_of_Participation__c</field>
+        <operation>equals</operation>
+        <value>Has never participated</value>
+    </filters>
+    <filters>
+        <field>S_I_TFA_Eligibility_Type__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All Schools Created June 2019</label>
+</ListView>

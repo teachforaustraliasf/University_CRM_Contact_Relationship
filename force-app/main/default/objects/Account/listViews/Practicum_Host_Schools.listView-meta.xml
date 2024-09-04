@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Practicum_Host_Schools</fullName>
+    <columns>Sector__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>LDP_School_Practicum_Host__c</columns>
+    <columns>Distance_km_to_CBD__c</columns>
+    <columns>Level_Of_Engagement__c</columns>
+    <columns>Level_of_Participation__c</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <columns>Region__c</columns>
+    <columns>Account_Owner_Full_Name__c</columns>
+    <columns>npe01__One2OneContact__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>LDP_School_Practicum_Host__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Practicum Host Schools</label>
+    <sharedTo>
+        <role>Teaching_Leadership_Director</role>
+    </sharedTo>
+</ListView>

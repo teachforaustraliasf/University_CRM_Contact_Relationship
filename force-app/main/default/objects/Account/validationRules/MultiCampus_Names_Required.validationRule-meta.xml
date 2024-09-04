@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MultiCampus_Names_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Campus_Names__c )  &amp;&amp;  NOT(ISNULL(Multi_Campus_School__c ))</errorConditionFormula>
+    <errorDisplayField>Campus_Names__c</errorDisplayField>
+    <errorMessage>Please list Campus names.</errorMessage>
+</ValidationRule>

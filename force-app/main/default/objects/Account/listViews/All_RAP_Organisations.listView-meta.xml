@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_RAP_Organisations</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner_Full_Name__c</columns>
+    <columns>Account_Relationship_Owner__c</columns>
+    <columns>Reconciliation_Priority_Organisation__c</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Reconciliation_Priority_Organisation__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>All Reconciliation Priority Orgs</label>
+</ListView>

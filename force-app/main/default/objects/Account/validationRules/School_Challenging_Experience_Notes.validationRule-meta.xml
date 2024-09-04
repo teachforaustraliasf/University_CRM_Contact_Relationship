@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Challenging_Experience_Notes</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(Challenging_experience_notes__c)  &amp;&amp; School_experiencing_challenges__c = True</errorConditionFormula>
+    <errorDisplayField>Challenging_experience_notes__c</errorDisplayField>
+    <errorMessage>Please add notes about the current challenging experience. **This field is only visible to PROPS LT &amp; State Managers</errorMessage>
+</ValidationRule>

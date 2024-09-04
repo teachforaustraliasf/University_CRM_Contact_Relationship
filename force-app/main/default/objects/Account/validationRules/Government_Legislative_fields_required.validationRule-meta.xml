@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Government_Legislative_fields_required</fullName>
+    <active>false</active>
+    <errorConditionFormula>RecordType.Id = &apos;012C00000007pTl&apos; &amp;&amp; ISPICKVAL(Type, &apos;Legislative&apos;) &amp;&amp; 
+(
+ISBLANK(TEXT(Status__c))
+ || 
+ISBLANK(TEXT(Legislative_Chamber__c))
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>For Legislative records, you must enter the &apos;Legislative Status&apos; and &apos;Legislative Chamber&apos;.</errorMessage>
+</ValidationRule>

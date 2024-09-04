@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enter_Disengaged_Notes</fullName>
+    <active>true</active>
+    <description>When an Org moves to purposefully Disengaged, enter notes. (Gov and Dev record types)</description>
+    <errorConditionFormula>((RecordType.DeveloperName = &apos;Development&apos; || RecordType.DeveloperName = &apos;Government&apos; || RecordType.DeveloperName = &apos;Other Organisations&apos;)
+&amp;&amp;  ISPICKVAL(Engagement_Status__c , &apos;Purposefully Disengaged&apos;) &amp;&amp;  ISBLANK( Engagement_Notes__c ) )</errorConditionFormula>
+    <errorDisplayField>Engagement_Notes__c</errorDisplayField>
+    <errorMessage>You must enter notes when moved to Purposefully Disengaged.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACT_Schools_engagement_participation</fullName>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner_Full_Name__c</columns>
+    <columns>Level_Of_Engagement__c</columns>
+    <columns>Level_of_Participation__c</columns>
+    <columns>LDP_School__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>Sector__c</field>
+        <operation>equals</operation>
+        <value>Sec. School Catholic,Sec. School Independent,Sec. School Government</value>
+    </filters>
+    <filters>
+        <field>State_dependant_picklist__c</field>
+        <operation>equals</operation>
+        <value>ACT</value>
+    </filters>
+    <label>ACT Schools (engagement &amp; participation)</label>
+    <sharedTo>
+        <group>LDP_State_Managers</group>
+    </sharedTo>
+</ListView>

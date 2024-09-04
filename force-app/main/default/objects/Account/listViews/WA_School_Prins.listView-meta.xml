@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WA_School_Prins</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <columns>Current_Business_Manager__c</columns>
+    <columns>Current_Principal__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>State_dependant_picklist__c</field>
+        <operation>equals</operation>
+        <value>WA</value>
+    </filters>
+    <label>WA School Prins</label>
+</ListView>
