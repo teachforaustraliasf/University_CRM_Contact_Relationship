@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schools_Created_Today</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <columns>Sector__c</columns>
+    <columns>Location__c</columns>
+    <columns>MySchool_ID__c</columns>
+    <columns>ICSEA__c</columns>
+    <columns>Year_Range__c</columns>
+    <columns>S_I_TFA_Eligibility_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.LAST_UPDATE</field>
+        <operation>equals</operation>
+        <value>10/1/2020 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>State_dependant_picklist__c</field>
+        <operation>equals</operation>
+        <value>SA</value>
+    </filters>
+    <label>Schools SA Updated 1st Oct 2020</label>
+</ListView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_PACA_score_for_Development_records</fullName>
+    <active>true</active>
+    <description>Check the PACA score for a Development Organisation when the Engagement Status is changed to &apos;Communicate&apos;</description>
+    <errorConditionFormula>RecordType.DeveloperName = &apos;Development&apos; &amp;&amp; 
+
+((((NOT(ISPICKVAL(Access__c, &apos;3 - TFA has a first degree active CEO or Managing Director-level contact (or former contact) with the prospect&apos;))  &amp;&amp; 
+NOT(ISPICKVAL(Access__c, &apos;2 - TFA has a ‘warm’ connection to key staff or representatives of the prospect; or has a good introduction opportunity available with the prospect&apos;)) &amp;&amp; 
+NOT(ISPICKVAL(Access__c, &apos;1 - TFA has no existing relationship with key staff or representatives of the prospect; but has a ‘cold’ introduction opportunity with other available contact details with the prospect&apos;)) &amp;&amp;  
+NOT(ISPICKVAL(Access__c, &apos;0 - There are no available contact details for key staff or representatives of the prospect; and no relationship connections that can be explored&apos;)))  ||
+
+(NOT(ISPICKVAL(Capacity__c, &apos;3 - Prospect has estimated funding capacity of $250k+&apos;))  &amp;&amp; 
+NOT(ISPICKVAL(Capacity__c, &apos;2 - Prospect has estimated funding capacity of between $100k - $250k&apos;)) &amp;&amp; 
+NOT(ISPICKVAL(Capacity__c, &apos;1 - Prospect has estimated funding capacity of between $20k - $100k&apos;)) &amp;&amp;  
+NOT(ISPICKVAL(Capacity__c, &apos;0 - Prospect has estimated funding capacity of less than $20k&apos;)))  ||
+
+(NOT(ISPICKVAL(Affinity__c, &apos;3 - Prospect’s giving strategy and areas of focus include all of education, youth, social justice/welfare&apos;))  &amp;&amp; 
+NOT(ISPICKVAL(Affinity__c, &apos;2 - Prospect’s giving strategy and focus includes two of education, youth, social justice/welfare&apos;)) &amp;&amp; 
+NOT(ISPICKVAL(Affinity__c, &apos;1 - Prospect’s giving strategy and focus includes one of education, youth, social justice/welfare&apos;)) &amp;&amp;  
+NOT(ISPICKVAL(Affinity__c, &apos;0 - Prospect does not currently give to education, youth or social justice/welfare or TFA clearly fails to meet current eligibility criteria&apos;)))  ||  
+
+(NOT(ISPICKVAL(Propensity__c, &apos;3 - Prospect has established or dedicated grantmaking resource; a clear giving strategy; and history of generous giving&apos;))  &amp;&amp; 
+NOT(ISPICKVAL(Propensity__c, &apos;2 - Prospect has limited or developing grantmaking resources; a limited or developing giving strategy; some history of giving&apos;)) &amp;&amp; 
+NOT(ISPICKVAL(Propensity__c, &apos;1 - Prospect has minimal grantmaking resources; an incomplete or unclear giving strategy; and a limited history of giving&apos;)) &amp;&amp;  
+NOT(ISPICKVAL(Propensity__c, &apos;0 - Prospect has no known resources, giving strategy or history of giving&apos;)))))) &amp;&amp; 
+
+(ISPICKVAL(Engagement_Status__c , &apos;Communicate&apos;)  || 
+ISPICKVAL(Engagement_Status__c , &apos;Engage&apos;)  || 
+ISPICKVAL(Engagement_Status__c , &apos;Commit&apos;))</errorConditionFormula>
+    <errorMessage>You must complete PACA rubrics before moving to status to Communicate, Engage or Commit.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_LDP_Partner_Schools</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Sector__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Level_of_Participation__c</field>
+        <operation>equals</operation>
+        <value>Participating - Current</value>
+    </filters>
+    <filters>
+        <field>State_dependant_picklist__c</field>
+        <operation>equals</operation>
+        <value>ACT,NSW,NT,QLD,SA,TAS,VIC,WA</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <label>Current LDP Partner Schools</label>
+</ListView>
