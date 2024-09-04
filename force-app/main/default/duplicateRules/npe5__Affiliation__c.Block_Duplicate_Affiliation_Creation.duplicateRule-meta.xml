@@ -4,7 +4,16 @@
     <actionOnUpdate>Block</actionOnUpdate>
     <alertText>Duplicate Affiliation is not allowed</alertText>
     <description>Block Duplicate Affiliation Creation</description>
-    <duplicateRuleFilter xsi:nil="true"/>
+    <duplicateRuleFilter>
+        <booleanFilter xsi:nil="true"/>
+        <duplicateRuleFilterItems>
+            <field>npe5__Status__c</field>
+            <operation>notEqual</operation>
+            <value>Former</value>
+            <sortOrder>1</sortOrder>
+            <table>npe5__Affiliation__c</table>
+        </duplicateRuleFilterItems>
+    </duplicateRuleFilter>
     <duplicateRuleMatchRules>
         <matchRuleSObjectType>npe5__Affiliation__c</matchRuleSObjectType>
         <matchingRule>Block_Duplicate_Affiliation_Creation_matching_rule</matchingRule>
