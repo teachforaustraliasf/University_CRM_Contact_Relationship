@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Federal_Electorate_required_for_schools</fullName>
+    <active>true</active>
+    <description>Federal Electorate is Mandatory for all Currently Participating Schools.</description>
+    <errorConditionFormula>OR ( 
+ISPICKVAL(Level_of_Participation__c, &apos;Participating - Current&apos;), 
+ISPICKVAL( TTL_Level_of_Participation__c , &apos;Participating - Current&apos;)) 
+&amp;&amp; 
+ISBLANK( TEXT( Federal_Electorate__c)) 
+&amp;&amp; 
+RecordType.DeveloperName = &quot;School&quot;</errorConditionFormula>
+    <errorMessage>Federal Electorate is Mandatory for all Currently Participating Schools</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NT_LDP_Currently_Participating_Schools</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Cluster__c</columns>
+    <columns>Region__c</columns>
+    <columns>Location__c</columns>
+    <columns>Distance_km_to_CBD__c</columns>
+    <columns>Level_Of_Engagement__c</columns>
+    <columns>School_Pract_Host__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LDP_School__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Level_of_Participation__c</field>
+        <operation>equals</operation>
+        <value>Participating - Current</value>
+    </filters>
+    <filters>
+        <field>State_dependant_picklist__c</field>
+        <operation>equals</operation>
+        <value>NT</value>
+    </filters>
+    <label>NT LDP Currently Participating Schools</label>
+</ListView>

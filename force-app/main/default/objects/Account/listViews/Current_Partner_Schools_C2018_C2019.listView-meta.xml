@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Partner_Schools_C2018_C2019</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Level_Of_Engagement__c</columns>
+    <columns>Level_of_Participation__c</columns>
+    <columns>npe01__One2OneContact__c</columns>
+    <columns>Region__c</columns>
+    <columns>Sector__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>Level_of_Participation__c</field>
+        <operation>equals</operation>
+        <value>Participating - Current</value>
+    </filters>
+    <label>Current Partner Schools C2018+C2019</label>
+</ListView>

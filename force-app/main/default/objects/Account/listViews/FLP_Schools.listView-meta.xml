@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FLP_Schools</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>FLP_Level_of_Engagement__c</columns>
+    <columns>FLP_Level_of_Participation__c</columns>
+    <columns>FLP_School__c</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.School</value>
+    </filters>
+    <filters>
+        <field>FLP_School__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>FLP Schools</label>
+</ListView>
