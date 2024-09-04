@@ -59,9 +59,6 @@
         <label>Check New</label>
         <locationX>182</locationX>
         <locationY>1055</locationY>
-        <defaultConnector>
-            <targetReference>When_Affiliation_has_No_End_Date</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>Old</defaultConnectorLabel>
         <rules>
             <name>New</name>
@@ -102,9 +99,6 @@
                     <numberValue>0.0</numberValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>When_Affiliation_has_No_End_Date</targetReference>
-            </connector>
             <label>Existing Affilliation Count : 0</label>
         </rules>
         <rules>
@@ -112,9 +106,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>ExistingAffilliationRecordCount</leftValueReference>
-                <operator>GreaterThan</operator>
+                <operator>GreaterThanOrEqualTo</operator>
                 <rightValue>
-                    <numberValue>0.0</numberValue>
+                    <numberValue>1.0</numberValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -132,36 +126,7 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>When_Affiliation_has_No_End_Date</targetReference>
-            </connector>
             <label>Updating Existing Affilliation Record</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <description>When Affiliation has No End Date</description>
-        <name>When_Affiliation_has_No_End_Date</name>
-        <label>When Affiliation has No End Date</label>
-        <locationX>270</locationX>
-        <locationY>1439</locationY>
-        <defaultConnector>
-            <targetReference>Set_Status_as_Former</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>When Affiliation has End Date</defaultConnectorLabel>
-        <rules>
-            <name>When_Affiliation_has_No_End_Date_Outcome</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.npe5__EndDate__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Set_Status_as_Current</targetReference>
-            </connector>
-            <label>When Affiliation has No End Date Outcome</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -173,7 +138,7 @@
     <formulas>
         <name>TodaysDate</name>
         <dataType>Date</dataType>
-        <expression>TODAY()</expression>
+        <expression>{!$Record.npe5__StartDate__c} - 1</expression>
     </formulas>
     <interviewLabel>Affiliation - Update Status When {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Affiliation - Update Status Based On End Date</label>
@@ -241,38 +206,21 @@
                 <stringValue>Current</stringValue>
             </value>
         </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
         <object>npe5__Affiliation__c</object>
         <outputReference>ExistingAffilliatedRecords</outputReference>
         <queriedFields>Id</queriedFields>
         <queriedFields>npe5__EndDate__c</queriedFields>
         <queriedFields>npe5__Status__c</queriedFields>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Asc</sortOrder>
     </recordLookups>
-    <recordUpdates>
-        <name>Set_Status_as_Current</name>
-        <label>Set Status as Current</label>
-        <locationX>138</locationX>
-        <locationY>1547</locationY>
-        <inputAssignments>
-            <field>npe5__Status__c</field>
-            <value>
-                <stringValue>Current</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Set_Status_as_Former</name>
-        <label>Set Status as Former</label>
-        <locationX>402</locationX>
-        <locationY>1547</locationY>
-        <inputAssignments>
-            <field>npe5__Status__c</field>
-            <value>
-                <stringValue>Former</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
     <recordUpdates>
         <name>Update_Existing_Affilliation_Record</name>
         <label>Update Existing Affilliation Record</label>
@@ -288,9 +236,6 @@
         <label>Update Newly Created Affilliation Record</label>
         <locationX>50</locationX>
         <locationY>1163</locationY>
-        <connector>
-            <targetReference>When_Affiliation_has_No_End_Date</targetReference>
-        </connector>
         <inputAssignments>
             <field>npe5__EndDate__c</field>
         </inputAssignments>
@@ -308,6 +253,7 @@
         <connector>
             <targetReference>Get_Existing_Affilliation</targetReference>
         </connector>
+        <filterFormula>ISNEW()</filterFormula>
         <object>npe5__Affiliation__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
