@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Open</fullName>
+        <default>false</default>
+        <label>Open</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Subscriber</fullName>
+        <default>false</default>
+        <label>Subscriber</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Cold</fullName>
+        <default>true</default>
+        <label>Cold</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Cold - Attempted Contact</fullName>
+        <default>false</default>
+        <label>Cold - Attempted Contact</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Event</fullName>
+        <default>false</default>
+        <label>Registered Event Attendance</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>In Contact</fullName>
+        <default>false</default>
+        <label>In Contact - 1:1</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Call Booked</fullName>
+        <default>false</default>
+        <label>Call Booked</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>In Contact - Ready to Apply</fullName>
+        <default>false</default>
+        <label>In Contact - Ready to Apply</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Cold - Headhunting Opportunity</fullName>
+        <default>false</default>
+        <label>Cold - Headhunting Opportunity</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Future Cohort</fullName>
+        <default>false</default>
+        <label>Future Cohort</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>No Prospect</fullName>
+        <default>false</default>
+        <label>No Prospect</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Not in a Placed Jurisdiction</fullName>
+        <default>false</default>
+        <label>Not in a Placed Jurisdiction</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Duplicate Record</fullName>
+        <default>false</default>
+        <label>Duplicate Record</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Qualified</fullName>
+        <default>false</default>
+        <label>Application Opened</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>No not Contact</fullName>
+        <default>false</default>
+        <label>Do not Contact</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Non - Responsive</fullName>
+        <default>false</default>
+        <label>Non - Responsive</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Eligible</fullName>
+        <default>false</default>
+        <label>Not Eligible</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <label>Not Interested</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Disqualified - Test Lead</fullName>
+        <default>false</default>
+        <label>Disqualified - Test Lead</label>
+        <converted>false</converted>
+    </standardValue>
+</StandardValueSet>

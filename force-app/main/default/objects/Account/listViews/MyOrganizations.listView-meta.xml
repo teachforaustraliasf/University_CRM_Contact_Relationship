@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyOrganizations</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Sector__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Engagement_Status__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>ACCOUNT.URL</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Other_Organisations,Account.Service_Provider</value>
+    </filters>
+    <label>My Organisations</label>
+</ListView>

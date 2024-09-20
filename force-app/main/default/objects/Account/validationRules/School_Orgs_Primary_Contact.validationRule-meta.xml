@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_Orgs_Primary_Contact</fullName>
+    <active>true</active>
+    <description>Primary Contact is mandatory for Partner Schools - LDP.</description>
+    <errorConditionFormula>RecordType.Id = &apos;012C0000000UHyf&apos; 
+&amp;&amp; 
+ISPICKVAL(Level_of_Participation__c, &apos;Participating - Current&apos;) 
+&amp;&amp; 
+(ISBLANK(npe01__One2OneContact__c))</errorConditionFormula>
+    <errorDisplayField>npe01__One2OneContact__c</errorDisplayField>
+    <errorMessage>For currently participating LDP Partner Schools, you must select a Primary Contact.</errorMessage>
+</ValidationRule>

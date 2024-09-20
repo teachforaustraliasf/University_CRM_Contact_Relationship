@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Other_Organisations_for_data_cleanse</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>State_dependant_picklist__c</columns>
+    <columns>Sector__c</columns>
+    <columns>Engagement_Status__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Account_Owner_Full_Name__c</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>Data_Cleanse_tag__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Other_Organisations</value>
+    </filters>
+    <filters>
+        <field>Data_Cleanse_tag__c</field>
+        <operation>notEqual</operation>
+        <value>Other non-GRAND to review,Archive</value>
+    </filters>
+    <label>All Other Organisations for data cleanse</label>
+    <sharedTo>
+        <role>CEO</role>
+    </sharedTo>
+</ListView>

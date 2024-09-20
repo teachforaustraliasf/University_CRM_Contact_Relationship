@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$Name</field>
+    </columns>
+    <columns>
+        <field>Lead$Status</field>
+    </columns>
+    <columns>
+        <field>Lead$State_Territory__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Status_Category__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Lead$Re_engagement_Lead__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Date_Stamp_In_Contact_Ready_to_Apply__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Expected_Application_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Lead$Last_Activity_Date__c</field>
+    </columns>
+    <description>Report of Leads that have been &apos;In Contact - Ready to Apply&apos; for more than 5 business days without opening an Application.</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead$Date_Stamp_In_Contact_Ready_to_Apply__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>N_DAYS_AGO:7</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>In Contact - Ready to Apply</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead$Last_Activity_Date_Range__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Ready to Apply Leads - Not Started App</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Leads_with_or_without_Applications__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Lead$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

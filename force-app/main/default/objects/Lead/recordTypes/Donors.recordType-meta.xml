@@ -1,0 +1,2376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donors</fullName>
+    <active>true</active>
+    <businessProcess>Leads</businessProcess>
+    <label>Donors</label>
+    <picklistValues>
+        <picklist>Aboriginal_andor_Torres_Strait_Islander__c</picklist>
+        <values>
+            <fullName>Aboriginal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aboriginal and Torres Strait Islander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prefer not to say</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Torres Strait Islander</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Address_Type__c</picklist>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Agreed_to_Privacy_and_Terms__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>App_Latest_Communication_Re_Engaged__c</picklist>
+        <values>
+            <fullName>Arctic Shores Reminder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Offer response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral Rejected response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral Request response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred Offer Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to Program - Waitlisted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to Program - communicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to Program - with call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to Program - without call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to SD Reminder 15 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to SD reminder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to Selection Day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to Selection Day After VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to VI Reminder 15 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to VI reminder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invite to Virtual Interview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Pack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reject after OA Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reject after Selection Day - with call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reject after Selection Day - without call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reject after Virtual Interview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Selection Day Follow up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Selection Day Preparation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsubmitted App Reminder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Welcome Letter Email from CEO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Application_Stage_Re_Engaged__c</picklist>
+        <values>
+            <fullName>Application Ineligible</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Opened</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Application Unsubmitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ApplicationUnsubmitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferral Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred after placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified - Test Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invited to II without placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Placement found during NII</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response - Offer for program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response - SD Invitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Response - VI Invitation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show - SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show - VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA - Completed Waiting on TA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA - Reject</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OA - Waiting on 2nd Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer Rescinded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement - Tentative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement - Unplaced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected after OA - Communicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected after SD - Communicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected after VI - Communicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - Follow up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - Invitation made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - Offer for Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD - Reject</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SD Offer for Program - Waitlisted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TA - Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TA - Eligible Invite to VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TA - Waiting on 2nd Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporarily removed from placement pool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VI - Booked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VI - Invitation made</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VI - Progress to SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VI - Reject</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VI - Waiting for 2nd Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn after placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn prior to Assessment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn prior to Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn prior to SD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn prior to VI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn prior to placement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Are_you_a_citizen_or_permanent_resident__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campus_Amb_introduction__c</picklist>
+        <values>
+            <fullName>Bernadette Young</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holly Ransom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lexi L%27Estrange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lizzie Angove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nick Coxon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rose Khalilizadeh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sarah Griffin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Mylonas</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Career_Important_Factor_1__c</picklist>
+        <values>
+            <fullName>Content of the work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Culture of the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employer is a well-known organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location of the job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity to %22give something back%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overall reputation of the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prestige of the role or profession</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of staff already working for the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of training and development program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starting salary and other benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work-life balance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Career_Important_Factor_2__c</picklist>
+        <values>
+            <fullName>Content of the work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Culture of the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employer is a well-known organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location of the job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity to %22give something back%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overall reputation of the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prestige of the role or profession</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of staff already working for the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of training and development program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starting salary and other benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work-life balance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Career_Important_Factor_3__c</picklist>
+        <values>
+            <fullName>Content of the work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Culture of the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employer is a well-known organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location of the job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity to %22give something back%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overall reputation of the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prestige of the role or profession</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of staff already working for the organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality of training and development program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starting salary and other benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work-life balance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Constituent_Type__c</picklist>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foundation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HNWI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Degree_Specialisation__c</picklist>
+        <values>
+            <fullName>Arts %2F Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanities %2F Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages %2F TESOL %2F Linguistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEM - Chemistry %2F Biology %2F Environmental Science %2F Earth Science %2F IT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEM - Engineering %2F Maths %2F Physics</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Degree_Type__c</picklist>
+        <values>
+            <fullName>Bachelors degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bachelors degree with Honours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Masters degree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PhD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post-graduate Diploma</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_type__c</picklist>
+        <values>
+            <fullName>Corporate Gift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foundations %26 philanthropies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HNW gift%2FBequest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-kind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workplace Giving</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Enquiry_type__c</picklist>
+        <values>
+            <fullName>Application enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOI form - Pass it On</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOI form - Your Time Starts Now</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mailing List signup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teach to Lead</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Expected_Future_Cohort_Year__c</picklist>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2026</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2027</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2028</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2029</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2030</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2031</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2032</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2033</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FLP_Hear_about_us__c</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Future Leaders Program Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other%3A Please specify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommended by Future Leaders Program alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommended by a friend or colleague</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search Engine %28Google%2C Safari%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teach for Australia Alumni Bulletin</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FLP_Lead_Type__c</picklist>
+        <values>
+            <fullName>Prospective Applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospective Program Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Field_of_Study_2__c</picklist>
+        <values>
+            <fullName>Architecture%2C Design and Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Art and Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business%2FEconomics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanities and Social Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT and Computer Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicine%2C Nursing and Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Field_of_study__c</picklist>
+        <values>
+            <fullName>Architecture%2C Design and Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Art and Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business%2FEconomics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanities and Social Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT and Computer Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicine%2C Nursing and Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Future_Engagement__c</picklist>
+        <values>
+            <fullName>Awaiting PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD Placement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Graduation_Year_New__c</picklist>
+        <values>
+            <fullName>1960</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1961</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1962</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1963</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1964</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1965</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1966</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1967</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1968</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1969</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1970</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1971</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1972</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1973</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1974</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1975</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1976</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1977</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1978</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1979</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1980</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1981</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1982</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1983</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1984</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1985</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1986</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1987</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1988</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1989</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1990</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1991</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1992</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1993</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1994</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1995</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1996</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1997</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1998</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2002</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2003</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2004</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2005</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2006</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2007</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2008</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2009</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2010</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2011</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2012</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2013</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2014</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Have_you_already_graduated__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_did_you_hear_about_Teach_to_Lead__c</picklist>
+        <values>
+            <fullName>Email newsletter</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of Mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_you_would_best_describe_your_current__c</picklist>
+        <values>
+            <fullName>I completed university 1-5 years ago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I completed university more than 5 years ago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I will be completing university this year%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I will not finish university before the end of this year%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>I_am_also_interested_in__c</picklist>
+        <values>
+            <fullName>Career Opportunities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership Development Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News for Schools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Programs for qualified teachers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supporting Teach For Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teach To Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ways to support us</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interested_In__c</picklist>
+        <values>
+            <fullName>A school%27s contribution to the program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More information on the program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Participating in the next cohort</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>General Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate Employment Guides</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rokt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFA Recruitment Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University careers service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of Mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Nurture_Type__c</picklist>
+        <values>
+            <fullName>Lead Nurture Handbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Nurture Meta Instant Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Pipeline_Category__c</picklist>
+        <values>
+            <fullName>Early Talent Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eligible Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To Investigate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Source_Specific__c</picklist>
+        <values>
+            <fullName>Another TFA Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brochure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campus Brand Ambassador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Hub%2Femail%2Fjob ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Careers Fair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethical Jobs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government websites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grad Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grad Australia Top 100 publication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grad Connection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Graduate Opportunities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instagram</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lecture Announcement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lecturer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newspaper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Past Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Podcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poster</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rokt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spotify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teach For Australia website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Testing Teachers Documentary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UniGrad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University club%2Fsociety publication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University%2FStudent Publication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Whirpool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>YouTube</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level_Of_Engagement__c</picklist>
+        <values>
+            <fullName>Current Supporter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Past Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Likelihood_of_applying__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Motives__c</picklist>
+        <values>
+            <fullName>Career teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Challenge seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incentivised job seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lifestyle first seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reputation and reward seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skills job seeker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visionary teacher</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lady</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M%2F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mx</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rev</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senator the Hon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sir</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Hon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Hon Dr</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>No_current_teaching_qualification__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Potential_Rating__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Re_engagement_status__c</picklist>
+        <values>
+            <fullName>Engaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Engaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unresponsive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Re_engagement_status_reason__c</picklist>
+        <values>
+            <fullName>Other teaching pathway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal circumstances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>other job opportunity</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Referal_source__c</picklist>
+        <values>
+            <fullName>Attended event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joined mailing list</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phonecall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recommended to TFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visited TFA office</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regional_Remote_Origin__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Retry_in_the_future__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ST_Stage__c</picklist>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_EOI_Submission_Email__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Started_Application__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>State_Territory__c</picklist>
+        <values>
+            <fullName>ACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overseas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status_Reason__c</picklist>
+        <values>
+            <fullName>Does not have eligible learning area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Has%2Fstudying teaching qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learning area closed by TFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple applications in one year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a permanent resident or Australian citizen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reason Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants next year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Will Not have undergraduate degree this year</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>University_Affiliations__c</picklist>
+        <values>
+            <fullName>Adelaide University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australian Catholic University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australian National University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bond University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canberra Institute of Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Queensland University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charles Darwin University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charles Sturt University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Curtin University of Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deakin University %28Burwood%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deakin University %28Geelong%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Edith Cowan University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flinders University of South Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Griffith University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>James Cook University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>La Trobe University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Practitioners Admission Board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macquarie University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monash University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Murdoch University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other university</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overseas university</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Queensland University of Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RMIT University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Cross University</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swinburne University of Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Ballarat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Canberra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Melbourne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of New England</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of New South Wales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Newcastle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Notre Dame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Queensland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of South Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Southern Queensland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Tasmania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Technology%2C Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Western Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Western Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of Wollongong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University of the Sunshine Coast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unspecified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Victoria University</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ways_to_engage__c</picklist>
+        <values>
+            <fullName>Apply for Campus Brand Ambassador role</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apply for Internship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apply for LDP in future years</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apply for LDP this year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attend events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Be an advocate for the mission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discuss partnership%2Fsupporter opportunities with TFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Find out more about TFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Find out more about Teach for All programs worldwide</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Why_Lead_Up__c</picklist>
+        <values>
+            <fullName>Decide if teaching is right for me</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entry point into a career with purpose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entry point into the Leadership Development Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Learn more about what inequity looks like in schools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meet other like-minded people</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal and leadership skills development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teach for Australia%27s reputation and culture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Understand better how inequity can be reduced</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__Preferred_Email__c</picklist>
+        <values>
+            <fullName>Alternate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npe01__Preferred_Phone__c</picklist>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
