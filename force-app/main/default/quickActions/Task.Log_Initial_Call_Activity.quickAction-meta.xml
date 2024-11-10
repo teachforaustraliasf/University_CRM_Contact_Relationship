@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Log activity after completing initial conversation call.</description>
+    <flowDefinition>Create_Initial_Call_Activity_Screenflow_Application_Nurturing</flowDefinition>
+    <label>Log Initial Call Activity</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>
