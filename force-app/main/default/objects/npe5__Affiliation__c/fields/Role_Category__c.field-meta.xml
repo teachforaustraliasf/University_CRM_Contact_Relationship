@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Role_Category__c</fullName>
+    <externalId>false</externalId>
     <label>Role Category</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
@@ -29,6 +30,51 @@
                 <fullName>Executive &amp; Senior Management</fullName>
                 <default>false</default>
                 <label>Executive &amp; Senior Management</label>
+            </value>
+            <value>
+                <fullName>LDP</fullName>
+                <default>false</default>
+                <label>LDP</label>
+            </value>
+            <value>
+                <fullName>FLP</fullName>
+                <default>false</default>
+                <label>FLP</label>
+            </value>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+                <label>School</label>
+            </value>
+            <value>
+                <fullName>TFA Staff</fullName>
+                <default>false</default>
+                <label>TFA Staff</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Philanthropy</fullName>
+                <default>false</default>
+                <label>Philanthropy</label>
+            </value>
+            <value>
+                <fullName>Donor</fullName>
+                <default>false</default>
+                <label>Donor</label>
+            </value>
+            <value>
+                <fullName>UG</fullName>
+                <default>false</default>
+                <label>UG</label>
+            </value>
+            <value>
+                <fullName>TTL</fullName>
+                <default>false</default>
+                <label>TTL</label>
             </value>
         </valueSetDefinition>
     </valueSet>
