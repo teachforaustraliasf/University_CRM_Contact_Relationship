@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Application_Nurturing_Activity__c</fullName>
+    <description>The last activity performed during the Application Nurturing process.</description>
+    <externalId>false</externalId>
+    <label>Last Application Nurturing Activity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Send Application Opened Email</fullName>
+                <default>false</default>
+                <label>Send Application Opened Email</label>
+            </value>
+            <value>
+                <fullName>Application Opened Email sent</fullName>
+                <default>false</default>
+                <label>Application Opened Email sent</label>
+            </value>
+            <value>
+                <fullName>Send Schedule an Initial Call Email</fullName>
+                <default>false</default>
+                <label>Send Schedule an Initial Call Email</label>
+            </value>
+            <value>
+                <fullName>Schedule an Initial Call Email sent</fullName>
+                <default>false</default>
+                <label>Schedule an Initial Call Email sent</label>
+            </value>
+            <value>
+                <fullName>Create &apos;Conduct Initial Conversation Call&apos; Reminder</fullName>
+                <default>false</default>
+                <label>Create &apos;Conduct Initial Conversation Call&apos; Reminder</label>
+            </value>
+            <value>
+                <fullName>Initial Conversation Call completed</fullName>
+                <default>false</default>
+                <label>Initial Conversation Call completed</label>
+            </value>
+            <value>
+                <fullName>Create &apos;Application Workshop SMS&apos; Reminder</fullName>
+                <default>false</default>
+                <label>Create &apos;Application Workshop SMS&apos; Reminder</label>
+            </value>
+            <value>
+                <fullName>Application Workshop SMS sent</fullName>
+                <default>false</default>
+                <label>Application Workshop SMS sent</label>
+            </value>
+            <value>
+                <fullName>Send Application Tips Email</fullName>
+                <default>false</default>
+                <label>Send Application Tips Email</label>
+            </value>
+            <value>
+                <fullName>Application Tips Email sent</fullName>
+                <default>false</default>
+                <label>Application Tips Email sent</label>
+            </value>
+            <value>
+                <fullName>Create &apos;Second Attempt at Initial Call&apos; Reminder</fullName>
+                <default>false</default>
+                <label>Create &apos;Second Attempt at Initial Call&apos; Reminder</label>
+            </value>
+            <value>
+                <fullName>Second Attempt Initial Call completed</fullName>
+                <default>false</default>
+                <label>Second Attempt Initial Call completed</label>
+            </value>
+            <value>
+                <fullName>Create &apos;Book a Call with your RM SMS&apos; Reminder</fullName>
+                <default>false</default>
+                <label>Create &apos;Book a Call with your RM SMS&apos; Reminder</label>
+            </value>
+            <value>
+                <fullName>Book a Call with your RM SMS sent</fullName>
+                <default>false</default>
+                <label>Book a Call with your RM SMS sent</label>
+            </value>
+            <value>
+                <fullName>Send Upcoming Events/Workshop Email</fullName>
+                <default>false</default>
+                <label>Send Upcoming Events/Workshop Email</label>
+            </value>
+            <value>
+                <fullName>Upcoming Events/Workshop Email sent</fullName>
+                <default>false</default>
+                <label>Upcoming Events/Workshop Email sent</label>
+            </value>
+            <value>
+                <fullName>Create &apos;Conduct Commitment Discussion Call&apos; Reminder</fullName>
+                <default>false</default>
+                <label>Create &apos;Conduct Commitment Discussion Call&apos; Reminder</label>
+            </value>
+            <value>
+                <fullName>Commitment Discussion Call completed</fullName>
+                <default>false</default>
+                <label>Commitment Discussion Call completed</label>
+            </value>
+            <value>
+                <fullName>Send Complete Your Application Email</fullName>
+                <default>false</default>
+                <label>Send Complete Your Application Email</label>
+            </value>
+            <value>
+                <fullName>Complete Your Application Email sent</fullName>
+                <default>false</default>
+                <label>Complete Your Application Email sent</label>
+            </value>
+            <value>
+                <fullName>Create &apos;Reminder to Submit SMS&apos; Reminder</fullName>
+                <default>false</default>
+                <label>Create &apos;Reminder to Submit SMS&apos; Reminder</label>
+            </value>
+            <value>
+                <fullName>Reminder to Submit SMS sent</fullName>
+                <default>false</default>
+                <label>Reminder to Submit SMS sent</label>
+            </value>
+            <value>
+                <fullName>Send Final Follow-up Email</fullName>
+                <default>false</default>
+                <label>Send Final Follow-up Email</label>
+            </value>
+            <value>
+                <fullName>Final Follow-up Email sent</fullName>
+                <default>false</default>
+                <label>Final Follow-up Email sent</label>
+            </value>
+            <value>
+                <fullName>Review Application</fullName>
+                <default>false</default>
+                <label>Review Application</label>
+            </value>
+            <value>
+                <fullName>Application Review complete</fullName>
+                <default>false</default>
+                <label>Application Review complete</label>
+            </value>
+            <value>
+                <fullName>Contact marked as unresponsive</fullName>
+                <default>false</default>
+                <label>Contact marked as unresponsive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
