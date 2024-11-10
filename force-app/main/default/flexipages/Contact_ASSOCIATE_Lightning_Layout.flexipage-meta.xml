@@ -279,36 +279,40 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Current_Affiliation__c</fieldItem>
                 <identifier>RecordCurrent_Affiliation__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.SMS_Opt_In__c</fieldItem>
-                <identifier>RecordSMS_opt_in__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.SMS_Opt_Out__c</fieldItem>
-                <identifier>RecordSMS_Opt_Out__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Taught_by_Alumni__c</fieldItem>
                 <identifier>RecordTaught_by_Alumni__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Taught_by_Alumni_Name__c</fieldItem>
                 <identifier>RecordTaught_by_Alumni_Name__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Application_Link__c</fieldItem>
                 <identifier>RecordApplication_Link__cField</identifier>
             </fieldInstance>
