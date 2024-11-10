@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Triggers screenflow to capture call notes and stage updates to the Application after the Commitment Discussion call in the Application Nurturing process.</description>
+    <flowDefinition>Create_Commitment_Call_Activity_Screenflow_Application_Nurturing</flowDefinition>
+    <label>Log Call Activity</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>
