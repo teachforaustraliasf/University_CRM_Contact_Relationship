@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Role_Def__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Current_Affiliation__r.Role__c) + &quot; at &quot; +  Current_Affiliation__r.npe5__Organization__r.Name + &quot; from &quot; + TEXT(Current_Affiliation__r.npe5__StartDate__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current Role Def</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

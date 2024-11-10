@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RM_Applicant_Booking_URL__c</fullName>
+    <description>URL link to a Recruitment Manager&apos;s Microsoft Booking page. Used during Application Nurturing process as a merge field in emails to applicants.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>URL link to a Recruitment Manager&apos;s Microsoft Booking page.</inlineHelpText>
+    <label>RM Applicant Booking URL</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Url</type>
+</CustomField>

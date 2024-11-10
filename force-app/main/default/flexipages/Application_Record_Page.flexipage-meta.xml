@@ -68,6 +68,12 @@
                 <identifier>RecordCohort_Round_cField1</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Unit__c</fieldItem>
+                <identifier>RecordUnit__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-7e13d925-5803-4021-9830-285eec202df5</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -190,6 +196,16 @@
                 <identifier>RecordStage_Reason_Last_Update_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Last_Application_Nurturing_Activity__c</fieldItem>
+                <identifier>RecordLast_Application_Nurturing_Activity__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-7b48a776-0f5c-4abf-af20-06f5b8e49a41</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -242,6 +258,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Submitted__c</fieldItem>
                 <identifier>RecordSubmitted_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Application_Withdrawn__c</fieldItem>
+                <identifier>RecordApplication_Withdrawn_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-3aac5f4b-54d5-4442-a3aa-1915e36db060</name>
