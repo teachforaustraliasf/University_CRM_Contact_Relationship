@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Withdrawn__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to flag when an applicant has requested to withdraw from the Application process. Checking this will remove stop them from receiving any further Application Nurturing communications.</description>
+    <externalId>false</externalId>
+    <label>Application Withdrawn</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
