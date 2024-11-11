@@ -58,7 +58,7 @@
         <inputAssignments>
             <field>Last_Application_Nurturing_Activity__c</field>
             <value>
-                <stringValue>Create &apos;Reminder to Submit SMS&apos; Reminder</stringValue>
+                <stringValue>Trigger &apos;Reminder to Submit SMS&apos;</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -222,5 +222,5 @@
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
 </Flow>
