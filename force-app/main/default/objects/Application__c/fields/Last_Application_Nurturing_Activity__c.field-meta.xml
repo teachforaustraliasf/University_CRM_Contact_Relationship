@@ -43,9 +43,9 @@
                 <label>Initial Conversation Call completed</label>
             </value>
             <value>
-                <fullName>Create &apos;Application Workshop SMS&apos; Reminder</fullName>
+                <fullName>Trigger &apos;Application Workshop SMS&apos;</fullName>
                 <default>false</default>
-                <label>Create &apos;Application Workshop SMS&apos; Reminder</label>
+                <label>Trigger &apos;Application Workshop SMS&apos;</label>
             </value>
             <value>
                 <fullName>Application Workshop SMS sent</fullName>
@@ -73,9 +73,9 @@
                 <label>Second Attempt Initial Call completed</label>
             </value>
             <value>
-                <fullName>Create &apos;Book a Call with your RM SMS&apos; Reminder</fullName>
+                <fullName>Trigger &apos;Book a Call with your RM SMS&apos;</fullName>
                 <default>false</default>
-                <label>Create &apos;Book a Call with your RM SMS&apos; Reminder</label>
+                <label>Trigger &apos;Book a Call with your RM SMS&apos;</label>
             </value>
             <value>
                 <fullName>Book a Call with your RM SMS sent</fullName>
@@ -113,9 +113,9 @@
                 <label>Complete Your Application Email sent</label>
             </value>
             <value>
-                <fullName>Create &apos;Reminder to Submit SMS&apos; Reminder</fullName>
+                <fullName>Trigger &apos;Reminder to Submit SMS&apos;</fullName>
                 <default>false</default>
-                <label>Create &apos;Reminder to Submit SMS&apos; Reminder</label>
+                <label>Trigger &apos;Reminder to Submit SMS&apos;</label>
             </value>
             <value>
                 <fullName>Reminder to Submit SMS sent</fullName>
