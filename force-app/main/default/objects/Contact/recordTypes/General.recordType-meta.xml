@@ -6595,15 +6595,15 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>State or Territory Education Department%C2%A0</fullName>
+            <fullName>State or Territory Education Department</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>TRB%C2%A0</fullName>
+            <fullName>TRB</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>University%C2%A0</fullName>
+            <fullName>University</fullName>
             <default>false</default>
         </values>
     </picklistValues>
