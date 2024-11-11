@@ -32,7 +32,7 @@
         <inputAssignments>
             <field>Last_Application_Nurturing_Activity__c</field>
             <value>
-                <stringValue>Create &apos;Book a Call with your RM SMS&apos; Reminder</stringValue>
+                <stringValue>Trigger &apos;Book a Call with your RM SMS&apos;</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -71,7 +71,7 @@
         <inputAssignments>
             <field>Last_Application_Nurturing_Activity__c</field>
             <value>
-                <stringValue>Create &apos;Application Workshop SMS&apos; Reminder</stringValue>
+                <stringValue>Trigger &apos;Application Workshop SMS&apos;</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
