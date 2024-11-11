@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Philanthropy</fullName>
+    <fullName>Development</fullName>
     <active>false</active>
     <description>Philanthropy contacts - used for all contacts working at Development (Corporate &amp; Philanthropic) organisations</description>
     <label>Philanthropy</label>
