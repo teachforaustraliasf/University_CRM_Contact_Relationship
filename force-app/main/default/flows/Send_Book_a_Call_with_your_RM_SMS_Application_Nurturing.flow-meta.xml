@@ -249,7 +249,7 @@
             <field>Last_Application_Nurturing_Activity__c</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Create &apos;Book a Call with your RM SMS&apos; Reminder</stringValue>
+                <stringValue>Trigger &apos;Book a Call with your RM SMS&apos;</stringValue>
             </value>
         </filters>
         <object>Application__c</object>
