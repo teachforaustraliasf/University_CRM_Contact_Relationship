@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>General</fullName>
-    <active>true</active>
-    <compactLayoutAssignment>Development_Contact_layout</compactLayoutAssignment>
-    <description>General - used for Contacts associated with Other Organisations, Universities, Media, Service Providers, excluding Schools, Government and Development contacts</description>
-    <label>General</label>
+    <fullName>Participants</fullName>
+    <active>false</active>
+    <description>Fellow - currently participating in the FLP or TTL program</description>
+    <label>Fellow</label>
     <picklistValues>
         <picklist>ACU_Assessed_Major__c</picklist>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Biology</fullName>
             <default>false</default>
@@ -17,6 +24,10 @@
         </values>
         <values>
             <fullName>Chemistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commerce and Business Studies</fullName>
             <default>false</default>
         </values>
         <values>
@@ -48,7 +59,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Geography</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
             <default>false</default>
         </values>
         <values>
@@ -57,6 +76,26 @@
         </values>
         <values>
             <fullName>History</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanities%2FHASS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOTE - Chinese</fullName>
             <default>false</default>
         </values>
         <values>
@@ -100,6 +139,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>TESOL</fullName>
             <default>false</default>
         </values>
@@ -124,6 +167,18 @@
         </values>
         <values>
             <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C Aboriginal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C Torres Strait Islander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C both Aboriginal and Torres Strait Islander</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -294,6 +349,10 @@
         </values>
         <values>
             <fullName>TA - Delayed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TA - Eligible for AC</fullName>
             <default>false</default>
         </values>
         <values>
@@ -568,6 +627,41 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>BuyerAttributes</picklist>
+        <values>
+            <fullName>BusinessUser</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buyer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DecisionMaker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detractor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Evaluator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ExecutiveSponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TechnicalExpert</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Campus_Amb_introduction__c</picklist>
         <values>
             <fullName>Bernadette Young</fullName>
@@ -605,7 +699,31 @@
     <picklistValues>
         <picklist>Can_I_contact_this_Alumni__c</picklist>
         <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No %28last known response%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No - Speak to ACE team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No - permanently disengaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28last known response%29</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -627,7 +745,19 @@
     <picklistValues>
         <picklist>Career_Pathway_Data_Source__c</picklist>
         <values>
+            <fullName>Alumni Survey 2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Alumni Survey 2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2020 EOY Reflection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2021 EOY Reflection</fullName>
             <default>false</default>
         </values>
         <values>
@@ -639,11 +769,59 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Confirmed by employer %28school %2F company%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed by organisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Deceased</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>EOY C2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EduMail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>End of Year Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Recovered in 2021 - Previous CP Used</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Recovered in 2022 - Previous CP Used</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Recovered in 2022 - Unable to complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Recovered in 2023 - Previous CP Used</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not recovered in 2021 - Unable to complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not recovered in 2023 - Unable to complete</fullName>
             <default>false</default>
         </values>
         <values>
@@ -652,6 +830,10 @@
         </values>
         <values>
             <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Survey</fullName>
             <default>false</default>
         </values>
         <values>
@@ -667,11 +849,23 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Phone Call with Alum</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Survey</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>TFA Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFA staff knowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFA staff member personal relationship</fullName>
             <default>false</default>
         </values>
         <values>
@@ -753,6 +947,30 @@
         </values>
         <values>
             <fullName>2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2016</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2017</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2018</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2019</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2020</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2021</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -866,6 +1084,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>TAS</fullName>
             <default>false</default>
         </values>
@@ -909,6 +1131,14 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Bayside Peninsula</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brisbane</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Central Coast</fullName>
             <default>false</default>
         </values>
@@ -922,6 +1152,10 @@
         </values>
         <values>
             <fullName>Central West</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central West QLD</fullName>
             <default>false</default>
         </values>
         <values>
@@ -953,6 +1187,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Goldfields</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Goldfields-Esperance %28Kalgoorlie%29</fullName>
             <default>false</default>
         </values>
@@ -978,6 +1216,10 @@
         </values>
         <values>
             <fullName>Greater Darwin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Darwin%2C Palmerston and Rural</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1021,11 +1263,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Loddon Mallee</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Mackay Issac Whitsunday</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Mallee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melbourne CBD</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1057,6 +1307,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>North East Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>North Metro</fullName>
             <default>false</default>
         </values>
@@ -1065,7 +1319,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>North West</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>North West %28Devonport%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North West Metro</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1085,11 +1347,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Overseas</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Palmerston and Rural</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Peel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perth</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1105,7 +1375,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>South East Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>South East NSW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South East QLD</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1129,7 +1407,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>South West Coast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South West Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Southern Highlands %26 Tablelands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sydney</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1176,6 +1466,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>I completed university 6-10 years ago</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>I completed university more than 10 years ago</fullName>
             <default>false</default>
         </values>
@@ -1196,6 +1490,10 @@
         </values>
         <values>
             <fullName>NT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overseas</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1245,7 +1543,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Environment and Sustainability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Humanities %2F Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT and Computer Science</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1257,11 +1567,27 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Law and Policy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathematics and Statistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>STEM - Chemistry %2F Biology %2F Environmental Science %2F Earth Science %2F IT</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>STEM - Engineering %2F Maths %2F Physics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1460,7 +1786,23 @@
     <picklistValues>
         <picklist>Emergency_Contact_1_Relationship__c</picklist>
         <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent %2F Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relative</fullName>
             <default>false</default>
         </values>
         <values>
@@ -1471,7 +1813,27 @@
     <picklistValues>
         <picklist>Emergency_Contact_2_Relationship__c</picklist>
         <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent %2F Guardian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1599,6 +1961,18 @@
             <fullName>Engage</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>Purposefully Disengaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready For Ask</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seeking Introduction</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Estimated_Worth_Rating__c</picklist>
@@ -1700,6 +2074,14 @@
             <fullName>6-10 years</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>FLP_Placement_Stage__c</picklist>
@@ -1709,6 +2091,10 @@
         </values>
         <values>
             <fullName>Withdrawn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn after acceptance</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1769,14 +2155,214 @@
     <picklistValues>
         <picklist>Field_of_Study_2_1__c</picklist>
         <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architecture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business and management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computing and information technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dentistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education and training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering and technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanities and social sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychology %2F Social work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport and leisure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tourism and hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veterinary science</fullName>
             <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
         <picklist>Field_of_Study_2_2__c</picklist>
         <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architecture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business and management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computing and information technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dentistry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Economics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education and training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering and technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Humanities and social sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medicine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pharmacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychology %2F Social work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sport and leisure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tourism and hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veterinary science</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -1930,6 +2516,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Environmental studies</fullName>
             <default>false</default>
         </values>
@@ -2002,7 +2592,34 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>GenderIdentity</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nonbinary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Gender__c</picklist>
+        <values>
+            <fullName>Female</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Male</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Non-binary</fullName>
             <default>false</default>
@@ -2369,6 +2986,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Alumni Network Leaders</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Assembly Hall</fullName>
             <default>false</default>
         </values>
@@ -2382,6 +3003,10 @@
         </values>
         <values>
             <fullName>LDP Incoming Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFA Staff Lounge</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -2419,6 +3044,18 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Aboriginal%2FTorres Strait Islander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Australian Aboriginal</fullName>
             <default>false</default>
         </values>
@@ -2427,7 +3064,39 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>British</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Burmese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caribbean Islander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central American</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese Asian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern European</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eritrean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethiopian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finnish</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2435,7 +3104,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Greek</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Guatemalan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2443,7 +3124,59 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Irish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jewish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maori</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melanesian and Papuan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micronesian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North African and Middle Eastern</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North American</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NorthEast Asian %28Chinese%2FKorean%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern European %28Swedish%2FFinnish%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Oceania or South Sea Islander</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2451,7 +3184,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Palestinian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Pathan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peoples of the Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polynesian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2459,7 +3204,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Romanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Scottish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singaporean</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2467,11 +3224,59 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>South American</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Eastern European</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South and Central American</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South%2FCentral Asian %28Indian%2FPakistani%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SouthEast Asian %28Vietnamese%2FIndonesian%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern European</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Sri Lankan</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Sub-Saharan African</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swiss</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Torres Strait Islander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukrainian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western European %28Dutch%2FGerman%2FFrench%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwean</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -2565,6 +3370,18 @@
             <fullName>2021LDPApplied</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>2022DPApplied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024DPApplied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2025DPApplied</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Last_State__c</picklist>
@@ -2616,6 +3433,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Media and Press</fullName>
             <default>false</default>
         </values>
@@ -2624,7 +3445,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Rokt</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFA Recruitment Team</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2720,6 +3549,10 @@
         </values>
         <values>
             <fullName>Bachelor%27s degree with Honours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Doctor of Philosophy</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2957,6 +3790,37 @@
             <fullName>C2020</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>C2021</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2022</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2023</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2025</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C2026</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Method_of_Opt_In__c</picklist>
+        <values>
+            <fullName>Default</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Motivational_Segment_Lead_Qualification__c</picklist>
@@ -2999,6 +3863,74 @@
             <fullName>Barrimal</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>Black Footed Rock Wallaby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Quoll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Quolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Bilbies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Bilby</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Gliders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mahogany Glider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mountain Pygmy Possum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mountain Pygmy Possums</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ngilkats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Numbat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Numbats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orange Bellied Parrots</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purple Copper Butterfly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pygmy Possums</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woylie</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Name</picklist>
@@ -3020,6 +3952,10 @@
         </values>
         <values>
             <fullName>M%2F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miss</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3103,6 +4039,10 @@
         </values>
         <values>
             <fullName>Intermediate %28With University Major%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -3193,6 +4133,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Bahasa Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Bambara</fullName>
             <default>false</default>
         </values>
@@ -3237,6 +4181,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Cantonese</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Catalan%2C Valencian</fullName>
             <default>false</default>
         </values>
@@ -3258,6 +4206,14 @@
         </values>
         <values>
             <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese %28Cantonese%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese %28Mandarin%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3301,6 +4257,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Dutch%2C Flemish</fullName>
             <default>false</default>
         </values>
@@ -3330,6 +4290,10 @@
         </values>
         <values>
             <fullName>Fijian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filipino</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3365,6 +4329,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Greek</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Greek%C2%A0%28modern%29</fullName>
             <default>false</default>
         </values>
@@ -3386,6 +4354,10 @@
         </values>
         <values>
             <fullName>Hazaragi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hebrew</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3446,6 +4418,10 @@
         </values>
         <values>
             <fullName>Irish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Irish Gaelic</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3561,6 +4537,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Malay %28Bahasa Melayu%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Malayalam</fullName>
             <default>false</default>
         </values>
@@ -3606,6 +4586,10 @@
         </values>
         <values>
             <fullName>Nepali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noongar</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3681,7 +4665,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Punjabi</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Quechua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romanian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3721,6 +4713,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Serbian-Croatian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Shona</fullName>
             <default>false</default>
         </values>
@@ -3745,6 +4741,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Sinhalese</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Slovak</fullName>
             <default>false</default>
         </values>
@@ -3757,11 +4757,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>South Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>South Ndebele</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Southern Sotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3833,6 +4841,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Tok Pisin</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Tongan%C2%A0%28Tonga Islands%29</fullName>
             <default>false</default>
         </values>
@@ -3862,6 +4874,10 @@
         </values>
         <values>
             <fullName>Ukrainian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukranian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3967,6 +4983,10 @@
             <fullName>Intermediate %28With University Major%29</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Other_Language_2__c</picklist>
@@ -4055,6 +5075,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Bahasa Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Bambara</fullName>
             <default>false</default>
         </values>
@@ -4099,6 +5123,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Cantonese</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Catalan%2C Valencian</fullName>
             <default>false</default>
         </values>
@@ -4120,6 +5148,14 @@
         </values>
         <values>
             <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese %28Cantonese%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese %28Mandarin%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4163,6 +5199,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Dutch%2C Flemish</fullName>
             <default>false</default>
         </values>
@@ -4192,6 +5232,10 @@
         </values>
         <values>
             <fullName>Fijian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filipino</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4227,6 +5271,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Greek</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Greek%C2%A0%28modern%29</fullName>
             <default>false</default>
         </values>
@@ -4248,6 +5296,10 @@
         </values>
         <values>
             <fullName>Hazaragi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hebrew</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4308,6 +5360,10 @@
         </values>
         <values>
             <fullName>Irish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Irish Gaelic</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4423,6 +5479,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Malay %28Bahasa Melayu%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Malayalam</fullName>
             <default>false</default>
         </values>
@@ -4468,6 +5528,10 @@
         </values>
         <values>
             <fullName>Nepali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noongar</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4543,7 +5607,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Punjabi</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Quechua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romanian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4583,6 +5655,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Serbian-Croatian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Shona</fullName>
             <default>false</default>
         </values>
@@ -4607,6 +5683,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Sinhalese</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Slovak</fullName>
             <default>false</default>
         </values>
@@ -4619,11 +5699,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>South Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>South Ndebele</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Southern Sotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4695,6 +5783,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Tok Pisin</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Tongan%C2%A0%28Tonga Islands%29</fullName>
             <default>false</default>
         </values>
@@ -4724,6 +5816,10 @@
         </values>
         <values>
             <fullName>Ukrainian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukranian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -4829,6 +5925,10 @@
             <fullName>Intermediate %28With University Major%29</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Other_Language_3__c</picklist>
@@ -4917,6 +6017,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Bahasa Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Bambara</fullName>
             <default>false</default>
         </values>
@@ -4961,6 +6065,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Cantonese</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Catalan%2C Valencian</fullName>
             <default>false</default>
         </values>
@@ -4982,6 +6090,14 @@
         </values>
         <values>
             <fullName>Chinese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese %28Cantonese%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese %28Mandarin%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5025,6 +6141,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Dutch%2C Flemish</fullName>
             <default>false</default>
         </values>
@@ -5054,6 +6174,10 @@
         </values>
         <values>
             <fullName>Fijian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filipino</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5089,6 +6213,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Greek</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Greek%C2%A0%28modern%29</fullName>
             <default>false</default>
         </values>
@@ -5110,6 +6238,10 @@
         </values>
         <values>
             <fullName>Hazaragi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hebrew</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5170,6 +6302,10 @@
         </values>
         <values>
             <fullName>Irish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Irish Gaelic</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5285,6 +6421,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Malay %28Bahasa Melayu%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Malayalam</fullName>
             <default>false</default>
         </values>
@@ -5330,6 +6470,10 @@
         </values>
         <values>
             <fullName>Nepali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noongar</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5405,7 +6549,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Punjabi</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Quechua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romanian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5445,6 +6597,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Serbian-Croatian</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Shona</fullName>
             <default>false</default>
         </values>
@@ -5469,6 +6625,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Sinhalese</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Slovak</fullName>
             <default>false</default>
         </values>
@@ -5481,11 +6641,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>South Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>South Ndebele</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Southern Sotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5557,6 +6725,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Tok Pisin</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Tongan%C2%A0%28Tonga Islands%29</fullName>
             <default>false</default>
         </values>
@@ -5586,6 +6758,10 @@
         </values>
         <values>
             <fullName>Ukrainian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukranian</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5656,8 +6832,12 @@
     <picklistValues>
         <picklist>Parliamentarian_Status__c</picklist>
         <values>
+            <fullName>Currently In Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>No Longer In Office</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -5716,7 +6896,39 @@
     <picklistValues>
         <picklist>Placement_status__c</picklist>
         <values>
+            <fullName>Coming to NII without Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Placement %28during NII%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honorary Associate%2FAlumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Placement Found %28during NII%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Placed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placed - Incomplete MTSLL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placement - Tentative</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5726,6 +6938,26 @@
         <values>
             <fullName>Unplaced</fullName>
             <default>true</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %28before NII%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %28before commenced teaching%29 %28is Associate under DET contract%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %28before commenced teaching%29 %28not Associate under DET contract%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %28in first year%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn %28in second year%29</fullName>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -5758,7 +6990,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Humanities %2F Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages %2F TESOL %2F Linguistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEM - Biology%2C Chemistry%2C Earth Science%2C Environmental Science%2C IT</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5777,7 +7021,23 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Architecture and construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Arts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Book publishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Building%2C construction%2C project management%2C coaching%2E</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5798,6 +7058,10 @@
         </values>
         <values>
             <fullName>Customer Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defence and Security</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5829,6 +7093,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Healthcare</fullName>
             <default>false</default>
         </values>
@@ -5838,6 +7106,14 @@
         </values>
         <values>
             <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal profession</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marine Tourism</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5873,6 +7149,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Student</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Tertiary</fullName>
             <default>false</default>
         </values>
@@ -5885,7 +7165,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Tourism and Transport</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Trades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trades and services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>University - professional staff</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -5931,11 +7223,71 @@
     <picklistValues>
         <picklist>Primary_Withdrawal_Category__c</picklist>
         <values>
+            <fullName>Academic Coursework</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional University partner factors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Classroom management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disengaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dissatisfaction overall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dissatisfaction with placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family commitments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isolation</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Lack of fit with the program</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Perception of failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Personal reasons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professionalism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To be completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wellbeing%2FMental health</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -5943,6 +7295,10 @@
         <picklist>Primary_Withdrawal_Reason__c</picklist>
         <values>
             <fullName>Alternative career opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change in personal circumstances</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5959,6 +7315,10 @@
         </values>
         <values>
             <fullName>Physical or mental health issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Undisclosed</fullName>
             <default>false</default>
         </values>
         <values>
@@ -5990,6 +7350,33 @@
         </values>
         <values>
             <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pronouns</picklist>
+        <values>
+            <fullName>He%2FHim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>He%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Listed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FHer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>She%2FThey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>They%2FThem</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -6109,6 +7496,13 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Reason_for_Opt_Out__c</picklist>
+        <values>
+            <fullName>Default</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Referral_status__c</picklist>
         <values>
             <fullName>Not referral partner</fullName>
@@ -6130,11 +7524,27 @@
     <picklistValues>
         <picklist>Reflecting_on_where_you_are_today__c</picklist>
         <values>
+            <fullName>Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Likely</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Neutral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strongly Disagree</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6153,7 +7563,135 @@
     <picklistValues>
         <picklist>Regional_Intensive_Allocation__c</picklist>
         <values>
+            <fullName>ACT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adelaide Hills and Fleurieu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adelaide Plains</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alice Springs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arnhem Land</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barkly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brisbane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canberra Goulburn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Desert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central West QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Darling Downs South West QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eyre and Western</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Far North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Far North QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Goldfields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Darwin%2C Palmerston %26 Rural</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Hobart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hunter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kangaroo Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Katherine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kimberley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melbourne CBD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metro QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Midwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Murray and Mallee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Coast QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North East</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>North Eastern Victoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North West</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6161,11 +7699,95 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Northern Region</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilbara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Riverland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South East QLD</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>South Eastern Victoria</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>South Metro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South West</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>South Western Victoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Region</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sydney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiwi Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To be determined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virtual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Coast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheatbelt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yorke and Mid North</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -6176,7 +7798,27 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Undecided</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28unsure when%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28within 3 - 5 years%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28within the next 2 years%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes %28within the next 5 years%29</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -6202,7 +7844,43 @@
     <picklistValues>
         <picklist>Role__c</picklist>
         <values>
+            <fullName>Aboriginal and Islander Education Officers %28AIEO%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Academic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acting Assistant Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Acting Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistant%2FAdmin Clerk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CSR Rep</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6210,11 +7888,39 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Campus Brand Ambassador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campus Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clinical Specialist - MGSE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>College Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Executive</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Executive Assistant</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>General Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leading Teacher</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6226,11 +7932,43 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Parliamentarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Program Manager</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Public Servant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Servant - Leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Regional Lead%2FManager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Academic Mentor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFA Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teacher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vice Principal</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -6341,11 +8079,67 @@
     <picklistValues>
         <picklist>Secondary_withdrawal_category__c</picklist>
         <values>
+            <fullName>Academic Coursework</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Additional University partner factors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Career Opportunity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Classroom management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disengaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dissatisfaction overall</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dissatisfaction with placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family commitments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isolation</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Lack of fit with the program</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Perception of failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Personal reasons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professionalism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wellbeing%2FMental health</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -6384,6 +8178,18 @@
         <picklist>Sector__c</picklist>
         <values>
             <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associates</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6523,6 +8329,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>TFA Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>TFAll Network</fullName>
             <default>false</default>
         </values>
@@ -6610,12 +8420,36 @@
     <picklistValues>
         <picklist>Stakeholder_Type__c</picklist>
         <values>
+            <fullName>Alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fellow</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Former TFA Staff</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>General</fullName>
-            <default>true</default>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
         </values>
         <values>
             <fullName>HNWI</fullName>
@@ -6630,7 +8464,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>School</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Service Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFA Staff</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6649,7 +8491,31 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>AM MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>AO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AO PSM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAICD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLC</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6661,14 +8527,86 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>OAM MP</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>OBE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PSM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QC</fullName>
             <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
         <picklist>Supporting_TFA__c</picklist>
         <values>
+            <fullName>%E2%80%8BPhilanthropy %26 stakeholder engagement%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advocacy %26 Government Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate development %28eg%2E supporting at Intensives and workshops%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate or TTL Fellow development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blogging for TFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Curating subject specific resources for the community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Developing%2FFacilitating and Alumni professional or social network of interest to you</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest speaker at Alumni Q%26A with candidates during LDP Selection Days%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guest speaker at TFA marketing and recruitment events%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Helping the Alumni team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am already a School Mentor for an Associate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am not interested in%2Fable to support TFA this year</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instagram takeover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joining the inaugural Alumni Steering Committee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media%2FSocial Media engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28please specify%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6676,7 +8614,47 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Participating in Focus Groups about TFA%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philanthropy and Fundraising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promote TFA on social media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Provide feedback on TFA programming %2F design %E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing your professional knowledge with the community %28Associates%2C Fellows%2C Alumni%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Short projects%2Fsmall tasks with a paid casual stipend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tell my story to an interviewer%E2%80%8B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Twitter engagement %28sharing%2Fcommenting%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Write my story in my own words for TFA %28e%2Eg%2E blogging%29%E2%80%8B</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -6740,7 +8718,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Humanities %2F Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Languages %2F TESOL %2F Linguistics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>STEM - Biology%2C Chemistry%2C Earth Science%2C Environmental Science%2C IT</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6752,6 +8742,10 @@
         <picklist>Teaching_Areas__c</picklist>
         <values>
             <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6803,7 +8797,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>English %28with Literature%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English %28without Literature%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Environmental Science</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental Studies</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6835,7 +8841,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Indigenous Studies</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Information Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOTE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOTE %E2%80%93 Aboriginal Languages of WA</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6867,11 +8885,23 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>LOTE - Sweedish</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Legal Studies</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Mathematics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathematics 7-10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mathematics Senior</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6884,6 +8914,10 @@
         </values>
         <values>
             <fullName>Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
             <default>false</default>
         </values>
         <values>
@@ -6919,6 +8953,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Religious Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Science</fullName>
             <default>false</default>
         </values>
@@ -6951,6 +8989,26 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCAL Literacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCAL Numeracy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCAL Personal Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCAL Work Related Skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>VET %28Vocational Education And Training%29</fullName>
             <default>false</default>
         </values>
@@ -6978,6 +9036,10 @@
         </values>
         <values>
             <fullName>Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Withdrawn</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -7340,11 +9402,19 @@
     <picklistValues>
         <picklist>Working_in_a_school__c</picklist>
         <values>
+            <fullName>Not currently working %28including travel%2C family leave%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Not working in a school</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Teaching in a school</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Teaching or leading in a school</fullName>
             <default>false</default>
         </values>
         <values>
@@ -7376,7 +9446,7 @@
         </values>
         <values>
             <fullName>Work</fullName>
-            <default>true</default>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>
@@ -7390,12 +9460,24 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>TFA</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Work</fullName>
             <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
         <picklist>npe01__Primary_Address_Type__c</picklist>
+        <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Address on file</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Other</fullName>
             <default>false</default>
@@ -7408,6 +9490,10 @@
     <picklistValues>
         <picklist>npe01__Secondary_Address_Type__c</picklist>
         <values>
+            <fullName>Home</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Other</fullName>
             <default>false</default>
         </values>
@@ -7418,6 +9504,10 @@
     </picklistValues>
     <picklistValues>
         <picklist>npe01__SystemAccountProcessor__c</picklist>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>One-to-One</fullName>
             <default>true</default>

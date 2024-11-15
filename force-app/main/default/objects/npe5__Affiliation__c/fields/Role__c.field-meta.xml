@@ -389,6 +389,10 @@
             </value>
         </valueSetDefinition>
         <valueSettings>
+            <controllingFieldValue>Donor</controllingFieldValue>
+            <valueName>Donor</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>UG</controllingFieldValue>
             <controllingFieldValue>LDP</controllingFieldValue>
             <controllingFieldValue>FLP</controllingFieldValue>
