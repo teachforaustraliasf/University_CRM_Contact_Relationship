@@ -10,10 +10,10 @@ import userLNameFIELD from '@salesforce/schema/User.LastName';
 import { CloseActionScreenEvent } from 'lightning/actions';
 import { NavigationMixin } from 'lightning/navigation';
 
+const smsMaxLimit = 600;
+const emailMaxLimit = 5000
 export default class SendEmail extends NavigationMixin(LightningElement)  {
     @api ids;
-    limitText = '/5000 send limits remaining';
-    upperLimit = '5000';
     newEmail;
     @track items =[];
     senderEmailId ;
@@ -21,6 +21,7 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
     emailIdList = [];
     error;
     htmlBody;
+    htmlBodyLength =0;
     emailSubject;
     userId = Id;
     @track emailOrgWideOptions = [];
@@ -50,7 +51,12 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
     handleToggleChange(event) {
         this.isSmsToggleOn = event.target.checked;
     }
-    
+    get isAttachmentInvisible() {
+        return this.isSmsToggleOn ? false : true;
+    }
+    get limitText(){
+        return !this.isSmsToggleOn ? '/5000 send limits remaining' : '/600 send limits remaining';
+    }
     @wire(getRecord, { recordId: Id, fields: [userFNameFIELD,userLNameFIELD, userEmailFIELD ]}) 
     currentUserInfo({error, data}) {
         if (data) {
@@ -127,11 +133,11 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
 
     handleChange(event){
         this.htmlBody = event.target.value;
-        this.setCharacterCount(this.htmlBody.length);
+        this.htmlBodyLength = this.htmlBody.length;
     }
  
-   setCharacterCount(currentCharLength){
-        this.upperLimit  = 5000-currentCharLength;
+    get upperLimit(){
+        return (this.isSmsToggleOn?smsMaxLimit: emailMaxLimit)-this.htmlBodyLength;
     }
 
     handleEmailChange(event){
@@ -165,8 +171,8 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
     }
 
     handleSendEmail(event){
+        this.showSpinner = true;
         if(this.validate()){
-            this.showSpinner = true;
             sentMail({ fromEmailId : this.senderEmailId.trim(),
                         toEmailList : this.emailIdList,
                         subject : this.emailSubject,
@@ -177,6 +183,7 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
                         affiliationIds : this.ids,
                         isSms : this.isSmsToggleOn})
             .then(result => {
+                this.showSpinner = false;
                  console.log('@Email Sent Successfully!')
                  this.handleBack();
             })
@@ -184,10 +191,11 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
                 this.error = error;
                 this.accounts = undefined;
                 console.log('@Email Error! ',error)
+                this.showSpinner = false;
             })
             this.showModal = false;
-            this.showSpinner = false;
         }else{
+            this.showSpinner = false;
             this.showModal = true;
         }
         
