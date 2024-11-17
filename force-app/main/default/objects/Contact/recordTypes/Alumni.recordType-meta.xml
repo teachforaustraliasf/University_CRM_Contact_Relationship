@@ -3,7 +3,7 @@
     <fullName>Alumni</fullName>
     <active>true</active>
     <compactLayoutAssignment>Alumni_Compact_Layout</compactLayoutAssignment>
-    <description>Alumna of the LDP and/or TTL program and/or FLP program.</description>
+    <description>Alumni of the LDP and/or TTL program and/or FLP program.</description>
     <label>Alumni</label>
     <picklistValues>
         <picklist>ACU_Assessed_Major__c</picklist>
