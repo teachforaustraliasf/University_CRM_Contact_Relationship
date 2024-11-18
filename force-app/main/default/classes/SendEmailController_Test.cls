@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             : 
+ * @last modified on  : 11-15-2024
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+**/
 @isTest
 public  class SendEmailController_Test {
     @TestSetup
@@ -26,12 +33,12 @@ public  class SendEmailController_Test {
     }
     private static List<SendEmailController.EmailRequest> createEmailRequests() {
         Case objCase = [SELECT Id FROM Case WHERE  Subject = 'Test Case-0-01'];
-       
+        Contact contact = [SELECT Id FROM Contact LIMIT 1];
         SendEmailController.EmailRequest emailRequest = new SendEmailController.EmailRequest();
         emailRequest.toAddress = 'recipient@example.com';
         emailRequest.subject = 'Test Subject';
         emailRequest.plainTextBody = 'Test email body';
-        emailRequest.conId = objCase.Id;
+        emailRequest.conId = contact.Id;
 
         return new List<SendEmailController.EmailRequest> { emailRequest };
     }
@@ -70,7 +77,7 @@ public  class SendEmailController_Test {
 
         // Test the getEmailCollectionMap method
         Test.startTest();
-        Map<String, String> emailMap = SendEmailController.getEmailCollectionMap(new List<String>{testAffiliation.Id});
+        Map<Id, String> emailMap = SendEmailController.getEmailCollectionMap(new List<String>{testAffiliation.Id});
         Test.stopTest();
     }
     
