@@ -3,7 +3,7 @@
     <fullName>General</fullName>
     <active>true</active>
     <compactLayoutAssignment>Development_Contact_layout</compactLayoutAssignment>
-    <description>General - used for Contacts associated with Other Organisations, Universities, Media, Service Providers, excluding Schools, Government and Development contacts</description>
+    <description>General - used for Contacts associated with Other Organisations, Universities, Media, Service Providers, Schools, Government and Development contacts</description>
     <label>General</label>
     <picklistValues>
         <picklist>ACU_Assessed_Major__c</picklist>
