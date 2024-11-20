@@ -200,6 +200,13 @@
                 <booleanValue>true</booleanValue>
             </value>
         </filters>
+        <filters>
+            <field>npe5__Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>npe5__Affiliation__c</object>
         <sortField>CreatedDate</sortField>
