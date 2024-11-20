@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 11-05-2024
+ * @last modified on  : 11-20-2024
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 global with sharing class ContactAffiliationUpdationBatchable implements Database.Batchable<sObject> {
@@ -13,7 +13,7 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
     
     global List<Contact> start(Database.BatchableContext BC) {
         List<Contact> contactList= new List<Contact>();
-        String soqlQuery = 'SELECT Id, Name, Alumni__c, FLP_Alumni__c, RecordTypeId FROM Contact WHERE Id=\'003Em00000JF96UIAT\'';//\'003Em00000QyyKCIAZ\'
+        String soqlQuery = 'SELECT Id, Name, Alumni__c, FLP_Alumni__c, RecordTypeId FROM Contact';
         contactList = Database.query(soqlQuery);
         return contactList;
     }
@@ -91,7 +91,7 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
     public static List<npe5__Affiliation__c> getFLPApplicationList(List<npe5__Affiliation__c> toCreatedAffiliationList,set<Id> contactIdsSet, Id accountId){
         System.debug('getFLPApplicationList');
         List<FLP_Application__c> FLPList = new List<FLP_Application__c>();
-        FLPList = [SELECT Id, Start_Date__c, LastModifiedDate, LastActivityDate, Contact__r.Email, Contact__c, Contact__r.AccountId, Contact__r.npe01__HomeEmail__c, Contact__r.npe01__WorkEmail__c, Application_Stage__c, Contact__r.FLP_Fellow__c, School_Lookup__c FROM FLP_Application__c WHERE Contact__c IN :contactIdsSet ];
+        FLPList = [SELECT Id, Start_Date__c, CreatedDate, LastModifiedDate, LastActivityDate, Contact__r.Email, Contact__c, Contact__r.AccountId, Contact__r.npe01__HomeEmail__c, Contact__r.npe01__WorkEmail__c, Application_Stage__c, Contact__r.FLP_Fellow__c, School_Lookup__c FROM FLP_Application__c WHERE Contact__c IN :contactIdsSet ];
         Set<Id> applicationIdSet = new Set<Id>();
         Map<Id, Datetime> flpApplicationHistoryMap = new Map<Id, Datetime>();
         if(!FLPList.isEmpty()){
@@ -99,7 +99,7 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
                 applicationIdSet.add(flpApplication.Id);
             }
             if(!applicationIdSet.isEmpty()){
-                List<FLP_Application__History > flpApplicationHistoryList = [SELECT Id,ParentId,CreatedDate  from FLP_Application__History where ParentId IN :applicationIdSet order by createdDate Desc];
+                List<FLP_Application__History > flpApplicationHistoryList = [SELECT Id, ParentId, CreatedDate FROM FLP_Application__History WHERE ParentId IN :applicationIdSet ORDER BY createdDate DESC];
                 if(!flpApplicationHistoryList.isEmpty()){
                     for(FLP_Application__History flpApplicationHistory : flpApplicationHistoryList){
                         if(!flpApplicationHistoryMap.containsKey(flpApplicationHistory.ParentId)){
@@ -110,8 +110,8 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
             }
             for(FLP_Application__c flpApplication :FLPList ){
                 npe5__Affiliation__c objAffliation = new npe5__Affiliation__c();
-                if(flpApplication.Start_Date__c != null){
-                    objAffliation.npe5__StartDate__c = Date.valueOf(flpApplication.Start_Date__c);
+                if(flpApplication.CreatedDate != null){
+                    objAffliation.npe5__StartDate__c = Date.valueOf(flpApplication.CreatedDate);
                 }
                 if(flpApplicationHistoryMap.containsKey(flpApplication.Id)){
                     Datetime endDateTime = flpApplicationHistoryMap.get(flpApplication.Id);
@@ -211,10 +211,10 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
     }
     public static List<npe5__Affiliation__c> getDonarAffiliationList(List<npe5__Affiliation__c> toCreatedAffiliationList,set<Id> contactIdsSet,Id accountId){
         System.debug('getDonarAffiliationList');
-        for(Payments__c paymentRecordObj:[SELECT Id,LastModifiedDate,Contact__r.Email,Contact__c, Contact__r.AccountId,Contact__r.npe01__HomeEmail__c,Payment_Date__c FROM Payments__c WHERE Contact__c IN :contactIdsSet ]){
+        for(Payments__c paymentRecordObj:[SELECT Id, LastModifiedDate, CreatedDate, Contact__r.Email, Contact__c, Contact__r.AccountId, Contact__r.npe01__HomeEmail__c, Payment_Date__c FROM Payments__c WHERE Contact__c IN :contactIdsSet]){
             npe5__Affiliation__c objAffliation= new npe5__Affiliation__c();
-            if(paymentRecordObj.Payment_Date__c!=null){
-                objAffliation.npe5__StartDate__c = Date.valueOf(paymentRecordObj.Payment_Date__c);
+            if(paymentRecordObj.CreatedDate != null){
+                objAffliation.npe5__StartDate__c = Date.valueOf(paymentRecordObj.CreatedDate);
             }
             objAffliation.npe5__EndDate__c = null;
             objAffliation.Email__c = paymentRecordObj.Contact__r.npe01__HomeEmail__c;
