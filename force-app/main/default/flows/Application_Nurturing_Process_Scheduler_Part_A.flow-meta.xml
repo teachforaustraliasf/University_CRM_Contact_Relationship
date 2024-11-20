@@ -215,12 +215,12 @@
                 <targetReference>Trigger_Day_1_Actions</targetReference>
             </connector>
             <label>Day 1</label>
-            <offsetNumber>0</offsetNumber>
-            <offsetUnit>Days</offsetUnit>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
             <recordField>CreatedDate</recordField>
             <timeSource>RecordField</timeSource>
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>
