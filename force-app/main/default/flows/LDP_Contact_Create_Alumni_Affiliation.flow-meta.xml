@@ -193,6 +193,12 @@
                 <elementReference>TodaysDate</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>npe5__Status__c</field>
+            <value>
+                <stringValue>Former</stringValue>
+            </value>
+        </inputAssignments>
         <object>npe5__Affiliation__c</object>
     </recordUpdates>
     <start>
@@ -227,5 +233,5 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
 </Flow>
