@@ -137,6 +137,9 @@
         <filters>
             <field>Name</field>
             <operator>EqualTo</operator>
+            <value>
+                <stringValue>2.1 App Pipeline - Unsub deadline. Urgency : deadline approaching</stringValue>
+            </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>EmailTemplate</object>
