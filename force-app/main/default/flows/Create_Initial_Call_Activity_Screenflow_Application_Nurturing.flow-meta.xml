@@ -14,7 +14,7 @@
         <inputParameters>
             <name>Type__c</name>
             <value>
-                <stringValue>Phone Call</stringValue>
+                <stringValue>Call - Outbound</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -208,9 +208,9 @@
         <label>Capture Initial Call Notes</label>
         <locationX>176</locationX>
         <locationY>350</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
             <targetReference>Create_Call_Activity</targetReference>
         </connector>
