@@ -24,14 +24,14 @@
             <assignToReference>NewActivity.Type__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Phone Call</stringValue>
+                <stringValue>Call - Outbound</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>NewActivity.Description</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>This is a reminder to complete the Second Call Attempt with the applicant, as the Initial Conversation Call was not successful. Once actioned, update the Stage Reason based on the outcome of the call attempt, mark this task as completed and then the activity will automatically be logged against the Contact and their Application.</stringValue>
+                <stringValue>This is a reminder to conduct the initial conversation call with the applicant. Once actioned, update the Stage Reason based on the outcome of the call attempt, use the Log Initial Call activity button on this task to capture call details and approve applicant for escalation (if required). Logging the call activity will automatically mark this reminder completed and the call activity will be logged against the Contact and their Application.</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
