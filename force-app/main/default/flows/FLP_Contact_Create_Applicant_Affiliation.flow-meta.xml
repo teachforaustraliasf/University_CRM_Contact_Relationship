@@ -73,7 +73,7 @@
         <inputAssignments>
             <field>npe5__Organization__c</field>
             <value>
-                <elementReference>TfaAccountIDReecord.Id</elementReference>
+                <elementReference>$Record.School_Lookup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -139,7 +139,7 @@
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>DefaultAccountID</name>
         <dataType>String</dataType>
