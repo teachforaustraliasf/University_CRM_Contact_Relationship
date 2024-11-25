@@ -35,7 +35,7 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
     currentUserEmail;
     showSpinner = false;
     isSmsToggleOn = false;
-
+    subjectReadOnly = false;
     // Predefined merge fields
     mergeFields = [
         { label: 'First Name', value: '{!Contact.FirstName}' },
@@ -50,6 +50,13 @@ export default class SendEmail extends NavigationMixin(LightningElement)  {
 
     handleToggleChange(event) {
         this.isSmsToggleOn = event.target.checked;
+        this.subjectReadOnly = event.target.checked;
+        if(event.target.checked){
+            this.emailSubject = 'Not Required';
+        }else{
+            this.emailSubject = '';
+        }
+
     }
     get isAttachmentInvisible() {
         return this.isSmsToggleOn ? false : true;

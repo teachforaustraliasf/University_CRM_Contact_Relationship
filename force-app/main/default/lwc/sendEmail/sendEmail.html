@@ -2,7 +2,7 @@
   @description       : This is new send email functionality from Affiliation list view 
   @author            : Mohammed Ismail
   @group             : Sinapse
-  @last modified on  : 10-30-2024
+  @last modified on  : 11-25-2024
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
@@ -14,9 +14,10 @@
                 <lightning-combobox name="progress" label="From" value={senderEmailId} placeholder="Select Progress"
                     options={emailOrgWideOptions} onchange={handleSenderEmailChange}></lightning-combobox>
             </div>
+
             <div class="slds-m-top_small">
                 <lightning-layout>
-                    <lightning-layout-item size="11">
+                    <lightning-layout-item size="10" class="slds-text-align_left">
                         <label>To</label>
                         <lightning-pill-container items={items} onitemremove={removePillItem}></lightning-pill-container>
                      <!--Commented this placeholder as not required this time   <span onkeypress={handleKeyCheck}>
@@ -24,21 +25,16 @@
                                 onchange={handleEmailChange}></lightning-input>
                         </span>-->
                     </lightning-layout-item>
-                    <lightning-layout-item  size="1" class="">
-                        <div class="slds-grid slds-wrap">
-                            <div class="slds-size_12-of-12 slds-text-align_right">
-                                <label>Send as SMS</label>
-                            </div>
-                            <div class="slds-size_12-of-12 toggle-input-css" >
-                                <lightning-input type="toggle" label="" onchange={handleToggleChange} message-toggle-active="" message-toggle-inactive=""></lightning-input>                            </div>
-                            </div>
+                    <lightning-layout-item  size="2" class="slds-text-align_right">
+                            <lightning-input type="checkbox" label="Send as SMS" onchange={handleToggleChange} message-toggle-active="" message-toggle-inactive=""></lightning-input>
+
                         <!-- Toggle for SMS vs regular email -->   
                     </lightning-layout-item>
                 </lightning-layout>
 
                 <div class="slds-m-top_medium">
                     <lightning-input label="Subject" type="text" value={emailSubject}
-                        onchange={handleSubjectChange}></lightning-input>
+                        onchange={handleSubjectChange} read-only={subjectReadOnly}></lightning-input>
                 </div>
                 <div class="slds-m-top_medium">
                     <lightning-input-rich-text value={htmlBody} onchange={handleChange}>
