@@ -61,6 +61,12 @@
             <targetReference>Getting_Previous_LDP_Application_Affiliation</targetReference>
         </connector>
         <inputAssignments>
+            <field>Application__c</field>
+            <value>
+                <elementReference>Get_IA_Record.Application_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Cohort__c</field>
             <value>
                 <elementReference>Get_IA_Record.Cohort_lookup__r.Id</elementReference>
