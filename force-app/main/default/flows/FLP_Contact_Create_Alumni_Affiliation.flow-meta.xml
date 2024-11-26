@@ -34,7 +34,7 @@
         <name>Creating_FLP_Alumni_Affiliation_Record</name>
         <label>Creating FLP Alumni Affiliation Record</label>
         <locationX>176</locationX>
-        <locationY>431</locationY>
+        <locationY>539</locationY>
         <connector>
             <targetReference>Getting_Previous_FLP_Fellow_Affiliation</targetReference>
         </connector>
@@ -77,7 +77,7 @@
         <inputAssignments>
             <field>npe5__Organization__c</field>
             <value>
-                <elementReference>$Record.AccountId</elementReference>
+                <elementReference>TFA_Default_Account.Id</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -90,13 +90,34 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
+        <name>Get_Default_TFA_Account</name>
+        <label>Get Default TFA Account</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Creating_FLP_Alumni_Affiliation_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>TFADefaultAccount</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputReference>TFA_Default_Account</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
         <name>Get_FLP_Application</name>
         <label>Get FLP Application</label>
         <locationX>176</locationX>
         <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Creating_FLP_Alumni_Affiliation_Record</targetReference>
+            <targetReference>Get_Default_TFA_Account</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -117,7 +138,7 @@
         <name>Getting_Previous_FLP_Fellow_Affiliation</name>
         <label>Getting Previous FLP Fellow Affiliation</label>
         <locationX>176</locationX>
-        <locationY>539</locationY>
+        <locationY>647</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Updating_FLP_Fellow_Affiliation_End_Date</targetReference>
@@ -162,7 +183,7 @@
         <name>Updating_FLP_Fellow_Affiliation_End_Date</name>
         <label>Updating FLP Fellow Affiliation End Date</label>
         <locationX>176</locationX>
-        <locationY>647</locationY>
+        <locationY>755</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -235,5 +256,23 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>TFA_Default_Account</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>TFADefaultAccount</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>$Label.TFA_Default_Account</elementReference>
+        </value>
     </variables>
 </Flow>
