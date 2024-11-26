@@ -117,7 +117,7 @@
                 <leftValueReference>$Record.Application_Last_Modified_Date__c</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
-                    <elementReference>$Record.CreatedDate</elementReference>
+                    <elementReference>$Record.Application_Start_Date__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>

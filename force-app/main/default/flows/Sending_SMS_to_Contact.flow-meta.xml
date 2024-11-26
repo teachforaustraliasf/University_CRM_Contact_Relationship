@@ -87,9 +87,9 @@
         <label>Getting SMS Content</label>
         <locationX>176</locationX>
         <locationY>242</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <connector>
             <targetReference>Send_SMS_Email_Action_1</targetReference>
         </connector>
@@ -100,6 +100,7 @@
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>false</isRequired>
         </fields>
+        <nextOrFinishButtonLabel>Send</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -108,9 +109,9 @@
         <label>Show Message</label>
         <locationX>176</locationX>
         <locationY>458</locationY>
-        <allowBack>true</allowBack>
+        <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
+        <allowPause>false</allowPause>
         <fields>
             <name>SMS_Error_Message</name>
             <fieldText>&lt;p&gt;SMS Successfully Sent.&lt;/p&gt;</fieldText>
