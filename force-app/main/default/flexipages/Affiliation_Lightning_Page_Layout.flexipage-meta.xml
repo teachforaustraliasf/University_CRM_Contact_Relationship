@@ -117,6 +117,12 @@
                 <identifier>RecordremediatedData_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.TTL_Application__c</fieldItem>
+                <identifier>RecordTTL_Application__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-198a1ecf-f5ff-4a8f-9afb-45eee8f61557</name>
         <type>Facet</type>
     </flexiPageRegions>
