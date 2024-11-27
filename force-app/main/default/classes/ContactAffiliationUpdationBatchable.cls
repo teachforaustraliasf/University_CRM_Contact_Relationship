@@ -171,11 +171,11 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
         List<FLP_Application__History > flpApplicationHistoryList = [SELECT Id, ParentId, CreatedDate, Field, NewValue FROM FLP_Application__History WHERE ParentId = :flpApplicationRecord.Id AND field = 'Application_Stage__c' ORDER BY createdDate DESC];
 
         npe5__Affiliation__c objAffliation= new npe5__Affiliation__c();
-        if(flpApplicationRecord.Start_Date__c!=null){
-            objAffliation.npe5__StartDate__c = Date.valueOf(flpApplicationHistoryList[0].createdDate);
-            Date endDate = Date.valueOf(flpApplicationRecord.Start_Date__c).addyears(1);
+
+            objAffliation.npe5__StartDate__c = (flpApplicationHistoryList.size() > 0) ? Date.valueOf(flpApplicationHistoryList[0].createdDate) : Date.valueOf(flpApplicationRecord.createdDate);
+            Date endDate = Date.valueOf(objAffliation.npe5__StartDate__c).addyears(1);
             objAffliation.npe5__EndDate__c = endDate;
-        }
+        
         
         objAffliation.FLP_Application__c = flpApplicationRecord.Id;
         objAffliation.Email__c = flpApplicationRecord.Contact__r.npe01__WorkEmail__c; 
