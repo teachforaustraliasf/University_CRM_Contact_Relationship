@@ -2,15 +2,15 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 11-20-2024
+ * @last modified on  : 11-27-2024
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 global with sharing class ContactAffiliationUpdationBatchable implements Database.Batchable<sObject> {
 
     public static final String OBJECT_CONTACT = 'Contact';
     public static final String RECORDTYPE_GENERAL = 'General';
-    public static final Set<String> RECORDTYPE_APPLICABLE = new Set<String>{'Applicants','Associates','Alumni','General'};
-    
+    public static final Set<String> RECORDTYPE_APPLICABLE = new Set<String>{'Applicants','Associates','Alumni','General','Participants'};
+    public static Id tfaAccountId;
     global List<Contact> start(Database.BatchableContext BC) {
         List<Contact> contactList= new List<Contact>();
         String soqlQuery = 'SELECT Id, Name, Alumni__c, FLP_Alumni__c, RecordTypeId FROM Contact';
@@ -22,6 +22,7 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
 
         List<npe5__Affiliation__c> toCreatedAffiliationList = new List<npe5__Affiliation__c>();
         Id accountId = [SELECT Id FROM Account WHERE Name = :Label.TFA_Default_Account LIMIT 1].Id;
+        tfaAccountId = accountId;
         set<Id> contactIdsSet = new set<Id>();
         for(Contact contactObj :contactList){
             contactIdsSet.add(contactObj.Id);
@@ -31,6 +32,7 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
       toCreatedAffiliationList = getFLPApplicationList(toCreatedAffiliationList,contactIdsSet, accountId);
       toCreatedAffiliationList = getIncomingAssociateList(toCreatedAffiliationList,contactIdsSet,accountId);
       toCreatedAffiliationList = getDonarAffiliationList(toCreatedAffiliationList,contactIdsSet,accountId);
+      toCreatedAffiliationList = getTTLApplicationList(toCreatedAffiliationList,contactIdsSet, accountId);
 
         try {
             if(!toCreatedAffiliationList.isEmpty()){
@@ -63,7 +65,9 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
                 objAffliation.npe5__StartDate__c = Date.valueOf(application.Application_Start_Date__c);
             }
 
+            System.debug(application.Stage_Last_Update__c);
             if(application.Stage_Last_Update__c != null){
+                System.debug('Should get end date');
                 Datetime endDateTime = application.Stage_Last_Update__c;
                 objAffliation.npe5__EndDate__c = Date.valueOf(endDateTime);
             }
@@ -138,13 +142,37 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
         
         return toCreatedAffiliationList;
     }
+
+    public static List<npe5__Affiliation__c> getTTLApplicationList(List<npe5__Affiliation__c> toCreatedAffiliationList,set<Id> contactIdsSet, Id accountId){
+        List<TTL_Application__c> ttlApps = [SELECT Id, CreatedDate, Applied_Date__c, LastActivityDate, Participant__r.npe01__HomeEmail__c, Participant__c FROM TTL_Application__c WHERE Participant__c IN :contactIdsSet];
+
+        if(!ttlApps.isEmpty()){
+            for(TTL_Application__c ttlApp : ttlApps){
+                npe5__Affiliation__c objAffliation = new npe5__Affiliation__c();
+                if(ttlApp.Applied_Date__c != null){
+                    objAffliation.npe5__StartDate__c = Date.valueOf(ttlApp.Applied_Date__c);
+                }
+                if(ttlApp.LastActivityDate != null){
+                    objAffliation.npe5__EndDate__c = Date.valueOf(ttlApp.LastActivityDate);
+                }
+                objAffliation.TTL_Application__c = ttlApp.Id;
+                objAffliation.Email__c = ttlApp.Participant__r.npe01__HomeEmail__c;
+                objAffliation.npe5__Organization__c = accountId;
+                toCreatedAffiliationList.add(objAffliation);
+            }
+        }
+        return toCreatedAffiliationList;
+    }
     
     public static List<npe5__Affiliation__c> getFLPFellowList(List<npe5__Affiliation__c> toCreatedAffiliationList,FLP_Application__c flpApplicationRecord){
        System.debug('getFLPFellowList');
         System.debug('toCreatedAffiliationList size before flp fellow = ' +toCreatedAffiliationList.size());
+
+        List<FLP_Application__History > flpApplicationHistoryList = [SELECT Id, ParentId, CreatedDate, Field, NewValue FROM FLP_Application__History WHERE ParentId = :flpApplicationRecord.Id AND field = 'Application_Stage__c' ORDER BY createdDate DESC];
+
         npe5__Affiliation__c objAffliation= new npe5__Affiliation__c();
         if(flpApplicationRecord.Start_Date__c!=null){
-            objAffliation.npe5__StartDate__c = Date.valueOf(flpApplicationRecord.Start_Date__c);
+            objAffliation.npe5__StartDate__c = Date.valueOf(flpApplicationHistoryList[0].createdDate);
             Date endDate = Date.valueOf(flpApplicationRecord.Start_Date__c).addyears(1);
             objAffliation.npe5__EndDate__c = endDate;
         }
@@ -159,12 +187,24 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
 
         toCreatedAffiliationList.add(objAffliation);
         System.debug('toCreatedAffiliationList size after flp fellow = ' +toCreatedAffiliationList.size());
+        if(flpApplicationRecord.Start_Date__c != null && Date.valueOf(flpApplicationRecord.Start_Date__c).addyears(1) >= Date.TODAY()){
+            toCreatedAffiliationList.add(
+                new npe5__Affiliation__c (Application__c = flpApplicationRecord.Id,
+                Email__c =  flpApplicationRecord.Contact__r.npe01__HomeEmail__c,
+                npe5__Organization__c = tfaAccountId,
+                npe5__Contact__c = flpApplicationRecord.Contact__c,
+                Role_Category__c = 'FLP',
+                Role__c = 'Alumni',
+                remediatedData__c = true)
+            );
+        }
         return toCreatedAffiliationList;
     }
 
+
     public static List<npe5__Affiliation__c> getIncomingAssociateList(List<npe5__Affiliation__c> toCreatedAffiliationList,set<Id> contactIdsSet,Id accountId){
         System.debug('getIncomingAssociateList');
-        for(Associate_Record__c associateRecord : [SELECT Id,Placed_Date_Stamp__c,Contact__r.npe01__HomeEmail__c,Contact__c, Contact__r.AccountId,Contact__r.Alumni__c,Placement_School__c, Application_ID__c FROM Associate_Record__c WHERE Contact__c IN :contactIdsSet]){
+        for(Associate_Record__c associateRecord : [SELECT Id,Placed_Date_Stamp__c,Contact__r.npe01__HomeEmail__c, Contact__r.npe01__WorkEmail__c, Contact__c, Contact__r.AccountId,Contact__r.Alumni__c,Placement_School__c, Application_ID__c FROM Associate_Record__c WHERE Contact__c IN :contactIdsSet]){
             npe5__Affiliation__c objAffliation= new npe5__Affiliation__c();
             if(associateRecord.Placed_Date_Stamp__c!=null){
                 objAffliation.npe5__StartDate__c = Date.valueOf(associateRecord.Placed_Date_Stamp__c);
@@ -175,7 +215,7 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
             }
             objAffliation.Application__c = associateRecord.Application_ID__c;
             objAffliation.Incoming_Associate_Record__c = associateRecord.Id;
-            objAffliation.Email__c = associateRecord.Contact__r.npe01__HomeEmail__c;
+            objAffliation.Email__c = associateRecord.Contact__r.npe01__WorkEmail__c;
             objAffliation.npe5__Organization__c = associateRecord.Placement_School__c;
             objAffliation.npe5__Contact__c = associateRecord.Contact__c;
             objAffliation.Role_Category__c = 'LDP';
@@ -260,12 +300,15 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
         return recordTypesMap;
     }
 
-    public static String getTobeRecordTypeID(String recordTypeID,Map<String,String> contactRecordTypeMap){
+    public static String getTobeRecordTypeID(String recordTypeID, Map<String, String> contactRecordTypeMap){
         List<String> BaseRecordTypeIdList = contactRecordTypeMap.values();
         String generalRecordTypeID = contactRecordTypeMap.get(RECORDTYPE_GENERAL);
         if(!BaseRecordTypeIdList.contains(recordTypeID)){
             return  generalRecordTypeID;
-        }else{
+        }else if(recordTypeID == contactRecordTypeMap.get('Participants')){
+            return contactRecordTypeMap.get('Associates');
+        }
+        else{
             return recordTypeID;
         }
            
