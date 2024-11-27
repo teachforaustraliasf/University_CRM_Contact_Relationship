@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stakeholder_Communications__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>To identify the stakeholders TFA has communicated with as part of the for approved program adjustment.</inlineHelpText>
+    <label>Stakeholder Communications</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>School</fullName>
+                <default>false</default>
+                <label>School</label>
+            </value>
+            <value>
+                <fullName>State or Territory Education Department</fullName>
+                <default>false</default>
+                <label>State or Territory Education Department</label>
+            </value>
+            <value>
+                <fullName>TRB</fullName>
+                <default>false</default>
+                <label>TRB</label>
+            </value>
+            <value>
+                <fullName>University</fullName>
+                <default>false</default>
+                <label>University</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

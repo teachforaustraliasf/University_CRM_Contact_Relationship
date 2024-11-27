@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Role__c</fullName>
+    <externalId>false</externalId>
     <label>Role</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
@@ -326,7 +327,89 @@
                 <default>false</default>
                 <label>Deputy Director</label>
             </value>
+            <value>
+                <fullName>Applicant</fullName>
+                <default>false</default>
+                <label>Applicant</label>
+            </value>
+            <value>
+                <fullName>Participant</fullName>
+                <default>false</default>
+                <label>Participant</label>
+            </value>
+            <value>
+                <fullName>Alumni</fullName>
+                <default>false</default>
+                <label>Alumni</label>
+            </value>
+            <value>
+                <fullName>Fellow</fullName>
+                <default>false</default>
+                <label>Fellow</label>
+            </value>
+            <value>
+                <fullName>Primary</fullName>
+                <default>false</default>
+                <label>Primary</label>
+            </value>
+            <value>
+                <fullName>Principal</fullName>
+                <default>false</default>
+                <label>Principal</label>
+            </value>
+            <value>
+                <fullName>Business Manager</fullName>
+                <default>false</default>
+                <label>Business Manager</label>
+            </value>
+            <value>
+                <fullName>School Prac Contact</fullName>
+                <default>false</default>
+                <label>School Prac Contact</label>
+            </value>
+            <value>
+                <fullName>School Prac Supervisor</fullName>
+                <default>false</default>
+                <label>School Prac Supervisor</label>
+            </value>
+            <value>
+                <fullName>In-School Mentor</fullName>
+                <default>false</default>
+                <label>In-School Mentor</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>Donor</fullName>
+                <default>false</default>
+                <label>Donor</label>
+            </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Donor</controllingFieldValue>
+            <valueName>Donor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UG</controllingFieldValue>
+            <controllingFieldValue>LDP</controllingFieldValue>
+            <controllingFieldValue>FLP</controllingFieldValue>
+            <valueName>Applicant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UG</controllingFieldValue>
+            <controllingFieldValue>LDP</controllingFieldValue>
+            <valueName>Participant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UG</controllingFieldValue>
+            <controllingFieldValue>TTL</controllingFieldValue>
+            <controllingFieldValue>LDP</controllingFieldValue>
+            <controllingFieldValue>FLP</controllingFieldValue>
+            <valueName>Alumni</valueName>
+        </valueSettings>
         <valueSettings>
             <controllingFieldValue>Academic</controllingFieldValue>
             <valueName>Assistant Professor</valueName>
@@ -578,6 +661,34 @@
         <valueSettings>
             <controllingFieldValue>Executive &amp; Senior Management</controllingFieldValue>
             <valueName>Deputy Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FLP</controllingFieldValue>
+            <valueName>Fellow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>Primary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>Principal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>Business Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>School Prac Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>School Prac Supervisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>In-School Mentor</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

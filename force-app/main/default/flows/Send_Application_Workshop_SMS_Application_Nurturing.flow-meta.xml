@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Send the email to Kudosity server to trigger the SMS to applicant.</description>
+        <name>Send_Email_to_SMS_for_Application_Workshop_SMS</name>
+        <label>Send Email-to-SMS for Application Workshop SMS</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>SendEmailController</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Last_Application_Nurturing_Activity</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>conId</name>
+            <value>
+                <elementReference>$Record.Contact__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>plainTextBody</name>
+            <value>
+                <elementReference>SMSContent</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedToId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subject</name>
+            <value>
+                <elementReference>EmailToSMSSubject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toAddress</name>
+            <value>
+                <elementReference>$Record.Contact__r.Burst_SMS_Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>SendEmailController</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <description>When Last Application Nurturing Activity is updated to &apos;Create &apos;Application Workshop SMS&apos; Reminder&apos;, the flow sends the email to trigger the automated SMS and updates the Last Application Nurturing Activity.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Subject line for the automated email-to-SMS</description>
+        <name>EmailToSMSSubject</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} + &quot; - Attend an Application Workshop&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Main body text for the automated SMS.</description>
+        <name>SMSContent</name>
+        <dataType>String</dataType>
+        <expression>&quot;Now that you’ve opened your LDP application, attend a TFA Application Workshop for tips on what makes a strong application.\n&quot; + 
+HYPERLINK(&quot;https://teachforaustralia.org/our-programs/leadership-development-program/&quot;, &quot;Leadership Development Program | Teach For Australia&quot;)</expression>
+    </formulas>
+    <interviewLabel>Send Application Workshop SMS (Application Nurturing) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Application Workshop SMS (Application Nurturing)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Last_Application_Nurturing_Activity</name>
+        <label>Update Last Application Nurturing Activity</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Application Workshop SMS sent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_Email_to_SMS_for_Application_Workshop_SMS</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Trigger &apos;Application Workshop SMS&apos;</stringValue>
+            </value>
+        </filters>
+        <object>Application__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Description for reminder task to conduct initial call with applicant.</description>
+        <name>TaskDescription</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>This is a reminder to send the Attend an application workshop SMS to the applicant.
+Once actioned, mark this task as completed and the activity will automatically be logged against the Contact and their Application.</text>
+    </textTemplates>
+    <variables>
+        <name>NewActivity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+</Flow>

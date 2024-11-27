@@ -5,7 +5,7 @@
         <name>check_dates</name>
         <label>check dates</label>
         <locationX>182</locationX>
-        <locationY>287</locationY>
+        <locationY>395</locationY>
         <defaultConnector>
             <targetReference>Set_status_to_former</targetReference>
         </defaultConnector>
@@ -31,6 +31,49 @@
                 <targetReference>set_status_to_current</targetReference>
             </connector>
             <label>Current</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>not_application_related</name>
+        <label>not application related</label>
+        <locationX>380</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>non_app_related</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Participant</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Applicant</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Alumni</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Role__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Fellow</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>check_dates</targetReference>
+            </connector>
+            <label>non app related</label>
         </rules>
     </decisions>
     <description>Populate Unique Key On Affiliation Record</description>
@@ -75,7 +118,7 @@
         <name>populate_isActive_Field</name>
         <label>populate isActive Field</label>
         <locationX>182</locationX>
-        <locationY>587</locationY>
+        <locationY>695</locationY>
         <connector>
             <targetReference>update_compount_Key</targetReference>
         </connector>
@@ -91,7 +134,7 @@
         <name>set_status_to_current</name>
         <label>set status to current</label>
         <locationX>50</locationX>
-        <locationY>395</locationY>
+        <locationY>503</locationY>
         <connector>
             <targetReference>populate_isActive_Field</targetReference>
         </connector>
@@ -107,7 +150,7 @@
         <name>Set_status_to_former</name>
         <label>Set status to former</label>
         <locationX>314</locationX>
-        <locationY>395</locationY>
+        <locationY>503</locationY>
         <connector>
             <targetReference>populate_isActive_Field</targetReference>
         </connector>
@@ -123,7 +166,7 @@
         <name>update_compount_Key</name>
         <label>update compount Key</label>
         <locationX>182</locationX>
-        <locationY>695</locationY>
+        <locationY>803</locationY>
         <inputAssignments>
             <field>Compound_Key__c</field>
             <value>
@@ -133,10 +176,10 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>56</locationX>
+        <locationX>254</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>check_dates</targetReference>
+            <targetReference>not_application_related</targetReference>
         </connector>
         <object>npe5__Affiliation__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>

@@ -1,0 +1,130 @@
+<!--
+  @description       : This is new send email functionality from Affiliation list view 
+  @author            : Mohammed Ismail
+  @group             : Sinapse
+  @last modified on  : 11-25-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-spinner if:true={showSpinner} alternative-text="Loading" size="x-small"></lightning-spinner>
+    <template if:true={ids}>
+    <lightning-card title="Send List Email" icon-name="utility:email" variant='inverse' size='small'>
+        <div class="slds-p-around_medium">
+            <div class="slds-m-top_medium">
+                <lightning-combobox name="progress" label="From" value={senderEmailId} placeholder="Select Progress"
+                    options={emailOrgWideOptions} onchange={handleSenderEmailChange}></lightning-combobox>
+            </div>
+
+            <div class="slds-m-top_small">
+                <lightning-layout>
+                    <lightning-layout-item size="10" class="slds-text-align_left">
+                        <label>To</label>
+                        <lightning-pill-container items={items} onitemremove={removePillItem}></lightning-pill-container>
+                     <!--Commented this placeholder as not required this time   <span onkeypress={handleKeyCheck}>
+                            <lightning-input type="email" class="input-no-border" data-id="inputEmailID" value={inputEmail}
+                                onchange={handleEmailChange}></lightning-input>
+                        </span>-->
+                    </lightning-layout-item>
+                    <lightning-layout-item  size="2" class="slds-text-align_right">
+                            <lightning-input type="checkbox" label="Send as SMS" onchange={handleToggleChange} message-toggle-active="" message-toggle-inactive=""></lightning-input>
+
+                        <!-- Toggle for SMS vs regular email -->   
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <div class="slds-m-top_medium">
+                    <lightning-input label="Subject" type="text" value={emailSubject}
+                        onchange={handleSubjectChange} read-only={subjectReadOnly}></lightning-input>
+                </div>
+                <div class="slds-m-top_medium">
+                    <lightning-input-rich-text value={htmlBody} onchange={handleChange}>
+                    </lightning-input-rich-text>
+                </div>
+            </div>
+
+            <!-- Dropdown to insert merge fields -->
+            <lightning-combobox label="Insert Merge Field" placeholder="Select a merge field" options={mergeFields}
+                onchange={handleMergeFieldInsert}>
+            </lightning-combobox>
+
+
+            <div class="slds-m-top_medium ">
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-helptext
+                            content="List Email Send Limit"></lightning-helptext>&nbsp;<span>{upperLimit}{limitText}</span>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-text-align_right">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_3-of-6">
+
+                                <input type="file" id="fileInput" onchange={handleFilesChange} style="display:none" />
+                            </div>
+                            <div class="slds-col slds-size_3-of-6">
+                                <template for:each={uploadedFiles} for:item="file">
+                                    <span key={file.name}>{file.name}</span>
+                                </template>
+                                &nbsp;&nbsp;
+                                <lightning-icon if:true={isAttachmentInvisible} icon-name="utility:attach" variant="brand" size="small"
+                                    alternative-text="Attachment!" title="Attachment"
+                                    onclick={handleOpenFileUploader}></lightning-icon>
+                                &nbsp;&nbsp;
+                                <lightning-button label="Cancel" variant="brand" onclick={handleCancel}
+                                    title="Cancel"></lightning-button>
+                                &nbsp;&nbsp;
+                                <lightning-button label="Send" variant="brand" onclick={handleSendEmail}
+                                    title="Send Email"></lightning-button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+    <div if:true={showModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+
+                <lightning-icon icon-name="utility:close" class="slds-button slds-button_icon slds-modal__close"
+                    size="medium" onclick={handleCloseModal} title="Close" alternative-text="Close">
+                </lightning-icon>
+                <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">Send Email?</h1>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div class="slds-align_absolute-center">To send this email, add recipient email, a subject and body content.</div>
+                    <br />
+
+                    <div class="slds-align_absolute-center">
+                        <lightning-button label="Ok" variant="brand" onclick={handleCloseModal}
+                            title="Ok"></lightning-button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </div>
+</template>
+<template if:false={ids}>
+    <lightning-card title=""   >
+        <div class="slds-m-top_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                    No Affiliation Record has been selected.Kindly select atleast one to send the email.
+                </div>
+             
+                </div>
+                <br/>   <br/>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                        <lightning-button label="Cancel" variant="brand" onclick={handleCancel}
+                    title="Cancel"></lightning-button>
+                    </div>       
+                    </div>
+                </div>
+    </lightning-card>
+</template>
+</template>

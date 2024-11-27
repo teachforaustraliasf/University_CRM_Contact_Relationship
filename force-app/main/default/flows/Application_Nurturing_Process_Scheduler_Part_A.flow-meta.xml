@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <description>Handles all the scheduled paths of the Application Nurturing Process that are applicable to all Applications from the point of creation to submission.</description>
+    <environments>Default</environments>
+    <interviewLabel>Application Nurturing Process Scheduler (Part A) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Application Nurturing Process Scheduler (Part A)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Trigger_Day_18_Actions</name>
+        <label>Trigger Day 18 Actions</label>
+        <locationX>578</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Send Complete Your Application Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Trigger_Day_21_Actions</name>
+        <label>Trigger Day 21 Actions</label>
+        <locationX>842</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Trigger &apos;Reminder to Submit SMS&apos;</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Trigger_Day_23_Actions</name>
+        <label>Trigger Day 23 Actions</label>
+        <locationX>1106</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Send Final Follow-up Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Trigger_Day_28_Actions</name>
+        <label>Trigger Day 28 Actions</label>
+        <locationX>1370</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Review Application</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Trigger_Day_2_Actions</name>
+        <label>Trigger Day 2 Actions</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Send Schedule an Initial Call Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Trigger_Day_3_Actions</name>
+        <label>Trigger Day 3 Actions</label>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Create &apos;Conduct Initial Conversation Call&apos; Reminder</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Submitted__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contact__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Application_Withdrawn__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Application__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Day_2</name>
+            <connector>
+                <targetReference>Trigger_Day_2_Actions</targetReference>
+            </connector>
+            <label>Day 2</label>
+            <offsetNumber>24</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Day_3</name>
+            <connector>
+                <targetReference>Trigger_Day_3_Actions</targetReference>
+            </connector>
+            <label>Day 3</label>
+            <offsetNumber>48</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Day_18</name>
+            <connector>
+                <targetReference>Trigger_Day_18_Actions</targetReference>
+            </connector>
+            <label>Day 18</label>
+            <offsetNumber>408</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Day_21</name>
+            <connector>
+                <targetReference>Trigger_Day_21_Actions</targetReference>
+            </connector>
+            <label>Day 21</label>
+            <offsetNumber>480</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Day_23</name>
+            <connector>
+                <targetReference>Trigger_Day_23_Actions</targetReference>
+            </connector>
+            <label>Day 23</label>
+            <offsetNumber>528</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Day_28</name>
+            <connector>
+                <targetReference>Trigger_Day_28_Actions</targetReference>
+            </connector>
+            <label>Day 28</label>
+            <offsetNumber>648</offsetNumber>
+            <offsetUnit>Hours</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

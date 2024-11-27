@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Create_Reminder_to_send_SMS</name>
+        <label>Create Reminder to send SMS</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <actionName>New_Task_Custom</actionName>
+        <actionType>quickAction</actionType>
+        <connector>
+            <targetReference>Update_Last_Application_Nurturing_Activity</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>Type__c</name>
+            <value>
+                <stringValue>SMS</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>Reminder: Book a call with your RM SMS</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ActivityDate</name>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>WhoId</name>
+            <value>
+                <elementReference>$Record.Contact__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Status</name>
+            <value>
+                <stringValue>In Progress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Priority</name>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>WhatId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Description</name>
+            <value>
+                <elementReference>TaskDescription</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>New_Task_Custom</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>Send the email to Kudosity server to trigger the SMS to applicant.</description>
+        <name>Send_Email_to_SMS_for_Book_a_Call_with_your_RM_SMS</name>
+        <label>Send Email-to-SMS for Book a Call with your RM SMS</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <actionName>SendEmailController</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Create_Reminder_to_send_SMS</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>conId</name>
+            <value>
+                <elementReference>$Record.Contact__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>plainTextBody</name>
+            <value>
+                <elementReference>SMSContent</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedToId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subject</name>
+            <value>
+                <elementReference>EmailToSMSSubject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>toAddress</name>
+            <value>
+                <elementReference>$Record.Contact__r.Burst_SMS_Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>SendEmailController</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <description>Checks if a task indicating the initial call being completed was found.</description>
+        <name>Initial_Call_completed</name>
+        <label>Initial Call completed?</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_to_SMS_for_Book_a_Call_with_your_RM_SMS</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Completed_Initial_Call_Tasks</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Revert_Last_Application_Nurturing_Activity</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>As part of the Application Nurturing process, if TFA have been unable to complete an initial call with the applicant after two attempts, then an SMS is sent to them to encourage them to schedule a call.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Subject line for the automated email-to-SMS</description>
+        <name>EmailToSMSSubject</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} + &quot; - Book a Call with your RM&quot;</expression>
+    </formulas>
+    <formulas>
+        <description>Main body text for the automated SMS.</description>
+        <name>SMSContent</name>
+        <dataType>String</dataType>
+        <expression>&quot;Book a call with your Recruitment Manager to get help with submitting a strong application. &quot; + HYPERLINK({!$Record.Owner:User.RM_Applicant_Booking_URL__c}, &quot;Click here to book a call.&quot;)</expression>
+    </formulas>
+    <interviewLabel>Send Book a Call with your RM SMS (Application Nurturing) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Book a Call with your RM SMS (Application Nurturing)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Attempt to retrieve a task related to this application that indicates the initial call has already been completed.</description>
+        <name>Get_Completed_Initial_Call_Tasks</name>
+        <label>Get Completed Initial Call Tasks</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Initial_Call_completed</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed Initial Conversation Call</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Revert_Last_Application_Nurturing_Activity</name>
+        <label>Revert Last Application Nurturing Activity</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <elementReference>$Record__Prior.Last_Application_Nurturing_Activity__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Last_Application_Nurturing_Activity</name>
+        <label>Update Last Application Nurturing Activity</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Book a Call with your RM SMS sent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Completed_Initial_Call_Tasks</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Trigger &apos;Book a Call with your RM SMS&apos;</stringValue>
+            </value>
+        </filters>
+        <object>Application__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Description for reminder task to conduct initial call with applicant.</description>
+        <name>TaskDescription</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>This is a reminder to send the Book a call with your RM SMS to the applicant.
+Once actioned, mark this task as completed and the activity will automatically be logged against the Contact and their Application.</text>
+    </textTemplates>
+    <variables>
+        <name>NewActivity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+</Flow>
