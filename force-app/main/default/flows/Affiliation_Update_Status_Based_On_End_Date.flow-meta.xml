@@ -260,7 +260,7 @@
         <connector>
             <targetReference>Get_Existing_Affilliation</targetReference>
         </connector>
-        <filterFormula>ISNEW() &amp;&amp; !(ISPICKVAL({!$Record.Role__c}, &apos;Applicant&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Alumni&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Participant&apos;)|| ISPICKVAL({!$Record.Role_Category__c}, &apos;FLP&apos;) &amp;&amp; ISPICKVAL({!$Record.Role__c}, &apos;Fellow&apos;)   )</filterFormula>
+        <filterFormula>ISNEW() &amp;&amp; !(ISPICKVAL({!$Record.Role__c}, &apos;Applicant&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Alumni&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Participant&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Fellow&apos;) )</filterFormula>
         <object>npe5__Affiliation__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>

@@ -57,6 +57,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>FLP_Application__c</field>
+            <value>
+                <elementReference>Get_FLP_Application.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Role_Category__c</field>
             <value>
                 <stringValue>FLP</stringValue>
