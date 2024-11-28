@@ -33,9 +33,9 @@
         <name>Create_FLP_Fellow_Affiliation_Record</name>
         <label>Create FLP Fellow Affiliation Record</label>
         <locationX>176</locationX>
-        <locationY>431</locationY>
+        <locationY>539</locationY>
         <connector>
-            <targetReference>Getting_Previous_FLP_Applicant_Affiliation</targetReference>
+            <targetReference>Update_FLP_Previous_Applicant_End_Date</targetReference>
         </connector>
         <inputAssignments>
             <field>Cohort__c</field>
@@ -82,7 +82,7 @@
         <inputAssignments>
             <field>npe5__Organization__c</field>
             <value>
-                <elementReference>$Record.AccountId</elementReference>
+                <elementReference>Get_FLP_Applcation.School_Lookup__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -101,7 +101,7 @@
         <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Create_FLP_Fellow_Affiliation_Record</targetReference>
+            <targetReference>Getting_Previous_FLP_Applicant_Affiliation</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -121,10 +121,10 @@
         <name>Getting_Previous_FLP_Applicant_Affiliation</name>
         <label>Getting Previous FLP Applicant Affiliation</label>
         <locationX>176</locationX>
-        <locationY>539</locationY>
+        <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Update_FLP_Previous_Applicant_End_Date</targetReference>
+            <targetReference>Create_FLP_Fellow_Affiliation_Record</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
