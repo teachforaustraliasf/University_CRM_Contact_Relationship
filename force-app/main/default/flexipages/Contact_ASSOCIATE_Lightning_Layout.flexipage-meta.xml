@@ -575,7 +575,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Cohort_Year2__c</fieldItem>
                 <identifier>RecordCohort_Year2_cField</identifier>
