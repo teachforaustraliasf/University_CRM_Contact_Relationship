@@ -34,10 +34,45 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Copy_1_of_check_dates</name>
+        <label>Copy 1 of check dates</label>
+        <locationX>710</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_Set_status_to_former</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Current</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.npe5__EndDate__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>TodaysDate</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.npe5__EndDate__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_set_status_to_current</targetReference>
+            </connector>
+            <label>Copy 1 of Current</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>not_application_related</name>
         <label>not application related</label>
-        <locationX>380</locationX>
+        <locationX>446</locationX>
         <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Copy_1_of_check_dates</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>non_app_related</name>
@@ -115,6 +150,67 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <name>Copy_1_of_populate_isActive_Field</name>
+        <label>Copy 1 of populate isActive Field</label>
+        <locationX>710</locationX>
+        <locationY>695</locationY>
+        <connector>
+            <targetReference>Copy_1_of_update_compount_Key</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>isActive__c</field>
+            <value>
+                <elementReference>isActiveCalc</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_set_status_to_current</name>
+        <label>Copy 1 of set status to current</label>
+        <locationX>578</locationX>
+        <locationY>503</locationY>
+        <connector>
+            <targetReference>Copy_1_of_populate_isActive_Field</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>npe5__Status__c</field>
+            <value>
+                <stringValue>Current</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_Set_status_to_former</name>
+        <label>Copy 1 of Set status to former</label>
+        <locationX>842</locationX>
+        <locationY>503</locationY>
+        <connector>
+            <targetReference>Copy_1_of_populate_isActive_Field</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>npe5__Status__c</field>
+            <value>
+                <stringValue>Former</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_1_of_update_compount_Key</name>
+        <label>Copy 1 of update compount Key</label>
+        <locationX>710</locationX>
+        <locationY>803</locationY>
+        <inputAssignments>
+            <field>Compound_Key__c</field>
+            <value>
+                <elementReference>compoundKey</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>populate_isActive_Field</name>
         <label>populate isActive Field</label>
         <locationX>182</locationX>
@@ -176,7 +272,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>254</locationX>
+        <locationX>320</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>not_application_related</targetReference>
