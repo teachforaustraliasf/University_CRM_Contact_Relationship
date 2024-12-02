@@ -201,7 +201,7 @@
             <field>Name</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>App-Attend an App Workshop</stringValue>
+                <stringValue>App-Attend an App Workshop (Generic)</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
@@ -253,5 +253,5 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
 </Flow>
