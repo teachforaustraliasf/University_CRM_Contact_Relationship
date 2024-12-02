@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>62.0</apiVersion>
-    <description>Populates the RM Email Signature field for Contact emails when the Owner of an Application is updated.</description>
+    <description>Populates field to be used for Application Nurturing emails when the Owner of an Application is updated.</description>
     <environments>Default</environments>
     <formulas>
         <name>EmailSignature</name>
@@ -9,7 +9,7 @@
         <expression>{!$Record.Owner_Fullname__c} + &quot; &quot; + IF(ISBLANK(TEXT({!$Record.Owner:User.Pronouns__c})),&quot;&quot;,TEXT({!$Record.Owner:User.Pronouns__c}))</expression>
     </formulas>
     <interviewLabel>Update RM Email Signature on Application Owner update {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Update RM Email Signature on Application Owner update</label>
+    <label>Update Application Nurturing Email fields on Application Owner update</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -43,9 +43,27 @@
             </value>
         </filters>
         <inputAssignments>
+            <field>RM_Booking_Link__c</field>
+            <value>
+                <elementReference>$Record.Owner:User.RM_Applicant_Booking_URL__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RM_Email_Address__c</field>
+            <value>
+                <elementReference>$Record.Owner:User.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>RM_Email_Signature__c</field>
             <value>
                 <elementReference>$Record.Owner:User.Email_Signature__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RM_First_Name__c</field>
+            <value>
+                <elementReference>$Record.Owner:User.FirstName</elementReference>
             </value>
         </inputAssignments>
         <object>Contact</object>
