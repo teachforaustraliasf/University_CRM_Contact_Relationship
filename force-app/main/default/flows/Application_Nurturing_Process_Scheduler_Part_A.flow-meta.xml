@@ -38,6 +38,19 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <name>Trigger_Day_1_Actions</name>
+        <label>Trigger Day 1 Actions</label>
+        <locationX>1634</locationX>
+        <locationY>276</locationY>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Send Application Opened Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Trigger_Day_21_Actions</name>
         <label>Trigger Day 21 Actions</label>
         <locationX>842</locationX>
@@ -103,7 +116,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>452</locationX>
+        <locationX>584</locationX>
         <locationY>0</locationY>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
@@ -195,6 +208,16 @@
             <offsetUnit>Hours</offsetUnit>
             <recordField>CreatedDate</recordField>
             <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Day_1</name>
+            <connector>
+                <targetReference>Trigger_Day_1_Actions</targetReference>
+            </connector>
+            <label>Day 1</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
