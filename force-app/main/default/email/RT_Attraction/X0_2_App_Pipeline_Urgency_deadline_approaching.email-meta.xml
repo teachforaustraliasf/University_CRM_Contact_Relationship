@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>App Pipeline - Deadline urgency. Unsub</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Teach_for_Australia</letterhead>
+    <name>2.1 App Pipeline - Unsub deadline. Urgency : deadline approaching</name>
+    <style>freeForm</style>
+    <subject>Deadline this Sunday - finish your application today!</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Thanks so much for taking an interest in Teach for Australia. This is an important reminder that the deadline for applications closing is this Sunday the 9th of June. If you’re ready to make inspiring your day job – now’s the time to complete your application.
+
+Through the Leadership Development Program you will create lasting social change by helping to break the cycle of educational inequity in Australia – all while earning your Masters.
+
+What&apos;s next?
+Here are a few steps you can take to get your application in great shape before the closing date:
+
+Start filling in your application by &lt;clicking here &lt;LINK APPLICATION&gt;
+Book a call with me (your Recruiter) before the weekend  &lt;&lt;BOOKING LINK FOR RM&gt;&gt;
+Read this blog by our selection specialist, which includes some great tips for submitting a quality application.
+
+I’ll be on the journey with you, so let me know when you&apos;ll be submitting your application for Cohort 2025.
+
+
+
+Speak soon,
+
+
+
+Coco Carter (she, her, hers)
+
+Recruitment Manager - Graduates &amp; Early Career Professionals
+
+
+
+On Wadawurrung Country
+
+
+
+Teach For Australia
+33 Lincoln Square South, Carlton VIC 3053
+Phone w. +61 3 8640 4500 |
+
+coco.carter@teachforaustralia.org | teachforaustralia.org</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

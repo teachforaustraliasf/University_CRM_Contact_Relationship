@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>App Pipeline - Unsub Online App Tips and Hints (follow up to the SJT email)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Teach_for_Australia</letterhead>
+    <name>(Jimmy) App Pipeline - Unsub Online App open. Template 2: OA (tips and hints)</name>
+    <style>freeForm</style>
+    <subject>Application tips</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Now that you’ve started an application for the Leadership Development Program, I’m here to help you make it the best it can be and will support you through the Teach For Australia (TFA) Selection Process.
+
+
+
+
+I&apos;ve put some application tips together below, but I encourage you to book a call with me and we can talk through the application and help you feel confident in responding to the questions.
+
+Continue your application here: Your application
+
+Top tips for a great application:
+
+Be specific - Even though we are assessing all of our 6 competencies throughout the selection process, for the application, focus your response on the specific question you are asked. Sometimes candidates try to address all of the competencies in each response, which can lead to vague answers that lack depth.
+Pick relevant examples - Select the most significant examples from your professional, academic or voluntary experience to demonstrate your alignment with the competencies. We value diverse skills and understand that your examples may not be related to education.
+Use your words -  85% of successful candidates each year maximise the word count of each question. While the word count is a guide, sticking to it shows your seriousness and thoughtfulness in crafting responses. Use it as a gauge for the level of detail expected, construct thoughtful paragraphs, and demonstrate your commitment to a thorough and well-considered application.
+Pay attention to detail – Proofread your application. A well-proofread application, free from grammar and spelling mistakes, is important. Consider having someone else review your application for additional insights. Remember, you&apos;re applying for a Masters too. The quality of your writing matters.
+Seek help – We are a learning community and value people who seek feedback and know when to ask for help sooner rather than later. As Recruitment Managers, we are here to help you navigate our selection process if you’re uncertain. We are your guides and your biggest advocates in this process, so don’t hesitate to reach out.
+Most importantly, check that you have saved each page as you move through your application so you don’t lose your work.
+
+You can read our Selection Specialist’s blog with her top tips for a shining application here
+
+
+
+I’m here to help so email me with any questions or book a call.
+
+
+
+Check out our upcoming events at TFA events
+
+
+Speak soon,
+
+
+
+Jimmy Carrocci (him/his)
+
+Recruitment Manager
+
+Graduates &amp; Early Career Professionals, TAS, NSW, WA, QLD
+
+
+
+On Wurundjeri Country
+
+
+
+Teach For Australia
+33 Lincoln Square South, Carlton VIC 3053
+Phone w. +61 3 8640 4500 |
+
+james.carrocci@teachforaustralia.org | teachforaustralia.org</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

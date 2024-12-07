@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>App Pipeline - Finish your application today</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Teach_for_Australia</letterhead>
+    <name>App Pipeline - Finish your application today</name>
+    <style>freeForm</style>
+    <subject>Don’t miss out – finish your application today!</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

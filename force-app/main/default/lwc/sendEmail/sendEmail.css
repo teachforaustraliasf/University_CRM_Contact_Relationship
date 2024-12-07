@@ -1,0 +1,10 @@
+.input-no-border {
+    --lwc-shadowButtonFocus: 0;
+    --lwc-borderWidthThin: 0;
+    --slds-c-input-shadow-focus: 0;
+    --sds-c-input-shadow-focus: 0;
+}
+.toggle-input-css{
+    margin-left: 55px;
+    padding-top: 5px;
+}

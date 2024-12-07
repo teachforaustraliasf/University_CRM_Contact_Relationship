@@ -4,7 +4,7 @@
     <assignments>
         <name>Assign_Existing_Affilliation_Record_Count</name>
         <label>Assign Existing Affilliation Record Count</label>
-        <locationX>270</locationX>
+        <locationX>314</locationX>
         <locationY>431</locationY>
         <assignmentItems>
             <assignToReference>ExistingAffilliationRecordCount</assignToReference>
@@ -79,7 +79,7 @@
     <decisions>
         <name>GetExistingAffilliationCount</name>
         <label>GetExistingAffilliationCount</label>
-        <locationX>270</locationX>
+        <locationX>314</locationX>
         <locationY>539</locationY>
         <defaultConnectorLabel>Default</defaultConnectorLabel>
         <rules>
@@ -178,7 +178,7 @@
     <recordLookups>
         <name>Get_Existing_Affilliation</name>
         <label>Get Existing Affilliation</label>
-        <locationX>270</locationX>
+        <locationX>314</locationX>
         <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -211,6 +211,13 @@
             <operator>NotEqualTo</operator>
             <value>
                 <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Role__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Alumni</stringValue>
             </value>
         </filters>
         <object>npe5__Affiliation__c</object>
@@ -248,12 +255,12 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>144</locationX>
+        <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Existing_Affilliation</targetReference>
         </connector>
-        <filterFormula>ISNEW()</filterFormula>
+        <filterFormula>ISNEW() &amp;&amp; !(ISPICKVAL({!$Record.Role__c}, &apos;Applicant&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Alumni&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Participant&apos;) || ISPICKVAL({!$Record.Role__c}, &apos;Fellow&apos;) )</filterFormula>
         <object>npe5__Affiliation__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>

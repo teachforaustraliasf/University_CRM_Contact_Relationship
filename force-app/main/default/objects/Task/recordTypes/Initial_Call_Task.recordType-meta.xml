@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initial_Call_Task</fullName>
+    <active>true</active>
+    <description>Record type specific to the Initial Conversation Call conducted during Application Nurturing.</description>
+    <label>Initial Call Task</label>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Waiting on someone else</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Alumni Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Applicant Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associate Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check-in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Last step</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Next step</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>School Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stakeholder Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To-do</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Team__c</picklist>
+        <values>
+            <fullName>CEO Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance and Business Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government and Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philanthropy and Partnerships</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RAMP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donor Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundraising Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundraising Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Meeting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Call - Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call - Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coffee chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EOI Existing Applicant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event - Attendee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event - Presenter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informal catch up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transcript Assessment Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workshop</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

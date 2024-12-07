@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>App Pipeline - Unsub Online App open. Rnd 3</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Teach_for_Australia</letterhead>
+    <name>(Coco) 0.1.2 App Pipeline - Unsub Online App open. Rnd 3</name>
+    <style>freeForm</style>
+    <subject>Your application - Important next steps | Teach For Australia</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Thank you for opening an application for the Leadership Development Program (LDP), Cohort 2025. I’m Coco, and I’ll be supporting you through the Teach For Australia (TFA) Selection Process.
+
+
+
+Before moving forward with the selection process, I encourage you to:
+
+
+1. Check that you meet the Program Requirements, including:
+
+Placement – You must be willing to accept a placement in these jurisdictions: VIC, WA, SA, NT, or TAS.
+Start date –  you must be able to start the full-time program in mid-November 2024.
+Eligibility –  check that you meet the learning area requirements, and are eligible for this program.
+
+2. Book a call with a Recruiter
+
+
+
+During this call, we&apos;ll get to know more about you and your motivations for joining the program, as well as discuss any questions you may have about the TFA, and the selection process. Book a call
+
+
+
+3. Attend our Application Workshop
+
+
+
+Learn more about the competencies and how to write a successful application, by attending our upcoming Application Workshop.
+
+
+
+
+If you have any questions or concerns, please email me. I&apos;ll be in touch with some further tips. Visit this link to continue working on your written application.
+
+
+
+IMPORTANT: This is the final round to apply for Cohort 2025. We encourage you to submit your application within five days of opening it.
+
+---
+
+
+Upcoming Events
+
+TFA Events
+
+
+
+Speak soon,
+
+
+
+Coco Carter (she, her, hers)
+
+Recruitment Manager
+
+Graduates &amp; Early Career Professionals, VIC, NT, ACT, OS
+
+
+
+On Wadawurrung Country
+
+
+
+Teach For Australia
+33 Lincoln Square South, Carlton VIC 3053
+Phone w. +61 3 8640 4500 |
+
+coco.carter@teachforaustralia.org | teachforaustralia.org</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

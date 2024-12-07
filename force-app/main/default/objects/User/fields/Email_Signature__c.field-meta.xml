@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Signature__c</fullName>
+    <description>Email signature for User</description>
+    <externalId>false</externalId>
+    <formula>FirstName + &quot; &quot; +  LastName + IF(ISBLANK(TEXT( Pronouns__c )),&quot;&quot;,&quot; (&quot; + TEXT( Pronouns__c ) + &quot;)&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Email Signature</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

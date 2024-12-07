@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <decisions>
+        <name>Application_Stage_Reason_check</name>
+        <label>Application Stage Reason check</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Stage_Reason_Will_submit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Related_Application.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Application Unsubmitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Related_Application.Stage_Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Will submit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Last_Application_Nurturing_Activity</targetReference>
+            </connector>
+            <label>Stage Reason = Will submit</label>
+        </rules>
+        <rules>
+            <name>Stage_Reason_Unresponsive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Related_Application.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Application Unsubmitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Related_Application.Stage_Reason__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Unresponsive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Last_Application_Nurturing_Activity2</targetReference>
+            </connector>
+            <label>Stage Reason = Unresponsive</label>
+        </rules>
+    </decisions>
+    <description>Updates to the Last Application Nurturing Stage upon completion of the &apos;28 Day Candidate Application Review&apos; reminder task. Decisions are dependant on Application Stage and Stage Reason</description>
+    <environments>Default</environments>
+    <interviewLabel>Application Reviewed Reminder Closed (Application Nurturing) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Application Reviewed Reminder Closed (Application Nurturing)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the related Application record linked to this reminder task.</description>
+        <name>Get_Related_Application</name>
+        <label>Get Related Application</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Application_Stage_Reason_check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Application__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Last_Application_Nurturing_Activity</name>
+        <label>Update Last Application Nurturing Activity</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Related_Application.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Application Review complete</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Application__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Last_Application_Nurturing_Activity2</name>
+        <label>Update Last Application Nurturing Activity</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Related_Application.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Last_Application_Nurturing_Activity__c</field>
+            <value>
+                <stringValue>Contact marked as unresponsive</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Application__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Related_Application</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Subject</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>28 Day Candidate Application Review</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

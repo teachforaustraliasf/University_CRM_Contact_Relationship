@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RM_Email_Signature__c</fullName>
+    <description>The email signature to use for email communications from the RM to the applicant. Updated by a flow when an Application related to the Contact has it&apos;s Owner modified.</description>
+    <externalId>false</externalId>
+    <label>RM Email Signature</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
