@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 11-27-2024
+ * @last modified on  : 11-29-2024
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 global with sharing class ContactAffiliationUpdationBatchable implements Database.Batchable<sObject> {
@@ -158,6 +158,10 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
                 objAffliation.TTL_Application__c = ttlApp.Id;
                 objAffliation.Email__c = ttlApp.Participant__r.npe01__HomeEmail__c;
                 objAffliation.npe5__Organization__c = accountId;
+                objAffliation.npe5__Contact__c = ttlApp.Participant__c;
+                objAffliation.Role_Category__c = 'TTL';
+                objAffliation.Role__c = 'Alumni';
+                objAffliation.remediatedData__c = true;
                 toCreatedAffiliationList.add(objAffliation);
             }
         }
@@ -187,9 +191,9 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
 
         toCreatedAffiliationList.add(objAffliation);
         System.debug('toCreatedAffiliationList size after flp fellow = ' +toCreatedAffiliationList.size());
-        if(flpApplicationRecord.Start_Date__c != null && Date.valueOf(flpApplicationRecord.Start_Date__c).addyears(1) >= Date.TODAY()){
+        if(objAffliation.npe5__StartDate__c != null && Date.valueOf(objAffliation.npe5__StartDate__c).addyears(1) >= Date.TODAY()){
             toCreatedAffiliationList.add(
-                new npe5__Affiliation__c (Application__c = flpApplicationRecord.Id,
+                new npe5__Affiliation__c (FLP_Application__c = flpApplicationRecord.Id,
                 Email__c =  flpApplicationRecord.Contact__r.npe01__HomeEmail__c,
                 npe5__Organization__c = tfaAccountId,
                 npe5__Contact__c = flpApplicationRecord.Contact__c,
@@ -251,20 +255,26 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
     }
     public static List<npe5__Affiliation__c> getDonarAffiliationList(List<npe5__Affiliation__c> toCreatedAffiliationList,set<Id> contactIdsSet,Id accountId){
         System.debug('getDonarAffiliationList');
-        for(Payments__c paymentRecordObj:[SELECT Id, LastModifiedDate, CreatedDate, Contact__r.Email, Contact__c, Contact__r.AccountId, Contact__r.npe01__HomeEmail__c, Payment_Date__c FROM Payments__c WHERE Contact__c IN :contactIdsSet]){
-            npe5__Affiliation__c objAffliation= new npe5__Affiliation__c();
-            if(paymentRecordObj.CreatedDate != null){
-                objAffliation.npe5__StartDate__c = Date.valueOf(paymentRecordObj.CreatedDate);
-            }
-            objAffliation.npe5__EndDate__c = null;
-            objAffliation.Email__c = paymentRecordObj.Contact__r.npe01__HomeEmail__c;
-            objAffliation.npe5__Organization__c = accountId;
-            objAffliation.npe5__Contact__c = paymentRecordObj.Contact__c;
-            objAffliation.Role_Category__c = 'Donor';
-            objAffliation.Role__c = '';
-            objAffliation.remediatedData__c = true;
+        Set<Id> processedIds = new Set<Id>();
+        for(Payments__c paymentRecordObj:[SELECT Id, LastModifiedDate, CreatedDate, Contact__r.Email, Contact__c, Contact__r.AccountId, Contact__r.npe01__HomeEmail__c, Payment_Date__c FROM Payments__c WHERE Contact__c IN :contactIdsSet ORDER BY CreatedDate]){
+            
 
-            toCreatedAffiliationList.add(objAffliation);
+            npe5__Affiliation__c objAffliation= new npe5__Affiliation__c();
+            if(!processedIds.contains(paymentRecordObj.Contact__c)){
+                if(paymentRecordObj.CreatedDate != null){
+                    objAffliation.npe5__StartDate__c = Date.valueOf(paymentRecordObj.CreatedDate);
+                }
+                objAffliation.npe5__EndDate__c = null;
+                objAffliation.Email__c = paymentRecordObj.Contact__r.npe01__HomeEmail__c;
+                objAffliation.npe5__Organization__c = accountId;
+                objAffliation.npe5__Contact__c = paymentRecordObj.Contact__c;
+                objAffliation.Role_Category__c = 'Donor';
+                objAffliation.Role__c = '';
+                objAffliation.remediatedData__c = true;
+                processedIds.add(paymentRecordObj.Contact__c);
+                toCreatedAffiliationList.add(objAffliation);
+            }
+
         }    
         return toCreatedAffiliationList;
     }
@@ -273,8 +283,12 @@ global with sharing class ContactAffiliationUpdationBatchable implements Databas
         Map<String,String> contactRecordTypeMap = getRecordTypesMap();
         List<Contact> contactListToBeUpdated = new List<Contact>();
         for(Contact contactObj:contactList){
+            Id initialRt = contactObj.RecordTypeId;
             contactObj.RecordTypeId  = getTobeRecordTypeID(contactObj.RecordTypeId,contactRecordTypeMap);
-            contactListToBeUpdated.add(contactObj);
+            if(initialRt != contactObj.RecordTypeId){
+                contactListToBeUpdated.add(contactObj);
+            }
+            
         }
         if(!contactListToBeUpdated.isEmpty()){
             try{
