@@ -2,7 +2,7 @@
  * @description       :
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             :
- * @last modified on  : 11-13-2024
+ * @last modified on  : 12-08-2024
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  **/
 public without sharing class SendEmailController {
@@ -79,7 +79,7 @@ public without sharing class SendEmailController {
     
     @AuraEnabled
     public static List<OrgWideEmailAddress> getOrgWideEmailIds(){
-        return [SELECT Id, Address, DisplayName FROM OrgWideEmailAddress];
+        return [SELECT Id, Address, DisplayName, IsAllowAllProfiles FROM OrgWideEmailAddress WHERE IsAllowAllProfiles = true];
     }
     
     @AuraEnabled(cacheable=true)
@@ -151,7 +151,7 @@ public without sharing class SendEmailController {
                 System.debug(orgWideSms.Id);
                 
                 emailObj.setToAddresses(new List<String>{(isSms) ? affiliationsMap.get(affId).Burst_SMS_Email__c : affiliationsMap.get(affId).Email__c});
-                emailObj.setSubject((isSms) ? 'SMS:' + subject : subject);
+                emailObj.setSubject((isSms) ? 'SMS:' + 'Sent by ' + UserInfo.getFirstName()  : subject);
                 emailObj.setHtmlBody(bodyWithMergeField.get(affId));
                 if(!String.isBlank(fileName)){
                     Messaging.EmailFileAttachment attachment = new Messaging.EmailFileAttachment();
@@ -185,7 +185,7 @@ public without sharing class SendEmailController {
                 //if (!String.isBlank(contactId)) {
                     Task task = new Task();
                     task.WhoId = affiliationsMap.get(affId).npe5__Contact__c; // Link to the Contact's ID
-                    task.Subject = subject;
+                    task.Subject = (isSms) ? 'SMS:' + 'Sent by ' + UserInfo.getFirstName()  : subject;
                     task.Description = htmlBody; // Email body text as task description
                     task.Status = 'Completed'; // Set status as required
                     task.Priority = 'Normal'; // Set priority if required
@@ -285,6 +285,76 @@ public without sharing class SendEmailController {
 
         return returnResult;
     }
+
+    @AuraEnabled
+    public static void sentCampaignMail(String fromEmailId,String campaignId, String emailType, String subject, String htmlBody, String fileName, String base64Data, String fileType, String contactId, Boolean isSms){
+        list<Task> taskList = new list<Task>();
+        List<Messaging.SingleEmailMessage> msgList= new List<Messaging.SingleEmailMessage>();
+        String email = '';
+        OrgWideEmailAddress orgWideSms = [SELECT Id, Address, DisplayName FROM OrgWideEmailAddress WHERE Address = 'apply@teachforaustralia.org' LIMIT 1];
+        
+        List<CampaignMember> campaignMembers =  [SELECT contact.FirstName,contact.lastName,contact.Preferred_Name__c,contact.Application_Link__c,Contact.npe01__HomeEmail__c,Contact.npe01__WorkEmail__c,Contact.Burst_SMS_Email__c  FROM CampaignMember Where CampaignId =:campaignId];
+
+        if(!campaignMembers.isEmpty()){
+            for(CampaignMember member :campaignMembers){
+                    String recipientEmailID = (emailType=='HOME' && member.Contact.npe01__HomeEmail__c != null)?member.Contact.npe01__HomeEmail__c:(emailType=='WORK' && member.Contact.npe01__WorkEmail__c != null)?member.Contact.npe01__WorkEmail__c:'';
+                    if(!String.isBlank(recipientEmailID)){
+
+                        Messaging.SingleEmailMessage emailObj = new Messaging.SingleEmailMessage();
+                        if(!String.isBlank(fromEmailId) && !isSms){
+                            emailObj.setOrgWideEmailAddressId((isSms) ? orgWideSms.Id :fromEmailId);
+                        }
+
+                        if(isSms){
+                            emailObj.setOrgWideEmailAddressId(orgWideSms.Id);
+                        }                
+                        emailObj.setToAddresses(new List<String>{(isSms) ? member.Contact.Burst_SMS_Email__c :recipientEmailID});
+                        emailObj.setSubject((isSms) ? 'SMS:' + subject : subject);
+                        emailObj.setHtmlBody(mergeCampaignFields(htmlBody,member.Contact));
+                        if(!String.isBlank(fileName)){
+                            Messaging.EmailFileAttachment attachment = new Messaging.EmailFileAttachment();
+                            attachment.setFileName(fileName);
+                            attachment.setBody(EncodingUtil.base64Decode(base64Data));
+                            attachment.setContentType(fileType);
+                            emailObj.setFileAttachments(new Messaging.EmailFileAttachment[] { attachment });
+                        }
+                        msgList.add(emailObj);
+                
+                        Task task = new Task();
+                        task.WhoId = contactId; // Link to the Contact's ID
+                        task.Subject = subject;
+                        task.Description = mergeCampaignFields(htmlBody,member.Contact); // Email body text as task description
+                        task.Status = 'Completed'; // Set status as required
+                        task.Priority = 'Normal'; // Set priority if required
+                        task.ActivityDate = Date.today(); // Set the date to today's date
+                        taskList.add(task);
+                
+                    }
+                }
+
+
+                    Messaging.sendEMail(msgList);
+                    if(!taskList.isEmpty()){
+                        insert taskList;
+                    }
+            }                  
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static AggregateResult getCampaignAssociateEmailCount(String campaignId){
+        return [SELECT count(Contact.npe01__HomeEmail__c),count(Contact.npe01__WorkEmail__c)  FROM CampaignMember Where CampaignId =:campaignId];
+    }
+    
+    private static String mergeCampaignFields(String body, Contact contactObj){
+            String tempBody = body;
+            tempBody = tempBody.replace('{!Contact.FirstName}', (contactObj.FirstName != null) ? contactObj.FirstName : '');
+            tempBody = tempBody.replace('{!Contact.LastName}', (contactObj.LastName != null) ? contactObj.LastName : '');
+            tempBody = tempBody.replace('{!Contact.PreferredName}', (contactObj.Preferred_Name__c != null) ? contactObj.Preferred_Name__c : '');
+            tempBody = tempBody.replace('{!Account.Applicant_Form_URL__c}', (contactObj.Application_Link__c != null) ? contactObj.Application_Link__c : '');
+        return tempBody;
+    }
+
+    
     //merge field replace method
     private static String mergeFields(String body, Id recordId) {
         //Contact contact = [SELECT FirstName, LastName, Email, Account.Name FROM Contact WHERE Id = :recordId LIMIT 1];
