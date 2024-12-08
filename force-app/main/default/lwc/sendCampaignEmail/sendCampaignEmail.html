@@ -2,7 +2,7 @@
   @description       : This is new send email functionality from Affiliation list view 
   @author            : Mohammed Ismail
   @group             : Sinapse
-  @last modified on  : 10-30-2024
+  @last modified on  : 12-08-2024
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
@@ -18,7 +18,7 @@
                 <lightning-layout>
                     <lightning-layout-item size="8">
                         <lightning-combobox name="" label="To" value={RecipientEmail} placeholder="Select Progress"
-                        options={RecipientOptions} onchange={handleRecipientEmailChange}></lightning-combobox>
+                        options={RecipientOptions} onchange={handleRecipientEmailChange} read-only={isSmsToggleOn}></lightning-combobox>
                        <!-- <lightning-pill-container items={items} onitemremove={removePillItem}></lightning-pill-container>-->
                      <!--Commented this placeholder as not required this time   <span onkeypress={handleKeyCheck}>
                             <lightning-input type="email" class="input-no-border" data-id="inputEmailID" value={inputEmail}
