@@ -293,7 +293,7 @@ public without sharing class SendEmailController {
         String email = '';
         OrgWideEmailAddress orgWideSms = [SELECT Id, Address, DisplayName FROM OrgWideEmailAddress WHERE Address = 'apply@teachforaustralia.org' LIMIT 1];
         
-        List<CampaignMember> campaignMembers =  [SELECT contact.FirstName,contact.lastName,contact.Preferred_Name__c,contact.Application_Link__c,Contact.npe01__HomeEmail__c,Contact.npe01__WorkEmail__c,Contact.Burst_SMS_Email__c  FROM CampaignMember Where CampaignId =:campaignId];
+        List<CampaignMember> campaignMembers =  [SELECT contact.Id, contact.FirstName,contact.lastName,contact.Preferred_Name__c,contact.Application_Link__c,Contact.npe01__HomeEmail__c,Contact.npe01__WorkEmail__c,Contact.Burst_SMS_Email__c  FROM CampaignMember Where CampaignId =:campaignId];
 
         if(!campaignMembers.isEmpty()){
             for(CampaignMember member :campaignMembers){
@@ -321,7 +321,7 @@ public without sharing class SendEmailController {
                         msgList.add(emailObj);
                 
                         Task task = new Task();
-                        task.WhoId = contactId; // Link to the Contact's ID
+                        task.WhoId = member.contact.Id; // Link to the Contact's ID
                         task.Subject = subject;
                         task.Description = mergeCampaignFields(htmlBody,member.Contact); // Email body text as task description
                         task.Status = 'Completed'; // Set status as required
