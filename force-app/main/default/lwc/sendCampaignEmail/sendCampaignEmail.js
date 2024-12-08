@@ -241,7 +241,7 @@ export default class SendCampaignEmail extends LightningElement {
     }
     get RecipientOptions(){
         return [
-            { label: 'Home Email', value:homeEmail },
+            { label: 'Personal Email', value:homeEmail },
             { label: 'Work Email', value: workEmail },
         ];
     }
