@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Application__c.Contact__c</field>
+    </columns>
+    <columns>
+        <field>Application__c.Last_Application_Nurturing_Activity__c</field>
+    </columns>
+    <columns>
+        <field>Application__c.Application_Last_Modified_Date__c</field>
+    </columns>
+    <description>Report of Applications that have not been updated in the last 14 days, despite being marked with Stage Reason of &apos;Will submit&apos;.</description>
+    <filter>
+        <criteriaItems>
+            <column>Application__c.Application_Last_Modified_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>LAST_N_DAYS:14</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Application__c.Stage_Reason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Will submit</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Application__c.Owner_Fullname__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>&apos;Will Submit&apos; Applications to Follow-up</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Application__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>Application__c.Application_Last_Modified_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Application__c.Application_Start_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
